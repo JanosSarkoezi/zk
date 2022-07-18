@@ -3,6 +3,7 @@
 Sind die Vektoren $e_1$ und $e_2$ die Standardbasisvektoren des
 zweidimensionalen Raumens $\R^2$ (sind orthonormiert). So gibt es vier
 Basisvektoren des $\mathscr{G}^2$.
+
 $$
 \begin{matrix}
     1 \\ 
@@ -22,7 +23,9 @@ gemeint.
 
 **Bemerkung**: Da die beiden Vektoren $e_1$ und $e_2$ senkrecht auf ein ander
 stehen, ist $e_1e_2 = e_1\wedge e_2$.
+
 ## Referenzen
+
 - [Geometrische Algebra](f35d.md)
 - [Geometrisches Produkt](81js.md)
 - [$k$-Blades](kikd.md)
@@ -32,4 +35,5 @@ stehen, ist $e_1e_2 = e_1\wedge e_2$.
 :mathe:ga:
 
 ## Literatur
+
 - Alan Macdonald - Linear and Geometric Algebra (2021) Seite 76

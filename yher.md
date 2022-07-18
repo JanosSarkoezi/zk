@@ -3,6 +3,7 @@
 Ein $k$-Vektor ist eine Linearkombination von $k$-Blades.
 
 ## Referenzen
+
 - [Geometrische Algebra](f35d.md)
 - [Geometrisches Produkt](81js.md)
 - [Basisvektoren für GA in 2D](e6nk.md)
@@ -13,5 +14,5 @@ Ein $k$-Vektor ist eine Linearkombination von $k$-Blades.
 :mathe:ga:
 
 ## Literatur
-- Alan Macdonald - Linear and Geometric Algebra (2021) Seite 82
 
+- Alan Macdonald - Linear and Geometric Algebra (2021) Seite 82

@@ -5,6 +5,7 @@ Multivektor des Grades $k$. Die Menge aller $k$-Vektoren wird mit
 $\mathscr{G}_k$ bezeichneit.
 
 ## Referenzen
+
 - [Geometrische Algebra](f35d.md)
 - [Geometrisches Produkt](81js.md)
 - [Basisvektoren für GA in 2D](e6nk.md)
@@ -15,4 +16,5 @@ $\mathscr{G}_k$ bezeichneit.
 :mathe:ga:
 
 ## Literatur
+
 - Eric Chisolm - Geomeric Algebra (2012) Seite 12
