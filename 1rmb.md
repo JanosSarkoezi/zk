@@ -3,11 +3,13 @@
 Gitflow erleichtert das behandeln von Branches unter git.
 
 Typisches forgehen bie Gitflow:
+
 - gup           (git pull --rebase auf develop)
 - git flow feature start FEATURE_NAME
 - git flow publish
 
 Weiter an nächsten Tag:
+
 - gco develop     (git checkout develop)
 - gup             (git pull --rebase auf develop)
 - gco -           (zurück auf den feautre Branch)
@@ -15,6 +17,7 @@ Weiter an nächsten Tag:
 - gpf             (git push --force-with-lease)
 
 Finale Rebase und Merge (fast forward)
+
 - gco develop     (git checkout develop)
 - gup             (git pull --rebase auf develop)
 - gco -           (zurück auf den feautre Branch)
@@ -26,7 +29,9 @@ Finale Rebase und Merge (fast forward)
 - git branch -d FEATURE_NAME
 
 ## Referenzen
+
 - [Gitflow features](xocy.md)
 
 ## Literatur
+
 - https://danielkummer.github.io/git-flow-cheatsheet/
