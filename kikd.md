@@ -6,7 +6,8 @@ $k$-Blades können auf verschiedene Weise definiert werden.
 - [$k$-Blades nach Hestenes](piun.md)
 - [$k$-Blades nach Chisolm](iqlf.md)
 
-## Referenzen
+# Referenzen
+
 - [Geometrische Algebra](f35d.md)
 - [Linearkombination](yjez.md)
 - [Grahm-Schmidtsches Orthogonalisieung](zju4.md)
@@ -14,7 +15,8 @@ $k$-Blades können auf verschiedene Weise definiert werden.
 
 :math:ga:
 
-## Literatur
+# Literatur
+
 - Alan Macdonald - Linear and Geometric Algebra (2021) Seite 94
 - Alan Macdonald - Linear and Geometric Algebra (2021) Seite 103
 - David Hestenes - New Foundations for Classical Mechanics (2002) Seite 34
