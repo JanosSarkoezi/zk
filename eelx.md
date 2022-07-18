@@ -18,9 +18,9 @@
   gemeint. Also der skalare Teil des Multivektors $A$.
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [Ein Multivektor](d1fv)
-- [Der $k$-Vektorteil eines Multivektors](oagu)
+- [Geometrische Algebra](f35d.md)
+- [Ein Multivektor](d1fv.md)
+- [Der $k$-Vektorteil eines Multivektors](oagu.md)
 
 :mathe:ga:
 

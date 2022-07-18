@@ -28,16 +28,16 @@ $$\mathfrak{m}_1f_1 + \mathfrak{m}_2f_2 = \mathfrak{m}s$$
 Hier die Konstruktion des Schwerpuntkes von zwei Punkten. Dabei haben die Massen
 $\mathfrak{m}_1$ und $\mathfrak{m}_2$ das selbe Vorzeichen.
 
-![](./images/sum1.svg)
+![](./images/sum1.svg.md)
 
 Wenn die Massen $\mathfrak{m}_1$ und $\mathfrak{m}_2$ unterschiedliche
 Vorzeichen haben, dann sieht die Konstruktion des Schwerpuntkes so aus.
 
-![](./images/sum2.svg)
+![](./images/sum2.svg.md)
 
 ## Referenzen
-- [Grasamms Idee](16ea)
-- [Geometrische Algebra](f35d)
+- [Grasamms Idee](16ea.md)
+- [Geometrische Algebra](f35d.md)
 
 :mathe:ga:
 

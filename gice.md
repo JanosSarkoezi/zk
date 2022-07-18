@@ -5,7 +5,7 @@ verknüpft werden. Die Informationen werden auf einem Papier geschriebe
 oder in einer Textdatei gespeichert.
 
 ##Referenzen
-[Programme für einen Zettelkasten](p7z2)
+[Programme für einen Zettelkasten](p7z2.md)
 
 :zk:
 

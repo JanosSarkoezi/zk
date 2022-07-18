@@ -9,7 +9,7 @@ $$
 asdf.
 
 ## Referenzen
-- [Lineare Algebra](jtfm)
+- [Lineare Algebra](jtfm.md)
 
 :mathe:la:svd:
 

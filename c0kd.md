@@ -5,10 +5,10 @@ $$A_r\cdot B_s = \langle A_rB_s\rangle_{|r-s|}$$
 erklärt.
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [$k$-Blades](kikd)
-- [Das innere und äußere Produkt](bzmt)
-- [Geometrische Algebra](f35d)
+- [Geometrische Algebra](f35d.md)
+- [$k$-Blades](kikd.md)
+- [Das innere und äußere Produkt](bzmt.md)
+- [Geometrische Algebra](f35d.md)
 
 :mathe:ga:
 

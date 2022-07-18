@@ -39,5 +39,5 @@ $$\begin{align*}
 \end{align*}$$
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [Herleitung für 3-Blades](3k2f)
+- [Geometrische Algebra](f35d.md)
+- [Herleitung für 3-Blades](3k2f.md)

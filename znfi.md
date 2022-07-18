@@ -12,7 +12,7 @@ git flow feature finish MYFEATURE
 ```
 
 ## Referenzen
-[Gitflow features](xocy)
+[Gitflow features](xocy.md)
 
 ## Literatur
 - https://danielkummer.github.io/git-flow-cheatsheet/

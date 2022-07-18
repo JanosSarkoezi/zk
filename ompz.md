@@ -39,9 +39,9 @@ und gehorcht den folgenden Axiomen:
     - $\langle A\rangle_r = 0$ wenn $r<0$ für alle $A\in\mathscr{G}$.
 
 ## Referencen
-- [Geometrische Algebra](f35d)
-- [Axiomatische sichtweise](il6v)
-- [Axiome von Hestenes](ciuz)
+- [Geometrische Algebra](f35d.md)
+- [Axiomatische sichtweise](il6v.md)
+- [Axiome von Hestenes](ciuz.md)
 
 :mathe:ga:
 

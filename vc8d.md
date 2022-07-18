@@ -9,9 +9,9 @@ $V$ mit Skalarprodukt und eine Zahl $\alpha \in \R$ gegeben, dann  hat das
 - $w \wedge (u + v) = w \wedge u + w \wedge v$
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [Geometrisches Produkt](81js)
-- [Äußeres Produkt](fuw3)
+- [Geometrische Algebra](f35d.md)
+- [Geometrisches Produkt](81js.md)
+- [Äußeres Produkt](fuw3.md)
 
 :mathe:ga:
 

@@ -26,7 +26,7 @@ Finale Rebase und Merge (fast forward)
 - git branch -d FEATURE_NAME
 
 ## Referenzen
-- [Gitflow features](xocy)
+- [Gitflow features](xocy.md)
 
 ## Literatur
 - https://danielkummer.github.io/git-flow-cheatsheet/

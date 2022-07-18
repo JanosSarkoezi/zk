@@ -4,11 +4,11 @@ Ein $k$-Blade oder einfacher $k$-Vektor ist ein Produkt von $r$ orthogonalen,
 das heißt antikommutierende, Vektoren.
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [Linearkombination](yjez)
-- [Grahm-Schmidtsches Orthogonalisieung](zju4)
-- [$k$-Vektoren](93t3)
-- [$k$-Blades](kikd)
+- [Geometrische Algebra](f35d.md)
+- [Linearkombination](yjez.md)
+- [Grahm-Schmidtsches Orthogonalisieung](zju4.md)
+- [$k$-Vektoren](93t3.md)
+- [$k$-Blades](kikd.md)
 
 :math:ga:
 

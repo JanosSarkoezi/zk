@@ -17,8 +17,8 @@ $$U\cap U^\perp = \{0\}$$
 zusammen.
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [Projektion auf einen 1D Unterraum](dog5)
+- [Geometrische Algebra](f35d.md)
+- [Projektion auf einen 1D Unterraum](dog5.md)
 
 :mathe:ga:
 

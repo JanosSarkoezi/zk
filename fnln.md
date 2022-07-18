@@ -15,9 +15,9 @@ $$a\cdot(b\wedge c):= \frac{1}{2}(ab\wedge c - b\wedge ca)$$
 führt.
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [Das innere Produkt zwischen einem Vektor und ein Blade](ozr9)
-- [Das innere und äußere Produkt](bzmt)
+- [Geometrische Algebra](f35d.md)
+- [Das innere Produkt zwischen einem Vektor und ein Blade](ozr9.md)
+- [Das innere und äußere Produkt](bzmt.md)
 
 :mathe:ga:
 

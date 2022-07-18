@@ -3,7 +3,7 @@
 Betrachten wir den Vektoren $u$ und einen 1D Unterraum, der duch einen Vektor $v$
 aufgespannt wird
 
-![](images/proj1.svg)
+![](images/proj1.svg.md)
 
 Teilen wir den Vektor $u$ in zwie Teile $u_\|$ und $u_\perp$ auf und betrachte
 das geometrische Produkt von den Vektoren $u$ und $v$:
@@ -19,7 +19,7 @@ Die Proketion eines Vektors $u$ auf $v$ ist
 $$u_\| := P_v(u) = (u\cdot v)v^{-1} = \frac{u\cdot v}{v\cdot v}v$$
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
+- [Geometrische Algebra](f35d.md)
 
 :mathe:ga:
 

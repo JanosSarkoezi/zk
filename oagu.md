@@ -27,10 +27,10 @@ $$\begin{align*}
   $\langle uv\rangle_2 = u\wedge v$ ist.
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [$k$-Blades](kikd)
-- [$k$-Vektoren](93t3)
-- [Die Umkehrung eines Multivektors](eelx)
+- [Geometrische Algebra](f35d.md)
+- [$k$-Blades](kikd.md)
+- [$k$-Vektoren](93t3.md)
+- [Die Umkehrung eines Multivektors](eelx.md)
 
 :mathe:ga:
 

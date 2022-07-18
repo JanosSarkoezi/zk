@@ -7,10 +7,10 @@ erklärt.
 Wenn $j > k$ ist, dann ist $k - j < 0$,  sodass $A\cdot B = 0$ ist.
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [$k$-Vektoren](93t3)
-- [Das innere und äußere Produkt](bzmt)
-- [Der $k$-Vektorteil eines Multivektors](oagu)
+- [Geometrische Algebra](f35d.md)
+- [$k$-Vektoren](93t3.md)
+- [Das innere und äußere Produkt](bzmt.md)
+- [Der $k$-Vektorteil eines Multivektors](oagu.md)
 
 :mathe:ga:
 

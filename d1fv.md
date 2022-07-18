@@ -16,10 +16,10 @@ $$\alpha_0 + \alpha_1 e_1 + \alpha_2 e_2 + \alpha_3 e_1e_2$$
 mit $\alpha_0, ...,\alpha_3\in\R$.
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [Basisvektoren für GA in 2D](e6nk)
-- [Basisvektoren für GA in 3D](fw8i)
-- [Der $k$-Vektorteil eines Multivektors](oagu)
+- [Geometrische Algebra](f35d.md)
+- [Basisvektoren für GA in 2D](e6nk.md)
+- [Basisvektoren für GA in 3D](fw8i.md)
+- [Der $k$-Vektorteil eines Multivektors](oagu.md)
 
 :mathe:ga:
 

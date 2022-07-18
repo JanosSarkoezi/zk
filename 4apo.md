@@ -39,7 +39,7 @@ Und der S2 sich beendet hat
 Dann ist alles OK.
 
 ## Referenzen
-[BSN-7993](14a5)
+[BSN-7993](14a5.md)
 
 ## Literatur
 https://ticket.intervista-ag.de/browse/BSN-7993

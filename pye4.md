@@ -10,9 +10,9 @@ $$aB_k = \frac{1}{2}(aB_k-(-1)^kB_ka) + a\wedge B_k$$
 die gewünschte Definition von $a\wedge B_k$ folgt.
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [Das innere und äußere Produkt](bzmt)
-- [Das äußere Produkt zwischen einem Vektor und ein Blade](xywt)
+- [Geometrische Algebra](f35d.md)
+- [Das innere und äußere Produkt](bzmt.md)
+- [Das äußere Produkt zwischen einem Vektor und ein Blade](xywt.md)
 
 :mathe:ga:
 

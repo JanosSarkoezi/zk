@@ -2,18 +2,18 @@
 
 Das innere Produkt zwischen zwei Multivektoren kann in mehreren Schritten
 aufgebaut werden.
-- [Das innere Produkt zwischen zwei Vektoren](1l7s)
-- [Das innere Produkt zwischen einem Vektor und ein Blade](ozr9)
-- [Das innere Produkt zwischen zwei Blades](nl6q)
-- [Das innere Produkt zwischen einem Blade und ein Multivektor](7bmz)
-- [Das innere Produkt zwischen zwei Multivektoren](n54e)
+- [Das innere Produkt zwischen zwei Vektoren](1l7s.md)
+- [Das innere Produkt zwischen einem Vektor und ein Blade](ozr9.md)
+- [Das innere Produkt zwischen zwei Blades](nl6q.md)
+- [Das innere Produkt zwischen einem Blade und ein Multivektor](7bmz.md)
+- [Das innere Produkt zwischen zwei Multivektoren](n54e.md)
 
 Die selbe Überlegung kann auch auf das äußere Produkt angewandt werden:
-- [Das äußere Produkt zwischen zwei Vektoren](x3ca)
-- [Das äußere Produkt zwischen einem Vektor und ein Blade](xywt)
-- [Das äußere Produkt zwischen zwei Blades](llot)
-- [Das äußere Produkt zwischen einem Blade und ein Multivektor](tmaz)
-- [Das äußere Produkt zwischen zwei Multivektoren](4aht)
+- [Das äußere Produkt zwischen zwei Vektoren](x3ca.md)
+- [Das äußere Produkt zwischen einem Vektor und ein Blade](xywt.md)
+- [Das äußere Produkt zwischen zwei Blades](llot.md)
+- [Das äußere Produkt zwischen einem Blade und ein Multivektor](tmaz.md)
+- [Das äußere Produkt zwischen zwei Multivektoren](4aht.md)
 
 Das innere Produkt wird mit zwei Multivektoren gebildet. Am besten erklärt das
 Hestenes. Die Bildung des inneren Prokutes wird in zwei Schritten erklärt.
@@ -38,17 +38,17 @@ Das innere Produkt wird auch als Skalarprodukt bezeichnet, wenn es um Vektoren
 geht.
 
 ## Das innere Produkt zwischen Multivektoren
-- [Das innere Produkt von Macdonald](9erq)
-- [Das innere Produkt von Hestenes](c0kd)
+- [Das innere Produkt von Macdonald](9erq.md)
+- [Das innere Produkt von Hestenes](c0kd.md)
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [Reeller Vektorraum](3g4f)
-- [Geometrisches Produkt](81js)
-- [Projektion und Rejektion](fmjb)
-- [Ein Multivektor](d1fv)
-- [Der $k$-Vektorteil eines Multivektors](oagu)
-- [Die Norm eines Multivektors](deuk)
+- [Geometrische Algebra](f35d.md)
+- [Reeller Vektorraum](3g4f.md)
+- [Geometrisches Produkt](81js.md)
+- [Projektion und Rejektion](fmjb.md)
+- [Ein Multivektor](d1fv.md)
+- [Der $k$-Vektorteil eines Multivektors](oagu.md)
+- [Die Norm eines Multivektors](deuk.md)
 
 :mathe:ga:
 

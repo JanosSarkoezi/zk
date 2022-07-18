@@ -1,11 +1,11 @@
 # Axiomatische sichtweise
 
 Es gibt mehrere Axiomensysteme. Hier eins von Hestenes und eins von Chisolm.
-- [Axiome von Hestenes](ciuz)
-- [Axiome von Chisolm](ompz)
+- [Axiome von Hestenes](ciuz.md)
+- [Axiome von Chisolm](ompz.md)
 
 ## Referencen
-- [Geometrische Algebra](f35d)
+- [Geometrische Algebra](f35d.md)
 
 :mathe:ga:
 

@@ -13,11 +13,11 @@ $$b_2=u_2 - \frac{u_2\cdot b_1}{b_1\cdot b_1}b_1$$
 $$b_3=u_3 - \frac{u_3\cdot b_1}{b_1\cdot b_1}b_1 - \frac{u_3\cdot b_2}{b_2\cdot b_2}b_2$$
 
 ## Referenzen
-- [Lineare Algebra](jtfm)
-- [Lineare Unabhängigkeit](v332)
-- [Geometrische Algebra](f35d)
-- [$k$-Blades](kikd)
-- [$k$-Vektoren](93t3)
+- [Lineare Algebra](jtfm.md)
+- [Lineare Unabhängigkeit](v332.md)
+- [Geometrische Algebra](f35d.md)
+- [$k$-Blades](kikd.md)
+- [$k$-Vektoren](93t3.md)
 
 
 :math:ga:

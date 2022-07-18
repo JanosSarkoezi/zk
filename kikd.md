@@ -2,15 +2,15 @@
 
 $k$-Blades können auf verschiedene Weise definiert werden.
 
-- [$k$-Blades nach Macdonalds](9o91)
-- [$k$-Blades nach Hestenes](piun)
-- [$k$-Blades nach Chisolm](iqlf)
+- [$k$-Blades nach Macdonalds](9o91.md)
+- [$k$-Blades nach Hestenes](piun.md)
+- [$k$-Blades nach Chisolm](iqlf.md)
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [Linearkombination](yjez)
-- [Grahm-Schmidtsches Orthogonalisieung](zju4)
-- [$k$-Vektoren](93t3)
+- [Geometrische Algebra](f35d.md)
+- [Linearkombination](yjez.md)
+- [Grahm-Schmidtsches Orthogonalisieung](zju4.md)
+- [$k$-Vektoren](93t3.md)
 
 :math:ga:
 

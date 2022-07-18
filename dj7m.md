@@ -1,8 +1,8 @@
 # Scrum
 
 - Vision
-- [User Stories](gbps)
-- [Product Backlog](0ata)
+- [User Stories](gbps.md)
+- [Product Backlog](0ata.md)
 - Sprint Planung
 -- Ausgewählte User Stories
 -- Sprint Backlog

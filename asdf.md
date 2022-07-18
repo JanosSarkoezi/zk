@@ -12,8 +12,8 @@ Der systematische Versuch der Erflüllung von (nicht A) findet seinen
 graphischen Niederschlag in einem baumartigen Gebilde.
 
 ## Referenzen 
-[Erfüllbarkeit in der Logik](kly9)
-[Vergleich der Beweismöglichkeiten](ed3f)
+[Erfüllbarkeit in der Logik](kly9.md)
+[Vergleich der Beweismöglichkeiten](ed3f.md)
 
 :mathe:logik:kalkül:baum:
 

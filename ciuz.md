@@ -31,9 +31,9 @@ die positive Zahl $|a|^2$ (Die Länge zum Quadrat des Vektors $a$).
 - $aa = a^2 := |a|^2 > 0$
 
 ## Referencen
-- [Geometrische Algebra](f35d)
-- [Axiomatische sichtweise](il6v)
-- [Axiome von Chisolm](ompz)
+- [Geometrische Algebra](f35d.md)
+- [Axiomatische sichtweise](il6v.md)
+- [Axiome von Chisolm](ompz.md)
 
 :mathe:ga:
 

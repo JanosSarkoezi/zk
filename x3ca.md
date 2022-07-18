@@ -14,8 +14,8 @@ Das heißt, das äußere Produkt kann mit dem geometrischen Produkt dargestellt
 werden.
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [Das innere und äußere Produkt](bzmt)
+- [Geometrische Algebra](f35d.md)
+- [Das innere und äußere Produkt](bzmt.md)
 
 :mathe:ga:
 

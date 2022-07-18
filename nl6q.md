@@ -13,10 +13,10 @@ $$a\cdot B_s = \langle aB_s\rangle_{s-1}$$
 hier ebenfalls $s > 0$.
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [$k$-Blades](kikd)
-- [Das innere und äußere Produkt](bzmt)
-- [Geometrische Algebra](f35d)
+- [Geometrische Algebra](f35d.md)
+- [$k$-Blades](kikd.md)
+- [Das innere und äußere Produkt](bzmt.md)
+- [Geometrische Algebra](f35d.md)
 
 :mathe:ga:
 

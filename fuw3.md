@@ -10,16 +10,16 @@ Zum Beispiel beschreiben die beiden äußeren Produkte $u\wedge v$ und
 $\frac{1}{2}u\wedge 2v$ das selbe Objekt, wenn $u$ und $v$ Vektoren eines
 n-Dimensionalen Raumes sind.
 
-![](./images/pic.svg)
+![](./images/pic.svg.md)
 
 Die Orientierung der Fläche wird über die Reihenfolge der Vektoren in dem
 Produkt erklärt.
 
 ## Referenzen
-- [Grassmanns Idee](16ea)
-- [Geometrische Algebra](f35d)
-- [Geometrisches Produkt](81js)
-- [Eingenschaften des äußeren Produkts](vc8d)
+- [Grassmanns Idee](16ea.md)
+- [Geometrische Algebra](f35d.md)
+- [Geometrisches Produkt](81js.md)
+- [Eingenschaften des äußeren Produkts](vc8d.md)
 
 :mathe:ga:
 

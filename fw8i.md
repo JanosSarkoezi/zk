@@ -24,11 +24,11 @@ Zum Beispiel mit $e_1e_2e_3$ wird das geometische Produkt der Vektoren $e_1, e_2
 und $e_3$ gemeint.
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [Geometrisches Produkt](81js)
-- [$k$-Blades](kikd)
-- [$k$-Vektoren](93t3)
-- [Ein Multivektor](d1fv)
+- [Geometrische Algebra](f35d.md)
+- [Geometrisches Produkt](81js.md)
+- [$k$-Blades](kikd.md)
+- [$k$-Vektoren](93t3.md)
+- [Ein Multivektor](d1fv.md)
 
 :mathe:ga:
 

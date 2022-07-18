@@ -14,11 +14,11 @@ In dem Buch über Clifford Algebra sieht es schon viel besser aus. Dort steht
   für $j,k=1,...,r$ und $k\neq j$ 
 
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [Linearkombination](yjez)
-- [Grahm-Schmidtsches Orthogonalisieung](zju4)
-- [$k$-Vektoren](93t3)
-- [$k$-Blades](kikd)
+- [Geometrische Algebra](f35d.md)
+- [Linearkombination](yjez.md)
+- [Grahm-Schmidtsches Orthogonalisieung](zju4.md)
+- [$k$-Vektoren](93t3.md)
+- [$k$-Blades](kikd.md)
 
 :math:ga:
 

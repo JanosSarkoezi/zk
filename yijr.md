@@ -4,8 +4,8 @@ Eine Aussage ist gültig, wenn jede Belegung der Aussage, diese war
 werden läßt.
 
 ## Referenzen
-- [Semantische Eigenschaften der Junktorenlogik](2q89)
-- [Tautologie in der Logik](u74r)
+- [Semantische Eigenschaften der Junktorenlogik](2q89.md)
+- [Tautologie in der Logik](u74r.md)
 
 :mathe:logik:
 

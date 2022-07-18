@@ -8,9 +8,9 @@ $$
 wobei die $\alpha_i \in \R$ für alle $i = 1, ..., n$.
 
 # Referenzen
-- [Lineare Algebra](jtfm)
-- [Reeller Vektorraum](3g4f)
-- [Lineare Unabhängigkeit](v332)
+- [Lineare Algebra](jtfm.md)
+- [Reeller Vektorraum](3g4f.md)
+- [Lineare Unabhängigkeit](v332.md)
 
 :mathe:la:
 

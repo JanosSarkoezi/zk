@@ -10,7 +10,7 @@ Möglichkeiten beschrieben
 Es werden auch die Equivalienzen der einzelne Kalküle betrachtet.
 
 ## Baumkalkül
-- [Beweismöglichkeiten Baumkalkül](asdf)
+- [Beweismöglichkeiten Baumkalkül](asdf.md)
 
 :mathe:logik:kalkül:
 

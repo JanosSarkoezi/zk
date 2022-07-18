@@ -4,7 +4,7 @@ Eine Aussage ist ungültig, wenn jede Belegung der Aussage, diese falsch
 werden läßt.
 
 ## Referenzen
-- [Semantische Eigenschaften der Junktorenlogik](2q89)
+- [Semantische Eigenschaften der Junktorenlogik](2q89.md)
 
 :mathe:logik:
 

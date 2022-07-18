@@ -21,7 +21,7 @@ will ich sicher durch den Verkehr fahren,
 damit ich unbeschadet nach Hause komme.
 
 ## Referenzen
-- [Scrum](dj7m)
-- [User Story Splitts](wbd4)
+- [Scrum](dj7m.md)
+- [User Story Splitts](wbd4.md)
 
 ## Literatur

@@ -23,11 +23,11 @@ gemeint.
 **Bemerkung**: Da die beiden Vektoren $e_1$ und $e_2$ senkrecht auf ein ander
 stehen, ist $e_1e_2 = e_1\wedge e_2$.
 ## Referenzen
-- [Geometrische Algebra](f35d)
-- [Geometrisches Produkt](81js)
-- [$k$-Blades](kikd)
-- [$k$-Vektoren](93t3)
-- [Ein Multivektor](d1fv)
+- [Geometrische Algebra](f35d.md)
+- [Geometrisches Produkt](81js.md)
+- [$k$-Blades](kikd.md)
+- [$k$-Vektoren](93t3.md)
+- [Ein Multivektor](d1fv.md)
 
 :mathe:ga:
 

@@ -6,12 +6,12 @@
 - Typically exist in developers repos only
 
 ## Referenzen
-- [Gitflow](1rmb)
-- [Gitflow features initalize](jq58)
-- [Gitflow Start a new feature](byeo)
-- [Gitflow Finish up a feature](znfi)
-- [Gitflow Publish a feature](5ftz)
-- [Gitflow Getting a published feature](ccek)
+- [Gitflow](1rmb.md)
+- [Gitflow features initalize](jq58.md)
+- [Gitflow Start a new feature](byeo.md)
+- [Gitflow Finish up a feature](znfi.md)
+- [Gitflow Publish a feature](5ftz.md)
+- [Gitflow Getting a published feature](ccek.md)
 
 ## Literatur
 - https://danielkummer.github.io/git-flow-cheatsheet/
