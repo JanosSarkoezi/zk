@@ -3,6 +3,7 @@
 Die Geometrische Algebra ist eine Menge $\mathscr{G}$ mit zwei Verknüpungen.
 Eine Addition und eine Multiplikation (auch als geometisches Produkt genannt)
 und gehorcht den folgenden Axiomen:
+
 - $\mathscr{G}$ ist ein Ring mit Einheit. Die additive Einheit ist die $0$ und
   die multiplikative Einheit ist die $1$.
 - $\mathscr{G}$ enthält einen Körper $\mathscr{G}_0$ mit Charakteristik Null.
@@ -39,6 +40,7 @@ und gehorcht den folgenden Axiomen:
     - $\langle A\rangle_r = 0$ wenn $r<0$ für alle $A\in\mathscr{G}$.
 
 ## Referencen
+
 - [Geometrische Algebra](f35d.md)
 - [Axiomatische sichtweise](il6v.md)
 - [Axiome von Hestenes](ciuz.md)
@@ -46,4 +48,5 @@ und gehorcht den folgenden Axiomen:
 :mathe:ga:
 
 ## Literatur
+
 - Eric Chisolm - Geomeric Algebra (2012) Seite 10-12
