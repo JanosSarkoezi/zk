@@ -4,6 +4,13 @@
 % Build based on the article class
 \LoadClass[8pt]{extarticle}
 
+\newcommand{\numberset}[1]{\mathbb{#1}}
+\newcommand{\N}{\numberset{N}}
+\newcommand{\Z}{\numberset{Z}}
+\newcommand{\Q}{\numberset{Q}}
+\newcommand{\R}{\numberset{R}}
+\newcommand{\C}{\numberset{C}}
+
 % Page setting mimics Niklas Luhmann's index card: A6
 \RequirePackage[paper=a6paper,landscape,bmargin=.1in,tmargin=.5em,hmargin=.3in,includehead,headsep=.5em]{geometry}
 
