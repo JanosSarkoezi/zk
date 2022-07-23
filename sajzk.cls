@@ -18,6 +18,7 @@
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
 \RequirePackage{amssymb}
+\RequirePackage{mathrsfs}
 
 % Make section font size the same size as the normal text.
 \RequirePackage{titlesec}
