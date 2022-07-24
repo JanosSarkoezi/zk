@@ -25,6 +25,13 @@
 \titleformat*{\section}{\normalsize\bfseries}
 \titleformat*{\subsection}{\normalsize\bfseries}
 
+\RequirePackage{currfile}
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\currfilepath}
+\renewcommand{\headrulewidth}{0pt}
+
 % Make the skip between items smaller.
 \RequirePackage{enumitem}
 \setlist{nosep}
@@ -35,3 +42,7 @@
 
 % Enable hyperref
 \RequirePackage[colorlinks=true,linkcolor=magenta,citecolor=magenta,urlcolor=magenta]{hyperref}
+
+\AtBeginDocument{
+    \markboth{\jobname}{\jobname}
+}
