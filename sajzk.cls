@@ -25,6 +25,9 @@
 \titleformat*{\section}{\normalsize\bfseries}
 \titleformat*{\subsection}{\normalsize\bfseries}
 
+\RequirePackage{tikz}
+
+% Header with current file name. Tags added in separate file.
 \RequirePackage{currfile}
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
