@@ -1,22 +1,22 @@
-\section{Modus Ponendo Ponens (MPP)}
-\label{69fy}
-\lhead{:mathe:logik:kalkül:}
+\section{Modus Tollendo Tollens (MTT)}
+\label{30ol}
+\lhead{:math:logik:kalkül:}
 
-Enthält eine Ableitung sowohl eine Formel mit $'\ra'$ als Hauptjunktor als auch
-das Antezedenz dieser Formel, dann darf ihr Konsequenz in eine \textit{neue}
-Zeile aufgenommen werden. Die Annahmeliste der neuen Zeile wird zusammengesetzt
-aus den Annahmelisten der beiden Oberformeln.
+Enthält eine Ableitung sowohl eine Formel mit $'\ra'$ als Hauptjunktor
+als auch die Negation der Konsequenz dieser Formel, dann darf die Negation der
+Antezedenz in eine \textit{neue} Zeile aufgenommen werden. Die Annahmeliste der
+neuen Zeile wird zusammengesetzt aus den Annahmelisten der beiden Oberformeln.
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
   \hline
   Annahme         & Nummer & Formel        & Regel \\
   \hline
-  $\alpha$        & (k)    & A             &  \\
+  $\alpha$        & (k)    & $\lnot$B      &  \\
   \hline
   $\beta$         & (l)    & A $\ra$ B     &  \\
   \hline
-  $\alpha, \beta$ & (m)    & B             & l,k MPP \\
+  $\alpha, \beta$ & (m)    & $\lnot$A      & l,k MPP \\
   \hline
 \end{tabular}
 \end{center}
@@ -25,22 +25,22 @@ Die Reihenfolge des Vorkommens der Oberformeln ist beliebig.
 
 \textsc{Beispiele:}
 \begin{center}
-    \[P, P \ra Q \therefore Q\] \\
+    \[\lnot Q, P \ra Q \therefore \lnot P\] \\
 
 \begin{tabular}{|c|c|c|c|}
   \hline
-  Annahme      & Nummer & Formel & Regel \\
+  Annahme         & Nummer  & Formel & Regel \\
   \hline
-  1   & (k)    & $P$             & AE \\
+  1   & (k)    & $\lnot Q$  & AE \\
   \hline
-  2   & (l)    & $P \ra Q$       & AE \\
+  2   & (l)    & $P \ra Q$  & AE \\
   \hline
-  1,2 & (m)    & $Q$             & 2,1 MPP \\
+  1,2 & (m)    & $\lnot P$  & 2,1 MPP \\
   \hline
 \end{tabular}
 \end{center}
 
-Es gilt: $P, P \ra Q \vdash_J Q$
+Es gilt: $\lnot Q, P \ra Q \vdash_J \lnot P$
 \newpage
 \begin{center}
     \[P \ra (Q\ra R), P \ra Q, P \therefore R\] \\
@@ -59,7 +59,7 @@ Es gilt: $P, P \ra Q \vdash_J Q$
   \hline
   2,3   & (5)    & $Q$               & 2,3 MPP \\
   \hline
-  1,2,3 & (6)    & $R$                               & 4,5 MPP \\
+  1,2,3 & (6)    & $R$               & 4,5 MPP \\
   \hline
 \end{tabular}
 \end{center}
@@ -72,5 +72,5 @@ Es gilt: $P \ra (Q\ra R), P \ra Q, P \vdash_J R$
 
 \subsection{Literatur}
 \begin{itemize}
-    \item Timm Lampert - Klassische Logik (2004) Seite 92-93
+    \item Timm Lampert - Klassische Logik (2004) Seite 95-96
 \end{itemize}
