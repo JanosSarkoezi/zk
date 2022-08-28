@@ -18,11 +18,11 @@
 #filename = "{{id}}"
 
 # The file extension used for the notes.
-#extension = "md"
+extension = "tex"
 
 # Template used to generate a note's content.
 # If not an absolute path, it is relative to .zk/templates/
-template = "default.md"
+template = "default.tex"
 
 # Path globs ignored while indexing existing notes.
 #ignore = [
