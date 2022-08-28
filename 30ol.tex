@@ -16,7 +16,7 @@ neuen Zeile wird zusammengesetzt aus den Annahmelisten der beiden Oberformeln.
   \hline
   $\beta$         & (l)    & A $\ra$ B     &  \\
   \hline
-  $\alpha, \beta$ & (m)    & $\lnot$A      & l,k MPP \\
+  $\alpha, \beta$ & (m)    & $\lnot$A      & l,k MTT \\
   \hline
 \end{tabular}
 \end{center}
@@ -35,7 +35,7 @@ Die Reihenfolge des Vorkommens der Oberformeln ist beliebig.
   \hline
   2   & (l)    & $P \ra Q$  & AE \\
   \hline
-  1,2 & (m)    & $\lnot P$  & 2,1 MPP \\
+  1,2 & (m)    & $\lnot P$  & 2,1 MTT \\
   \hline
 \end{tabular}
 \end{center}
@@ -43,7 +43,7 @@ Die Reihenfolge des Vorkommens der Oberformeln ist beliebig.
 Es gilt: $\lnot Q, P \ra Q \vdash_J \lnot P$
 \newpage
 \begin{center}
-    \[P \ra (Q\ra R), P \ra Q, P \therefore R\] \\
+    \[P \ra (Q\ra R), P ,\lnot R \therefore \lnot Q\] \\
 
 \begin{tabular}{|c|c|c|c|}
   \hline
@@ -51,20 +51,18 @@ Es gilt: $\lnot Q, P \ra Q \vdash_J \lnot P$
   \hline
   1     & (1)    & $P \ra (Q\ra R)$  & AE \\
   \hline
-  2     & (2)    & $P \ra Q$         & AE \\
+  2     & (2)    & $P$               & AE \\
   \hline
-  3     & (3)    & $P$               & AE \\
+  3     & (3)    & $\lnot R$         & AE \\
   \hline
-  1,3   & (4)    & $Q \ra R$         & 1,3 MPP \\
+  1,2   & (4)    & $Q \ra R$         & 1,2 MPP \\
   \hline
-  2,3   & (5)    & $Q$               & 2,3 MPP \\
-  \hline
-  1,2,3 & (6)    & $R$               & 4,5 MPP \\
+  1,2,3 & (5)    & $\lnot Q$         & 3,4 MTT \\
   \hline
 \end{tabular}
 \end{center}
 
-Es gilt: $P \ra (Q\ra R), P \ra Q, P \vdash_J R$
+Es gilt: $P \ra (Q\ra R), P, \lnot R \vdash_J \lnot Q$
 \subsection{Referenzen}
 \begin{itemize}
     \item \nameref{8hkr} 8hkr.tex
