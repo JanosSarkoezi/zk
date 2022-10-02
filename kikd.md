@@ -13,7 +13,7 @@ $k$-Blades können auf verschiedene Weise definiert werden.
 - [Grahm-Schmidtsches Orthogonalisieung](zju4.md)
 - [$k$-Vektoren](93t3.md)
 
-:math:ga:
+:mathe:ga:
 
 # Literatur
 

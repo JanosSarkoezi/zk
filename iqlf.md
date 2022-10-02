@@ -11,7 +11,7 @@ das heißt antikommutierende, Vektoren.
 - [$k$-Vektoren](93t3.md)
 - [$k$-Blades](kikd.md)
 
-:math:ga:
+:mathe:ga:
 
 ## Literatur
 

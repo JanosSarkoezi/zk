@@ -29,7 +29,7 @@ In dem Buch über Clifford Algebra sieht es schon viel besser aus. Dort steht
 - [$k$-Vektoren](93t3.md)
 - [$k$-Blades](kikd.md)
 
-:math:ga:
+:mathe:ga:
 
 # Literatur
 

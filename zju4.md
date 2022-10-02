@@ -20,7 +20,7 @@ $$b_3=u_3 - \frac{u_3\cdot b_1}{b_1\cdot b_1}b_1 - \frac{u_3\cdot b_2}{b_2\cdot 
 - [$k$-Vektoren](93t3.md)
 
 
-:math:ga:
+:mathe:ga:
 
 ## Literatur
 - Alan Macdonald - Linear and Geometric Algebra (2021) Seite 64
