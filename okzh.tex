@@ -15,8 +15,9 @@ Nachricht informiert den Benutzer, dass er Wasser trinken soll. Dafür werden
 drei Dateien erstellt. Zuerst eine Shell Datei namens wasser.sh. Die Shell
 Datei muss ausführbar gemacht werden (chmod u+x wasser.sh)
 
-\begin{mdframed}[backgroundcolor=light-gray, roundcorner=10pt,leftmargin=1, rightmargin=1, innerleftmargin=15, innertopmargin=15,innerbottommargin=15, outerlinewidth=1, linecolor=light-gray]
-\begin{lstlisting}
+%\begin{mdframed}[backgroundcolor=light-gray, roundcorner=10pt,leftmargin=1, rightmargin=1, innerleftmargin=15, innertopmargin=15,innerbottommargin=15, outerlinewidth=1, linecolor=light-gray]
+%\begin{lstlisting}
+\begin{minted}{bash}
 #!/bin/bash
 export DBUS_SESSION_BUS_ADDRESS = \
 "${DBUS_SESSION_BUS_ADDRESS:-unix:path=/run/user/${UID}/bus}"
@@ -24,12 +25,14 @@ export DBUS_SESSION_BUS_ADDRESS = \
 /usr/bin/notify-send 'Wasser Trinken' \
 "Du solltest etwas wasser trinken $(date --iso-8601=seconds)." \
 -i dialog-information
-\end{lstlisting}
-\end{mdframed}
+\end{minted}
+%\end{lstlisting}
+%\end{mdframed}
 \newpage
 Dann ein Service-Datei mit dem Namen wasser.service
-\begin{mdframed}[backgroundcolor=light-gray, roundcorner=10pt,leftmargin=1, rightmargin=1, innerleftmargin=15, innertopmargin=15,innerbottommargin=15, outerlinewidth=1, linecolor=light-gray]
-\begin{lstlisting}
+%\begin{mdframed}[backgroundcolor=light-gray, roundcorner=10pt,leftmargin=1, rightmargin=1, innerleftmargin=15, innertopmargin=15,innerbottommargin=15, outerlinewidth=1, linecolor=light-gray]
+%\begin{lstlisting}
+\begin{minted}{ini}
 [Unit]
 Description = Wasser trinken
 
@@ -39,14 +42,16 @@ ExecStart = /home/<user>/.config/systemd/user/wasser.sh
 
 [Install]
 WantedBy = multi-user.target
-\end{lstlisting}
-\end{mdframed}
-\textsc{Bemerkung:} Die Zeichen \lstinline!<user>! müssen durch den
+\end{minted}
+%\end{lstlisting}
+%\end{mdframed}
+\textsc{Bemerkung:} %Die Zeichen \lstinline!<user>! müssen durch den
 Benutzernamen ersetzt werden.
 \newpage
 Zu letzt die Timer-Datei wasser.timer
-\begin{mdframed}[backgroundcolor=light-gray, roundcorner=10pt,leftmargin=1, rightmargin=1, innerleftmargin=15, innertopmargin=15,innerbottommargin=15, outerlinewidth=1, linecolor=light-gray]
-\begin{lstlisting}
+%\begin{mdframed}[backgroundcolor=light-gray, roundcorner=10pt,leftmargin=1, rightmargin=1, innerleftmargin=15, innertopmargin=15,innerbottommargin=15, outerlinewidth=1, linecolor=light-gray]
+%\begin{lstlisting}
+\begin{minted}{ini}
 [Unit]
 Description = Timer Wasser trinken
 
@@ -57,8 +62,9 @@ Unit        = wasser.service
 
 [Install]
 WantedBy = multi-user.target
-\end{lstlisting}
-\end{mdframed}
+\end{minted}
+%\end{lstlisting}
+%\end{mdframed}
 
 \subsection{Referenzen}
 \begin{itemize}
