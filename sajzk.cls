@@ -11,6 +11,8 @@
 \newcommand{\R}{\numberset{R}}
 \newcommand{\C}{\numberset{C}}
 \newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\lra}{\leftrightarrow}
 
 % Page setting mimics Niklas Luhmann's index card: A6
 \RequirePackage[paper=a6paper,landscape,bmargin=.1in,tmargin=.5em,hmargin=.3in,includehead,headsep=.5em]{geometry}
