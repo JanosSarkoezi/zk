@@ -4,7 +4,7 @@ Gitflow erleichtert das behandeln von Branches unter git.
 
 Typisches forgehen bie Gitflow:
 
-- gup           (git pull --rebase auf develop)
+- gup             (git pull --rebase auf develop)
 - git flow feature start FEATURE_NAME
 - git flow publish
 
