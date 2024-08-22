@@ -7,7 +7,7 @@ Finish the development of a feature. This action performs the following
 - Removes the feature branch
 - Switches back to 'develop' branch
 
-```
+```sh
 git flow feature finish MYFEATURE
 ```
 

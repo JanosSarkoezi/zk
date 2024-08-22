@@ -4,7 +4,8 @@
 
 Are you developing a feature in collaboration?
 Publish a feature to the remote server so it can be used by other users.
-```
+
+```sh
 git flow feature publish MYFEATURE
 ```
 

@@ -4,7 +4,7 @@
 
 Development of new features starting from the 'develop' branch.
 Start developing a new feature with
-```
+```sh
 git flow feature start MYFEATURE
 ```
 This action creates a new feature branch based on 'develop' and switches to it
