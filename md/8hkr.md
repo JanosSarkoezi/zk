@@ -1,0 +1,3 @@
+# Kalkül der Aussagenlogik
+
+
