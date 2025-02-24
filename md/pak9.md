@@ -1,0 +1,4 @@
+# Mit ripgrep finden
+
+```sql
+```
