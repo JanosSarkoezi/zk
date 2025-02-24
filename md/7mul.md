@@ -13,3 +13,6 @@ SELECT @id_list = STUFF((
 DECLARE @sql NVARCHAR(MAX);
 SELECT 'DELETE FROM T_Property WHERE PropKey IN (' + @id_list + ')'
 ```
+
+## Referenzen
+- [SQL-Tricks](c66r.md)

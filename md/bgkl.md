@@ -15,3 +15,6 @@ SELECT 'exec sp_add_listelement '
 FROM T_Listelement
 WHERE (Name LIKE '%provision%' AND ListID IN (-108, -10, -25, -58) AND ListelementID < 0) OR ListID IN (-182, -170, -163, -87, -88)
 ```
+
+## Referenzen
+- [SQL-Tricks](c66r.md)

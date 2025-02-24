@@ -8,3 +8,6 @@ SELECT '| '
 FROM T_PermissionClass
 WHERE Name LIKE '%commission%' ORDER BY Name
 ```
+
+## Referenzen
+- [SQL-Tricks](c66r.md)

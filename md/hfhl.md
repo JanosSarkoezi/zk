@@ -9,3 +9,6 @@ SELECT 'INSERT INTO T_PermissionClass ("Name", "Description", "Label") VALUES ('
 FROM T_PermissionClass
 WHERE Name LIKE '%commission%' ORDER BY Name
 ```
+
+## Referenzen
+- [SQL-Tricks](c66r.md)
