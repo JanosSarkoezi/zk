@@ -1,0 +1,75 @@
+\documentclass{sajzk}
+
+\usepackage{minted}
+
+\begin{document}
+\section{Systemd Unit}
+\label{okzh}
+\lhead{:systemd:user:unit:}
+
+Eine Unit-Konfigurationsdatei ist eine reine Textdatei im Ini-Format, die
+Informationen über einen Dienst, ein Socket, ein Gerät, einen Einhängepunkt,
+einen Selbsteinhängepunkt, eine Auslagerungsdatei oder -partition, ein
+Startziel, einen überwachten Dateipfad, einen von systemd(1) gesteuerten und
+überwachten Zeitgeber, eine Ressourcenverwaltungsscheibe oder eine Gruppe von
+extern erstellten Prozessen kodiert.
+
+\textsc{Beispiele:}
+Hier soll als Beispiel eine zeitgesteuerte Nachricht erscheinen. Diese
+Nachricht informiert den Benutzer, dass er Wasser trinken soll. Dafür werden
+drei Dateien erstellt. Zuerst eine Shell Datei namens wasser.sh. Die Shell
+Datei muss ausführbar gemacht werden (chmod u+x wasser.sh)
+
+\begin{minted}{bash}
+#!/bin/bash
+export DBUS_SESSION_BUS_ADDRESS = \
+"${DBUS_SESSION_BUS_ADDRESS:-unix:path=/run/user/${UID}/bus}"
+
+/usr/bin/notify-send 'Wasser Trinken' \
+"Du solltest etwas wasser trinken $(date --iso-8601=seconds)." \
+-i dialog-information
+\end{minted}
+\newpage
+Dann ein Service-Datei mit dem Namen wasser.service
+\begin{minted}{ini}
+[Unit]
+Description = Wasser trinken
+
+[Service]
+Type      = oneshot
+ExecStart = /home/<user>/.config/systemd/user/wasser.sh
+
+[Install]
+WantedBy = multi-user.target
+\end{minted}
+\textsc{Bemerkung:} %Die Zeichen \lstinline!<user>! müssen durch den
+Benutzernamen ersetzt werden.
+\newpage
+Zu letzt die Timer-Datei wasser.timer
+%\begin{mdframed}[backgroundcolor=light-gray, roundcorner=10pt,leftmargin=1, rightmargin=1, innerleftmargin=15, innertopmargin=15,innerbottommargin=15, outerlinewidth=1, linecolor=light-gray]
+%\begin{lstlisting}
+\begin{minted}{ini}
+[Unit]
+Description = Timer Wasser trinken
+
+[Timer]
+OnCalendar  = *:0/20
+AccuracySec = 100ms
+Unit        = wasser.service
+
+[Install]
+WantedBy = multi-user.target
+\end{minted}
+%\end{lstlisting}
+%\end{mdframed}
+
+\subsection{Referenzen}
+\begin{itemize}
+    \item \href{gjxh.pdf}{Systemd} gjxh.tex
+\end{itemize}
+
+\subsection{Literatur}
+\begin{itemize}
+    \item man:systemd.unit(5)
+\end{itemize}
+\end{document}

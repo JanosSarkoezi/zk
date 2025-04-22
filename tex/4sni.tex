@@ -1,0 +1,91 @@
+\documentclass{sajzk}
+
+\begin{document}
+\section{Disjunktor-Beseitigungsregel \texorpdfstring{($\lor$B)}{(or B)}}
+\label{4sni}
+\lhead{:mathe:logik:kalkül:}
+Enthält eine Ableigung eine Disjunktion der Formeln A und B, und wurde eine
+beliebige Formel C einerseits aus der Annahme A, andererseits aus der Annahme B
+abgeleitet, dann darf C in einer neue Zeile der Ableigung aufgenommen werden.
+Die neue Annhmeliste setzt sich zusammen aus der Annhmeliste der Disjunktion A
+und B und der Annhmeliste der Ableigung C aus A, vermindert um die Zeilennumer
+von A, und der Annhmeliste der Ableigung C aus B, vermindert um die Zeilennumer
+von B.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme                  & Nummer & Formel       & Regel \\
+  \hline
+  $\alpha$                 & (k)    & A $\lor$ B   & AE \\
+  \hline
+  $l^\star$                & (l)    & A            & AE \\
+  \hline
+  $\beta, l^\star$         & (m)    & C            & \\
+  \hline
+  $n^\star$                & (n)    & B            & AE \\
+  \hline
+  $\gamma, l^\star$        & (o)    & C            & \\
+  \hline
+  $\alpha, \beta, \gamma$  & (p)    & C            & k;l,m;n,o $\lor$B \\
+  \hline
+\end{tabular}
+\end{center}
+\newpage
+\textsc{Beispiele:}
+\begin{center}
+    \[P \lor Q \therefore Q \lor P\] \\
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme            & Nummer & Formel       & Regel \\
+  \hline
+  1                  & (1)    & $P \lor Q$   & AE \\
+  \hline
+  $2^\star$          & (2)    & $P$          & AE \\
+  \hline
+  $2^\star$          & (3)    & $Q \lor P$    & 2 $\lor$E \\
+  \hline
+  $4^\star$          & (4)    & $Q$          & AE \\
+  \hline
+  $4^\star$          & (5)    & $Q \lor P$    & 4 $\lor$E \\
+  \hline
+  1                  & (6)    & $Q \lor P$   & 1;2,3;4,5 $\lor$B \\
+  \hline
+\end{tabular}
+\end{center}
+Es gilt: $P \lor Q \vdash_J Q \lor P$
+\begin{center}
+    \[P \lor Q, P \ra R, Q \ra R \therefore R\] \\
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme            & Nummer & Formel       & Regel \\
+  \hline
+  1                  & (1)    & $P \lor Q$   & AE \\
+  \hline
+  2                  & (2)    & $P \ra R$    & AE \\
+  \hline
+  3                  & (3)    & $Q \ra R$    & AE \\
+  \hline
+  $4^\star$          & (4)    & $P$          & AE \\
+  \hline
+  $2, 4^\star$       & (5)    & $R$          & 2,4 MPP \\
+  \hline
+  $6^\star$          & (6)    & $Q$          & AE \\
+  \hline
+  $3, 6^\star$       & (7)    & $R$          & 3,6 MPP \\
+  \hline
+  1,2,3              & (5)    & $R$          & 1;4,5;6,7 $\lor$B \\
+  \hline
+\end{tabular}
+\end{center}
+Es gilt: $P \lor Q, P \ra R, Q \ra R \vdash_J R$
+\subsection{Referenzen}
+\begin{itemize}
+    \item \href{8hkr.pdf}{Kalkül der Aussagenlogik} 8hkr.tex
+\end{itemize}
+
+\subsection{Literatur}
+\begin{itemize}
+    \item Timm Lampert - Klassische Logik (2004) Seite 101-102
+\end{itemize}
+\end{document}

@@ -1,0 +1,50 @@
+\documentclass{sajzk}
+
+\begin{document}
+\section{Annahmen Einführung (AE)}
+\label{yyix}
+\lhead{:mathe:logik:kalkül:}
+
+Eine beliebige Formel A von J darf in einer beliebigen Zeile k als
+\textit{Annahme} eingeführt werden. Die Annahmeliste enthält die und nur die
+Zeile, in der die Annahme eingeführt wird (=k)
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme & Nummer & Formel & Regel \\
+  \hline
+  k     & (k)    & A      & AE \\
+  \hline
+\end{tabular}
+\end{center}
+
+Mit dieser Regel lässt sich das Argument $P \therefore P$ Ableiten.
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme & Nummer & Formel & Regel \\
+  \hline
+  1     & (1)    & $P$      & AE \\
+  \hline
+\end{tabular}
+\end{center}
+
+\textsc{Paraphrase:}
+
+Aus der Formel, die in Zeile 1 steht ist die Formel $'P'$ in der Zeile 1
+ableitbar. Die Ableitung erfolgt auf Grund der Regel AE.
+
+Es gilt: $P \vdash_J P$
+
+
+\subsection{Referenzen}
+\begin{itemize}
+  \item \href{8hkr.pdf}{Kalkül der Aussagenlogik} 8hkr.tex
+\end{itemize}
+
+\subsection{Literatur}
+\begin{itemize}
+    \item Timm Lampert - Klassische Logik (2004) Seite 91-92
+\end{itemize}
+\end{document}

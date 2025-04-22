@@ -1,0 +1,79 @@
+\documentclass{sajzk}
+
+\begin{document}
+\section{Disjunktor-Einführungsregel \texorpdfstring{$(\lor E)$}{(or E)}}
+\label{7yg4}
+\lhead{:mathe:logik:kalkül:}
+Enthält eine Ableitung die Formel A, dann darf die Disjunktion der Formel A mit
+einer beliebigen Formel B in eine neue Zeile aufgenommen werden. Die neue
+Annahmeliste ist eine Kopie der Annahmeliste der Oberformel.
+
+\begin{center}
+  \begin{minipage}[t]{0.4\textwidth}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      Ann.               & Nr.    & Formel       & Regel \\
+      \hline
+      $\alpha$           & (k)    & A            & AE \\
+      \hline
+      $\alpha$           & (m)    & A $\lor$ B  & k $\lor$E \\
+      \hline
+    \end{tabular}
+  \end{minipage}
+  \begin{minipage}[t]{0.4\textwidth}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      Ann.               & Nr.    & Formel       & Regel \\
+      \hline
+      $\alpha$           & (k)    & A            & AE \\
+      \hline
+      $\alpha$           & (m)    & B $\lor$ A  & k $\lor$E \\
+      \hline
+    \end{tabular}
+  \end{minipage}
+\end{center}
+
+\textsc{Beispiele:}
+\begin{center}
+    \[P \therefore P \lor Q\] \\
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme            & Nummer & Formel       & Regel \\
+  \hline
+  1                  & (1)    & $P$          & AE \\
+  \hline
+  1                  & (2)    & $P \lor Q$   & 1 $\lor$E \\
+  \hline
+\end{tabular}
+\end{center}
+Es gilt: $P \vdash_J P \lor Q$
+\newpage
+\begin{center}
+    \[(P \lor Q) \ra R \therefore P \ra  R\]
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme            & Nummer & Formel                 & Regel \\
+  \hline
+  1                  & (1)    & $(P \lor Q) \ra R$     & AE \\
+  \hline
+  $2^\star$          & (2)    & $P$                    & AE \\
+  \hline
+  $2^\star$          & (3)    & $P \lor Q$             & 2 $\lor$E \\
+  \hline
+  $1, 2^\star$       & (4)    & $R$                    & 1,3 MPP \\
+  \hline
+  1                  & (5)    & $P \ra R$              & 2,4 K \\
+  \hline
+\end{tabular}
+\end{center}
+Es gilt: $(P \lor Q) \ra R \vdash_J P \ra  R$
+\subsection{Referenzen}
+\begin{itemize}
+    \item \href{8hkr.pdf}{Kalkül der Aussagenlogik} 8hkr.tex
+\end{itemize}
+
+\subsection{Literatur}
+\begin{itemize}
+    \item Timm Lampert - Klassische Logik (2004) Seite 101-102
+\end{itemize}
+\end{document}

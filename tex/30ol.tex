@@ -1,0 +1,78 @@
+\documentclass{sajzk}
+
+\begin{document}
+\section{Modus Tollendo Tollens (MTT)}
+\label{30ol}
+\lhead{:mathe:logik:kalkül:}
+
+Enthält eine Ableitung sowohl eine Formel mit $'\ra'$ als Hauptjunktor
+als auch die Negation der Konsequenz dieser Formel, dann darf die Negation der
+Antezedenz in eine \textit{neue} Zeile aufgenommen werden. Die Annahmeliste der
+neuen Zeile wird zusammengesetzt aus den Annahmelisten der beiden Oberformeln.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme         & Nummer & Formel        & Regel \\
+  \hline
+  $\alpha$        & (k)    & $\lnot$B      &  \\
+  \hline
+  $\beta$         & (l)    & A $\ra$ B     &  \\
+  \hline
+  $\alpha, \beta$ & (m)    & $\lnot$A      & l,k MTT \\
+  \hline
+\end{tabular}
+\end{center}
+
+Die Reihenfolge des Vorkommens der Oberformeln ist beliebig.
+
+\textsc{Beispiele:}
+\begin{center}
+    \[\lnot Q, P \ra Q \therefore \lnot P\] \\
+
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme         & Nummer  & Formel & Regel \\
+  \hline
+  1   & (1)    & $\lnot Q$  & AE \\
+  \hline
+  2   & (2)    & $P \ra Q$  & AE \\
+  \hline
+  1,2 & (3)    & $\lnot P$  & 2,1 MTT \\
+  \hline
+\end{tabular}
+\end{center}
+
+Es gilt: $\lnot Q, P \ra Q \vdash_J \lnot P$
+\newpage
+\begin{center}
+    \[P \ra (Q\ra R), P ,\lnot R \therefore \lnot Q\] \\
+
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme        & Nummer & Formel   & Regel \\
+  \hline
+  1     & (1)    & $P \ra (Q\ra R)$  & AE \\
+  \hline
+  2     & (2)    & $P$               & AE \\
+  \hline
+  3     & (3)    & $\lnot R$         & AE \\
+  \hline
+  1,2   & (4)    & $Q \ra R$         & 1,2 MPP \\
+  \hline
+  1,2,3 & (5)    & $\lnot Q$         & 3,4 MTT \\
+  \hline
+\end{tabular}
+\end{center}
+
+Es gilt: $P \ra (Q\ra R), P, \lnot R \vdash_J \lnot Q$
+\subsection{Referenzen}
+\begin{itemize}
+    \item \href{8hkr.pdf}{Kalkül der Aussagenlogik} 8hkr.tex
+\end{itemize}
+
+\subsection{Literatur}
+\begin{itemize}
+    \item Timm Lampert - Klassische Logik (2004) Seite 95-96
+\end{itemize}
+\end{document}

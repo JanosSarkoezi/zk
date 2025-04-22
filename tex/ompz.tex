@@ -1,0 +1,66 @@
+\documentclass{sajzk}
+
+\begin{document}
+\section{Axiome von Chisolm}
+\label{ompz}
+\lhead{:mathe:ga:}
+
+Die Geometrische Algebra ist eine Menge $\mathscr{G}$ mit zwei Verknüpungen.
+Eine Addition und eine Multiplikation (auch als geometisches Produkt genannt)
+und gehorcht den folgenden Axiomen:
+\begin{itemize}
+    \item $\mathscr{G}$ ist ein Ring mit Einheit. Die additive Einheit ist die $0$ und
+          die multiplikative Einheit ist die $1$.
+    \item $\mathscr{G}$ enthält einen Körper $\mathscr{G}_0$ mit Charakteristik Null.
+          Er enthält die $0$ und die $1$.
+    \item $\mathscr{G}$ enthält eine Teilmenge $\mathscr{G}_1$, die abgeschlossen unter
+          der Addition ist und wenn $\lambda\in\mathscr{G}_0$ und $v\in\mathscr{G}_1$,
+          dann ist $\lambda v=v\lambda\in\mathscr{G}_1$.
+    \begin{itemize}
+        \item Die Elemente von $\mathscr{G}_1$ werden $1$-Vektor, homogener Vektor des
+              Grades $1$ oder einfach Vektor genannt.
+    \end{itemize}
+\item Das Quadrat von jedem Vektor ist ein Skalar.
+\item Das Skalarprodukt ist nicht degeneriert.
+    \begin{itemize}
+        \item Die nicht Degeneriertheit bedeutet, das nur der Nullvektor $0$ zu allen
+              Vektoren senkrecht seht.
+        \item Das Skalarprodukt kann mit dem geometischen Produkt definiert werden:
+              $$u\cdot v :=\frac{1}{2}(uv+vu)$$
+    \end{itemize}
+\item Wenn $\mathscr{G}_0=\mathscr{G}_1$, dann ist $\mathscr{G}=\mathscr{G}_0$.
+      Sonst ist $\mathscr{G}$ die direkte Summe von $\mathscr{G}_r$.
+    \begin{itemize}
+        \item Die Menge $\mathscr{G}_r$ ist die Menge der $r$-Vektoren.
+        \item Ein $r$-Vektor ist die Summen von $r$-Blades.
+        \item Ein $r$-Blade ist das Produkt von $r$ orthogonalen (anti kommutierenden)
+              Vektoren.
+        \item Wenn $\lambda\in\mathscr{G}_0$ und $A\in\mathscr{G}_r$,
+              dann ist
+          $$\lambda A=A\lambda\in\mathscr{G}_r$$
+        \item Diese Axiom sagt aus, Wenn $A\in\mathscr{G}$, dann kann $A$ nur auf genau
+              eine Art in $r$-Vektoren zerlegt werden. $A=\sum_r A_r$ mit
+              $A_r\in\mathscr{G}_r$.
+        \item Führt man ein Operator $\langle \rangle_r:\mathscr{G}\to\mathscr{G}_r$ ein,
+              so soll dieser Operator die folgenden Aussagen erfüllen:
+        \begin{itemize}
+            \item $A$ ist genau dann ein $r$-Vektor, wenn $A = \langle A\rangle_r$ ist.
+            \item $\langle\lambda A\rangle_r=\langle A\lambda\rangle_r=\lambda\langle A\rangle_r$.
+            \item $\langle\langle A\rangle_r\rangle_s = \langle A\rangle_r\delta_r^s$
+            \item $\sum_r A_r = A$ für alle $A\in\mathscr{G}$.
+            \item $\langle A\rangle_r = 0$ wenn $r<0$ für alle $A\in\mathscr{G}$.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\subsection{Referencen}
+\begin{itemize}
+    \item \href{f35d.pdf}{Geometrische Algebra} f35d.tex
+    \item \href{il6v.pdf}{Axiomatische sichtweise} il6v.tex
+\end{itemize}
+
+\subsection{Literatur}
+\begin{itemize}
+    \item Eric Chisolm - Geomeric Algebra (2012) Seite 10-12
+\end{itemize}
+\end{document}

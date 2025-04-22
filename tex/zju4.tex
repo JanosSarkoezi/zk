@@ -1,0 +1,34 @@
+\documentclass{sajzk}
+
+\begin{document}
+\section{Grahm-Schmidtsches Orthogonalisieung}
+\label{zju4}
+\lhead{:mathe:la:}
+Für das Verständis des Verfahrens reicht es in 3D anzuschauen. Seien $u_1, u_2$
+und $u_3$ linear unabhängige Vektoren aus einem reelem Vektorraum $V$ mit
+Skalarprodukt. Die orhtogonalen Vektoren seien mit $b_1, b_2$ und $b_3$
+bezeichnet.
+\begin{itemize}
+  \item  Setze
+    \[b_1 := u_1\]
+  \item Projiziere $u_2$ auf $b_1$ und ziehe die Projektion von $u_2$ ab.
+    \[b_2=u_2 - \frac{u_2\cdot b_1}{b_1\cdot b_1}b_1\]
+  \item  Projiziere $u_3$ auf $b_1$ und auf $b_2$ und ziehe die Projetionen von $u_3$
+  ab.
+  \[b_3=u_3 - \frac{u_3\cdot b_1}{b_1\cdot b_1}b_1 - \frac{u_3\cdot b_2}{b_2\cdot b_2}b_2\]
+\end{itemize}
+
+\subsection{Referenzen}
+\begin{itemize}
+    \item \href{jtfm.pdf}{Lineare Algebra} jtfm.tex
+    \item \href{v332.pdf}{Lineare Unabhängigkeit} v332.tex
+    \item \href{f35d.pdf}{Geometrische Algebra} f35d.tex
+    \item \href{93t3.pdf}{$k$-Vektoren} 93t3.tex
+    \item \href{kikd.pdf}{$k$-Blades} kikd.tex
+\end{itemize}
+
+\subsection{Literatur}
+\begin{itemize}
+    \item Alan Macdonald - Linear and Geometric Algebra (2021) Seite 64
+\end{itemize}
+\end{document}

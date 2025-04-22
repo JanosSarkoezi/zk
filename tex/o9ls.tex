@@ -1,0 +1,63 @@
+\documentclass{sajzk}
+
+\begin{document}
+\section{Summe von Punkten an verscheiden Orten}
+\section{Reductio Ad Absurdum (RAA)}
+\label{o9ls}
+\lhead{:mathe:logik:kalkül:}
+
+Enthält eine Ableitung eine $FK$-Formel, und hängt dieser unter anderem von der
+Annahme A ab, dann darf die Negation von A in deine neue Zeile aufgenommen
+werden. Die neue Annahmeliste ist eine Kopie der Annahmeliste der $FK$-Formel
+verkürzt um die Zeilennummer der Annahme A.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme                  & Nummer & Formel            & Regel \\
+  \hline
+  $k^\star$                & (k)    & A                 & AE \\
+  \hline
+  $\alpha, k^\star$        & (l)    & B $\land\lnot$B   & AE \\
+  \hline
+  $\alpha$                 & (m)    & $\lnot$A          & k,l RAA\\
+  \hline
+\end{tabular}
+\end{center}
+\textsc{Bemerkung:} FK steht für formale Kontradiktion, also für $P\land\lnot
+P$.
+
+\textsc{Beispiele:}
+\begin{center}
+    \[P \ra Q, P \ra\lnot Q \therefore \lnot Q \] \\
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme            & Nummer & Formel           & Regel \\
+  \hline
+  1                  & (1)    & $P \ra Q$        & AE \\
+  \hline
+  2                  & (2)    & $P \ra\lnot Q$   & AE \\
+  \hline
+  $3^\star$          & (3)    & $P$              & AE \\
+  \hline
+  $1, 3^\star$       & (4)    & $Q$              & 1,3 MPP \\
+  \hline
+  $2, 3^\star$       & (5)    & $\lnot Q$        & 2,3 MPP \\
+  \hline
+  $1,2,3^\star$      & (6)    & $Q \land\lnot Q$ & 4,5 $\land$E \\
+  \hline
+  1,2                & (7)    & $\lnot P$        & 3,6 RAA \\
+  \hline
+\end{tabular}
+\end{center}
+Es gilt: $P \lor Q \vdash_J Q \lor P$
+\subsection{Referenzen}
+\begin{itemize}
+    \item \href{8hkr.pdf}{Kalkül der Aussagenlogik} 8hkr.tex
+\end{itemize}
+
+\subsection{Literatur}
+\begin{itemize}
+    \item Timm Lampert - Klassische Logik (2004) Seite 101-102
+\end{itemize}
+\end{document}

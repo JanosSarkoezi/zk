@@ -1,0 +1,80 @@
+\documentclass{sajzk}
+
+\begin{document}
+\section{Modus Ponendo Ponens (MPP)}
+\label{69fy}
+\lhead{:mathe:logik:kalkül:}
+
+Enthält eine Ableitung sowohl eine Formel mit $'\ra'$ als Hauptjunktor als auch
+das Antezedenz dieser Formel, dann darf ihr Konsequenz in eine \textit{neue}
+Zeile aufgenommen werden. Die Annahmeliste der neuen Zeile wird zusammengesetzt
+aus den Annahmelisten der beiden Oberformeln.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme         & Nummer & Formel        & Regel \\
+  \hline
+  $\alpha$        & (k)    & A             &  \\
+  \hline
+  $\beta$         & (l)    & A $\ra$ B     &  \\
+  \hline
+  $\alpha, \beta$ & (m)    & B             & l,k MPP \\
+  \hline
+\end{tabular}
+\end{center}
+
+Die Reihenfolge des Vorkommens der Oberformeln ist beliebig.
+
+\textsc{Beispiele:}
+\begin{center}
+    \[P, P \ra Q \therefore Q\] \\
+
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme      & Nummer & Formel & Regel \\
+  \hline
+  1   & (1)    & $P$             & AE \\
+  \hline
+  2   & (2)    & $P \ra Q$       & AE \\
+  \hline
+  1,2 & (3)    & $Q$             & 2,1 MPP \\
+  \hline
+\end{tabular}
+\end{center}
+
+Es gilt: $P, P \ra Q \vdash_J Q$
+\newpage
+\begin{center}
+    \[P \ra (Q\ra R), P \ra Q, P \therefore R\] \\
+
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme        & Nummer & Formel   & Regel \\
+  \hline
+  1     & (1)    & $P \ra (Q\ra R)$  & AE \\
+  \hline
+  2     & (2)    & $P \ra Q$         & AE \\
+  \hline
+  3     & (3)    & $P$               & AE \\
+  \hline
+  1,3   & (4)    & $Q \ra R$         & 1,3 MPP \\
+  \hline
+  2,3   & (5)    & $Q$               & 2,3 MPP \\
+  \hline
+  1,2,3 & (6)    & $R$               & 4,5 MPP \\
+  \hline
+\end{tabular}
+\end{center}
+
+Es gilt: $P \ra (Q\ra R), P \ra Q, P \vdash_J R$
+\subsection{Referenzen}
+\begin{itemize}
+    \item \href{8hkr.pdf}{Kalkül der Aussagenlogik} 8hkr.tex
+\end{itemize}
+
+\subsection{Literatur}
+\begin{itemize}
+    \item Timm Lampert - Klassische Logik (2004) Seite 92-93
+\end{itemize}
+\end{document}

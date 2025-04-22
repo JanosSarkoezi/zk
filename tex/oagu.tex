@@ -1,0 +1,49 @@
+\documentclass{sajzk}
+
+\begin{document}
+\section{\texorpdfstring{Der $k$-Vektorteil eines Multivektors}{Der k-Vektorteil eines Multivektors}}
+\label{oagu}
+\lhead{:mathe:ga:}
+Der $k$-Vektorteil eines Multivektors aus dem $\mathscr{G}^n$ besteht nur aus der Linearkombination der $k$-Blades. Wenn $A$ ein Multivektor ist dann wird mit
+\[
+\langle A\rangle_k
+\]
+der $k$-Vektorteil bezeichnet.
+
+Die Abbildung $\langle ...\rangle_k$ wird auch als Gradoperator genannt. Sie erfüllt folgende Eigenschaften:
+\begin{align*}
+  \langle A + B\rangle_k &= \langle A \rangle_k + \langle B \rangle_k \\
+  \langle \lambda A\rangle_k &= \lambda \langle A \rangle_k = \langle
+  A\rangle_k\lambda\hspace{3ex}\textrm{wenn }\lambda = \langle\lambda\rangle_0 \\
+  \langle\langle A\rangle_k\rangle_k &= \langle A \rangle_k
+\end{align*}
+
+\textsc{Beispiele:}
+\begin{itemize}
+  \item  Sei ein $A$ ein Multivektor aus dem $\mathscr{G}^3$. Dann kann $A$ als Summe der
+  $k$-Vektorteile dargestellt werden:
+  \[
+  A = \langle A\rangle_0 + \langle A\rangle_1 + \langle A\rangle_2 + \langle A\rangle_3
+  \]
+  \item Das geometische Produkt der Vektoren $u$ und $v$ kann auch in die
+  $k$-Vektorteile aufgespalten werden.
+  \[
+  uv = \langle uv\rangle_0 + \langle uv\rangle_1 + \langle uv\rangle_2
+  \]
+  wobei $\langle uv\rangle_0 = u \cdot v$, $\langle uv\rangle_1 = 0$ und $\langle uv\rangle_2 = u\wedge v$ ist.
+\end{itemize}
+
+\subsection{Referenzen}
+\begin{itemize}
+    \item \href{f35d.pdf}{Geometrische Algebra} f35d.tex
+    \item \href{kikd.pdf}{$k$-Blades} kikd.tex
+    \item \href{93t3.pdf}{$k$-Vektoren} 93t3.tex
+    \item \href{eelx.pdf}{Die Umkehrung eines Multivektors} eelx.tex
+\end{itemize}
+
+\subsection{Literatur}
+\begin{itemize}
+    \item Alan Macdonald - Linear and Geometric Algebra (2021) Seite 96
+    \item David Hestenes - New Foundations for Classical Mechanics (2002) Seite 34
+\end{itemize}
+\end{document}

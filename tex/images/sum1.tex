@@ -1,0 +1,28 @@
+\documentclass[tikz]{standalone}
+\usepackage{amsmath, amssymb, amsfonts}
+\usetikzlibrary {arrows.meta}
+\usetikzlibrary {calc}
+\begin{document}
+\begin{tikzpicture}[>=Stealth,
+        point/.style={circle, fill=black, minimum size=1pt, scale=0.5}]
+    \coordinate (f1) at (0, 0);
+    \coordinate (f2) at (5, 0);
+    \coordinate (h) at (1, -2);
+    \coordinate (s) at ($(f1)!0.25!(f2)$);
+    \coordinate (hs) at ($(h)!0.25!(f2)$);
+
+    \draw (f1) -- (f2);
+    \draw (h) -- (f2);
+    \draw (h) -- (f1);
+    \draw (hs) -- (s);
+
+    \node[point, label=$\mathfrak{m}_1f_1$] at (f1) {};
+    \node[point, label=$\mathfrak{m}_2f_2$] at (f2) {};
+    \node[point, label=$\mathfrak{m}s$] at (s) {};
+
+    \draw [->, thick] (f2) to [out=230, in=0]
+    node [below, sloped]  (m1) {$\mathfrak{m}_1$} (hs);
+    \draw [->, thick] (hs) to [out=230, in=0]
+    node [below, sloped]  (m1) {$\mathfrak{m}_2$} (h);
+\end{tikzpicture}
+\end{document}

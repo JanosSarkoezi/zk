@@ -1,0 +1,47 @@
+\documentclass{sajzk}
+
+\begin{document}
+\section{Gesetz vom ausgeschlossenen Dritten (Tertium non Datur)(GTD)}
+\label{jjkp}
+\lhead{:mathe:logik:kalkül:}
+\textbf{GTD:} $\vdash A\lor\lnot A$
+
+\textbf{Theorem} $\vdash P\lor\lnot P$
+
+\textbf{Ableitung:}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme            & Nr. & Formel                                       & Regel \\
+  \hline
+  $1^\star$          & (1)    & $\lnot(P\lor\lnot P)$                     & AE \\
+  \hline
+  $2^\star$          & (2)    & $P$                                       & AE \\
+  \hline
+  $2^\star$          & (3)    & $P\lor\lnot P$                            & 2 $\lor$E \\
+  \hline
+  $1^\star,2^\star$  & (4)    & $(P\lor\lnot P)\land\lnot(P\lor\lnot P)$  & 3,1 $\land$E \\
+  \hline
+  $1^\star$          & (5)    & $\lnot P$                                 & 2,4 RAA \\
+  \hline
+  $1^\star$          & (6)    & $P\lor\lnot P$                            & 5 $\lor$E \\
+  \hline
+  $1^\star$          & (7)    & $(P\lor\lnot P)\land\lnot(P\lor\lnot P)$  & 6,1 $\land$E \\
+  \hline
+                     & (8)    & $\lnot\lnot(P\lor\lnot P)$                & 1,7 RAA \\
+  \hline
+                     & (9)    & $P\lor\lnot P$                            & 7 DNB \\
+  \hline
+\end{tabular}
+\end{center}
+
+\subsection{Referenzen}
+\begin{itemize}
+    \item \href{s52i.pdf}{Logische Gesetze} s52i.tex
+\end{itemize}
+
+\subsection{Literatur}
+\begin{itemize}
+    \item Timm Lampert - Klassische Logik (2004) Seite 121
+\end{itemize}
+\end{document}

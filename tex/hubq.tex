@@ -1,0 +1,54 @@
+\documentclass{sajzk}
+
+\begin{document}
+\section{Gesetz der doppelten Negation (GDN)}
+\label{hubq}
+\lhead{:mathe:logik:kalkül:}
+
+\textbf{GDN1:} $\vdash A\ra\lnot\lnot A$
+
+\textbf{Theorem} $\vdash P\ra\lnot\lnot P$
+
+\textbf{Ableitung:}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme            & Nr. & Formel                     & Regel \\
+  \hline
+  $1^\star$          & (1)    & $P$                     & AE \\
+  \hline
+  $1^\star$          & (2)    & $\lnot\lnot P$          & 1 DNE \\
+  \hline
+                     & (3)    & $P\ra\lnot\lnot P$      & \\
+  \hline
+\end{tabular}
+\end{center}
+\newpage
+\textbf{GDN2:} $\vdash \lnot\lnot A\ra A$
+
+\textbf{Theorem} $\vdash \lnot\lnot P\ra P$
+
+\textbf{Ableitung:}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme            & Nr. & Formel                     & Regel \\
+  \hline
+  $1^\star$          & (1)    & $\lnot\lnot P$          & AE \\
+  \hline
+  $1^\star$          & (2)    & $P$                     & 1 DNB \\
+  \hline
+                     & (3)    & $\lnot\lnot P\ra P$     & \\
+  \hline
+\end{tabular}
+\end{center}
+\subsection{Referenzen}
+\begin{itemize}
+  \item \href{s52i.pdf}{Logische Gesetze} s52i.tex
+\end{itemize}
+
+\subsection{Literatur}
+\begin{itemize}
+    \item Timm Lampert - Klassische Logik (2004) Seite 121-122
+\end{itemize}
+\end{document}

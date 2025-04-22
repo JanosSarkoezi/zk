@@ -1,0 +1,97 @@
+\documentclass{sajzk}
+
+\begin{document}
+\section{Konditionlaisierung (K)}
+\label{5qwp}
+\lhead{:mathe:logik:kalkül:}
+Ist A einer der \textit{Annahmen}, von denen die Ablietung von B abhängt, so
+darf das Konditional mit A als Antezedenz und B als Konsequenz in eine neue
+Zeile aufgenommen werden. Die neue Annahmeliste ergibt sich aus der Annahmeliste
+von B durch Streichung der Zeilennummer der Annahme A.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme            & Nummer & Formel     & Regel \\
+  \hline
+  $k^\star$          & (k)    & A          & AE \\
+  \hline
+  $\alpha, k^\star$  & (l)    & B          &  \\
+  \hline
+  $\alpha$           & (m)    & A $\ra$ B  & k,l K \\
+  \hline
+\end{tabular}
+\end{center}
+Das Sternchen hinter der Zeilennummer der Formel A, kennzeichnet diese als
+Hilfsannahme für die Ableitung der Formel in der Zeile m, in deren Annahmeliste
+nicht mehr auf die Formel A bezug genommen wird.
+
+\textsc{Beispiele:}
+\begin{center}
+    \[P \ra Q \therefore \lnot Q \ra \lnot P\] \\
+
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme     & Nummer & Formel               & Regel \\
+  \hline
+  1           & (1)    & $P \ra Q$            & AE \\
+  \hline
+  $2^\star$   & (2)    & $\lnot Q$            & AE \\
+  \hline
+  $1,2^\star$ & (3)    & $\lnot P$            & 1,2 MTT \\
+  \hline
+  1           & (4)   & $\lnot Q\ra \lnot P$  & 2,3 K \\
+  \hline
+\end{tabular}
+\end{center}
+Es gilt: $P \ra Q \vdash_J \lnot Q \ra \lnot P$
+
+\begin{center}
+    \[P \ra (Q \ra R) \therefore  Q \ra (P \ra R)\] \\
+
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme             & Nummer & Formel              & Regel \\
+  \hline
+  1                   & (1)    & $P \ra (Q \ra R)$   & AE \\
+  \hline
+  $2^\star$           & (2)    & $P$                 & AE \\
+  \hline
+  $3^\star$           & (3)    & $Q$                 & AE \\
+  \hline
+  $1,2^\star$         & (4)    & $Q \ra R$           & 1,2 MPP \\
+  \hline
+  $1,2^\star,3^\star$ & (5)    & $R$                 & 4,3 MPP \\
+  \hline
+  $1,3^\star$         & (6)    & $P\ra R$            & 2,5 K \\
+  \hline
+  $1$                 & (7)    & $Q \ra (P\ra R)$    & 3,5 K \\
+  \hline
+\end{tabular}
+\end{center}
+Es gilt: $P \ra (Q \ra R) \vdash_J Q \ra (P \ra R)$
+
+\begin{center}
+    \[P \ra P\] \\
+
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme         & Nummer  & Formel      & Regel \\
+  \hline
+  $1^\star$       & (1)     & $P$         & AE \\
+  \hline
+                  & (2)     & $P \ra P$   & 1,1 K \\
+  \hline
+\end{tabular}
+\end{center}
+Es gilt: $\vdash_J P \ra P$
+\subsection{Referenzen}
+\begin{itemize}
+    \item \href{8hkr.pdf}{Kalkül der Aussagenlogik} 8hkr.tex
+\end{itemize}
+
+\subsection{Literatur}
+\begin{itemize}
+    \item Timm Lampert - Klassische Logik (2004) Seite 96-97
+\end{itemize}
+\end{document}

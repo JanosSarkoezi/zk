@@ -1,0 +1,90 @@
+\documentclass{sajzk}
+
+\begin{document}
+\section{Konjunktor-Einführungsregel \texorpdfstring{($\land$E)}{(and E)}}
+\label{zzno}
+\lhead{:mathe:logik:kalkül:}
+Enthält eine Ableitung die Formel A als auch die Formel B, dann darfi die
+Konjunktion der beiden Formeln in einer neuen Zeile aufgenommen werden. Die
+Annahnmeliste der euen Zeile, wird zusammengesetzt aus den beiden
+Annahnmelisten der beiden Oberformeln.
+
+\begin{center}
+  \begin{minipage}[t]{0.4\textwidth}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      Ann.               & Nr.    & Formel       & Regel \\
+      \hline
+      $\alpha$           & (k)    & A            & AE \\
+      \hline
+      $\beta$            & (l)    & B            &  \\
+      \hline
+      $\alpha, \beta$    & (m)    & A $\land$ B  & k,l $\land$E \\
+      \hline
+    \end{tabular}
+  \end{minipage}
+  \begin{minipage}[t]{0.4\textwidth}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      Ann.               & Nr.    & Formel       & Regel \\
+      \hline
+      $\alpha$           & (k)    & A            & AE \\
+      \hline
+      $\beta$            & (l)    & B            &  \\
+      \hline
+      $\alpha, \beta$    & (m)    & B $\land$ A  & l,k $\land$E \\
+      \hline
+    \end{tabular}
+  \end{minipage}
+\end{center}
+
+\textsc{Beispiele:}
+\begin{center}
+    \[P, Q \therefore P \land Q\] \\
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme            & Nummer & Formel       & Regel \\
+  \hline
+  1                  & (1)    & $P$          & AE \\
+  \hline
+  2                  & (2)    & $Q$          & AE \\
+  \hline
+  3                  & (3)    & $P \land Q$  & 1,2 $\land$E \\
+  \hline
+\end{tabular}
+\end{center}
+Es gilt: $P, Q \vdash_J P \land Q$
+\newpage
+\begin{center}
+    \[P \ra Q, P \ra R \therefore P \ra (Q\land R)\]
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Annahme            & Nummer & Formel                 & Regel \\
+  \hline
+  1                  & (1)    & $P \ra Q$              & AE \\
+  \hline
+  2                  & (2)    & $P \ra R$              & AE \\
+  \hline
+  $3^\star$          & (3)    & $P$                    & AE \\
+  \hline
+  $1, 3^\star$       & (4)    & $Q$                    & 1,3 MPP \\
+  \hline
+  $2, 3^\star$       & (5)    & $R$                    & 2,3 MPP \\
+  \hline
+  $1, 2, 3^\star$    & (6)    & $Q \land R$            & 4,5 $\land$E \\
+  \hline
+  $1, 2$             & (7)    & $P \ra (Q \land R)$    & 3,6 K \\
+  \hline
+\end{tabular}
+\end{center}
+Es gilt: $P \ra Q, P \ra R \vdash_J P \ra (Q\land R)$
+\subsection{Referenzen}
+\begin{itemize}
+    \item \href{8hkr.pdf}{Kalkül der Aussagenlogik} 8hkr.tex
+\end{itemize}
+
+\subsection{Literatur}
+\begin{itemize}
+    \item Timm Lampert - Klassische Logik (2004) Seite 99-100
+\end{itemize}
+\end{document}
