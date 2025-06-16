@@ -1,0 +1,6 @@
+# Wunschliste für NeoVim Setup
+
+- Plugins: So wenig wie möglich. Nur das Nötigste, um die Funktionalität zu gewährleisten.
+- Verzeichnisse: Schneller und einfacher Wechsel zwischen verschiedenen Arbeitsverzeichnissen/Projekten.
+- Dateisuche: Suche nach Dateinamen innerhalb der Verzeichnisse. Priorität auf `fd`. Falls zu komplex, dann ein einfacher Fuzzy Finder.
+- Inhaltssuche: Suchen nach Text in Dateien (Grep-Style). Die Ergebnisse müssen zwingend in die Quickfix-Liste von NeoVim geladen werden, um sie effizient abzuarbeiten.

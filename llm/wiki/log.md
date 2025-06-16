@@ -1,0 +1,105 @@
+# Wiki Log
+
+Protokoll über Erstellungen und Änderungen.
+
+- **2026-04-15**: Erstellung der Basis-Struktur (`specs.md`, `index.md`).
+- **2026-04-15**: Ingest der Axiome aus H. Heuser - Kapitel 1:
+  - `peano_axiome`
+  - `koerperaxiome`
+  - `ordnungsaxiome`
+  - `schnittaxiom`
+  - `metrische_axiome`
+- **2026-04-15**: Ingest der Inhalte aus H. Heuser - Kapitel 2:
+  - `vektorraumaxiome`
+  - `funktion_definition`
+  - `identitaetssatz_polynome`
+  - `polynomdivision_rest`
+  - `lagrange_interpolation`
+  - `abzaehlbarkeit_q`
+  - `abzaehlbarkeit_vereinigung`
+  - `ueberabzaehlbarkeit_r`
+  - `satz_von_cantor`
+- **2026-04-15**: Ingest der Inhalte aus H. Heuser - Kapitel 3:
+  - `supremum_infimum`
+  - `grenzwert_definition`
+  - `eindeutigkeit_grenzwert`
+  - `beschraenktheit_konvergenter_folgen`
+  - `grenzwertsaetze_arithmetik`
+  - `vergleichssatz_grenzwerte`
+  - `einschliessungssatz`
+  - `monotoniekriterium`
+  - `bolzano_weierstrass`
+  - `cauchy_kriterium`
+  - `grenzwertsatz_cauchy_mittel`
+- **2026-04-15**: Ingest der Inhalte aus H. Heuser - Kapitel 4:
+  - `reihe_definition`
+  - `nullfolgenkriterium_reihe`
+  - `absolute_konvergenz`
+  - `leibniz_kriterium`
+  - `quotientenkriterium`
+  - `wurzelkriterium`
+- **2026-04-20**: Ingest der Inhalte aus H. Heuser - Kapitel 5:
+  - `stetigkeit_folgen_definition`
+  - `stetigkeit_arithmetik`
+  - `stetigkeit_epsilon_delta_definition`
+  - `nullstellensatz_bolzano`
+  - `zwischenwertsatz`
+  - `kompaktheit_folgen_definition`
+  - `extremalsatz_weierstrass`
+  - `stetigkeit_gleichmaessig_definition`
+  - `satz_von_heine`
+  - `heine_borel_satz`
+  - `grenzwert_funktion_definition`
+- **2026-04-20**: Ingest der Inhalte aus H. Heuser - Kapitel 6:
+  - `ableitung_definition`
+  - `differenzierbarkeit_stetigkeit`
+  - `ableitungsregeln_arithmetik`
+  - `kettenregel`
+  - `ableitung_umkehrfunktion`
+  - `mittelwertsatz_differentialrechnung`
+  - `lhospital_regel`
+- **2026-04-20**: Ingest der Inhalte aus H. Heuser - Kapitel 7:
+  - `lokale_extrema_kriterium`
+  - `wendepunkt_definition`
+  - `hyperbelfunktionen_definition`
+  - `stammfunktion_definition`
+  - `hoelder_ungleichung`
+  - `minkowski_ungleichung`
+  - `jensen_ungleichung`
+- **2026-04-21**: Ergänzung aus H. Heuser - Kapitel 6:
+  - `konvexitaet_definition`
+- **2026-04-21**: Ingest der Inhalte aus H. Heuser - Kapitel 8:
+  - `mittelwertsatz_hoehere_differenzen`
+  - `satz_von_taylor`
+  - `potenzreihe_definition_konvergenz`
+  - `potenzreihe_differenzierbarkeit`
+  - `potenzreihe_identitaetssatz`
+  - `abelscher_grenzwertsatz`
+- **2026-04-21**: Ingest der Inhalte aus H. Heuser - Kapitel 9:
+  - `newton_verfahren_satz`
+  - `bernoulli_zahlen_definition`
+  - `dgl_linear_homogen_n_ordnung`
+  - `dgl_linear_inhomogen_n_ordnung`
+- **2026-04-21**: Ingest der Inhalte aus H. Heuser - Kapitel 10 (Integration):
+  - `riemann_integral_definition`
+  - `darboux_integrale_definition`
+  - `riemann_integrabilitaet_kriterium`
+  - `lebesgue_integrabilitaetskriterium`
+  - `hauptsatz_differential_integralrechnung`
+  - `stetigkeit_impliziert_integrabilitaet`
+  - `integrationsregeln_arithmetik`
+  - `substitutionsregel`
+  - `partielle_integration`
+  - `mittelwertsatz_integralrechnung`
+  - `erweiterter_mittelwertsatz_integralrechnung`
+- **2026-04-22**: Refactoring der Parser-Source:
+  - Rename `src/parser.c` -> `src/import.c`
+  - Rename `src/parser.h` -> `src/import.h`
+  - Update `meson.build` und Includes.
+- **2026-04-22**: Ingest der Inhalte aus H. Heuser - Kapitel 3 (Häufungswerte):
+  - `limes_superior_inferior_definition`
+  - `limes_superior_inferior_eigenschaften`
+- **2026-04-22**: Ingest der Inhalte aus H. Heuser - Kapitel 11 (Uneigentliche Integrale):
+  - `uneigentliches_integral_unbeschraenkt_definition`
+  - `uneigentliches_integral_konvergenzkriterien`
+  - `integralkriterium_konvergenz`
