@@ -1,0 +1,82 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\title{Beweise geometrischer Schnittpunkte mit der Plane-Based Geometric Algebra (PGA)}
+\author{Generiert aus dem Dokument PGA4CS.pdf}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Grundlegende Darstellung in PGA}
+
+Wir definieren die drei Eckpunkte eines Dreiecks als Trivektoren $p_A$, $p_B$ und $p_C$. Die Geraden, die die Seiten bilden, werden durch den \textbf{Join} der Punkte dargestellt:
+\begin{itemize}
+    \item Seite c (zwischen A und B): $L_c = p_A \vee p_B$
+    \item Seite a (zwischen B und C): $L_a = p_B \vee p_C$
+    \item Seite b (zwischen C und A): $L_b = p_C \vee p_A$
+\end{itemize}
+
+\section{Beweis für die Seitenhalbierenden (Mediane)}
+
+Die Seitenhalbierenden sind Geraden, die eine Ecke des Dreiecks mit dem Mittelpunkt der gegenüberliegenden Seite verbinden.
+
+\subsection*{1. Mittelpunkte finden}
+Der Mittelpunkt $m_c$ der Strecke $AB$ ist die Summe der Punkte $p_A$ und $p_B$:
+\begin{itemize}
+    \item $m_c = p_A + p_B$
+    \item $m_a = p_B + p_C$
+    \item $m_b = p_C + p_A$
+\end{itemize}
+
+\subsection*{2. Seitenhalbierende Geraden definieren}
+Die Seitenhalbierenden werden als Join eines Eckpunktes und des Mittelpunktes der gegenüberliegenden Seite definiert:
+\begin{itemize}
+    \item $M_c = p_C \vee m_c = p_C \vee (p_A + p_B)$
+    \item $M_a = p_A \vee m_a = p_A \vee (p_B + p_C)$
+    \item $M_b = p_B \vee m_b = p_B \vee (p_C + p_A)$
+\end{itemize}
+
+\subsection*{3. Schnittpunkt finden}
+Der Schnittpunkt $P_s$ zweier Seitenhalbierenden, z.B. $M_a$ und $M_b$, wird durch ihr \textbf{Meet} dargestellt. Im Kontext der PGA entspricht dies dem äußeren Produkt:
+\begin{align*}
+P_s &= M_a \wedge M_b \\
+&= (p_A \wedge (p_B + p_C)) \wedge (p_B \wedge (p_C + p_A)) \\
+&= p_A \wedge p_B \wedge p_C
+\end{align*}
+Das Resultat $p_A \wedge p_B \wedge p_C$ stellt den Schwerpunkt des Dreiecks dar.
+
+\subsection*{4. Beweis, dass sich alle drei Geraden in einem Punkt treffen}
+Um zu zeigen, dass die dritte Seitenhalbierende $M_c$ ebenfalls durch diesen Punkt $P_s$ verläuft, muss das äußere Produkt $M_c \wedge P_s$ Null sein:
+\begin{align*}
+M_c \wedge P_s &= (p_C \wedge (p_A + p_B)) \wedge (p_A \wedge p_B \wedge p_C) \\
+&= 0
+\end{align*}
+Daher treffen sich alle drei Seitenhalbierenden in einem einzigen Punkt.
+
+\section{Beweis für die Winkelhalbierenden (Dualer Ansatz)}
+
+Die Winkelhalbierenden werden am besten als duale Ebenen dargestellt. Eine Winkelhalbierende ist die Summe der beiden Geraden, die den Winkel bilden.
+
+\subsection*{1. Definition der Winkelhalbierenden als duale Ebenen}
+\begin{itemize}
+    \item Winkelhalbierende an Punkt A: $E_A = L_b + L_c$
+    \item Winkelhalbierende an Punkt B: $E_B = L_c + L_a$
+    \item Winkelhalbierende an Punkt C: $E_C = L_a + L_b$
+\end{itemize}
+
+\subsection*{2. Schnittpunkt finden}
+Der Schnittpunkt der drei Winkelhalbierenden (der Inkreismittelpunkt) wird durch ihr \textbf{Meet}, das äußere Produkt, dargestellt:
+\begin{align*}
+I &= E_A \wedge E_B \wedge E_C \\
+&= (L_b + L_c) \wedge (L_c + L_a) \wedge (L_a + L_b) \\
+&= 2(L_a \wedge L_b \wedge L_c)
+\end{align*}
+(Hinweis: Die antikommutative Eigenschaft $A \wedge B = -B \wedge A$ wurde verwendet.)
+
+\subsection*{3. Beweis, dass sich alle drei Geraden in einem Punkt treffen}
+Das Ergebnis des äußeren Produkts $I = 2(L_a \wedge L_b \wedge L_c)$ ist ein nicht-null-Trivektor. Dies beweist, dass sich die drei Winkelhalbierenden (als duale Ebenen) an einem einzigen, eindeutigen Punkt schneiden.
+\end{document}
