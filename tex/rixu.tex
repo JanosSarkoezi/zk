@@ -1,0 +1,105 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{hyperref}
+\title{Ableitung der funktionaldeterminante und bewegung in einem zeitabhängigen kraftfeld}
+\author{erstellt mit hilfe von chatgpt}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{1. gradient eines konstanten gravitationsfeldes}
+
+ein konstantes gravitationsfeld nahe der erdoberfläche hat die form:
+\[
+\vec{g} = (0, 0, -g)
+\]
+der gradient eines vektorfeldes ist ein tensor:
+\[
+\nabla \vec{g} = \begin{pmatrix}
+\frac{\partial g_x}{\partial x} & \frac{\partial g_x}{\partial y} & \frac{\partial g_x}{\partial z} \\
+\frac{\partial g_y}{\partial x} & \frac{\partial g_y}{\partial y} & \frac{\partial g_y}{\partial z} \\
+\frac{\partial g_z}{\partial x} & \frac{\partial g_z}{\partial y} & \frac{\partial g_z}{\partial z}
+\end{pmatrix}
+\]
+da $\vec{g}$ konstant ist, sind alle ableitungen null:
+\[
+\nabla \vec{g} = \mathbf{0}
+\]
+
+\section*{2. zentralfeld und gradient}
+
+in einem zentralen gravitationsfeld (z. b. $\vec{g} = -g m \frac{\vec{r}}{r^3}$) ist der gradient im allgemeinen nicht null, da das feld vom ort abhängt. dort gilt:
+\[
+\nabla \vec{g} \neq 0
+\]
+
+\section*{3. gradient eines zeitabhängigen vektorfeldes}
+
+sei $\vec{f}(x, y, z, t) = (0, 0, a t)$. dann ist der gradient:
+\[
+\nabla \vec{f} = \begin{pmatrix}
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & 0
+\end{pmatrix}
+\]
+da $f_z$ nur von $t$ abhängt, sind alle räumlichen ableitungen null.
+
+\section*{4. bewegung eines punktkörpers in einem solchen feld}
+
+die bewegungsgleichung nach newton lautet:
+\[
+m \ddot{z} = a t \rightarrow \ddot{z} = \frac{a}{m} t
+\]
+integration ergibt:
+\[
+\dot{z}(t) = \frac{a}{2m} t^2 + v_0, \quad z(t) = \frac{a}{6m} t^3 + v_0 t + z_0
+\]
+
+\section*{5. beschreibung mit kontinuumsmechanik}
+
+die bewegung kann durch die cauchy-gleichung beschrieben werden:
+\[
+\rho \frac{d\vec{v}}{dt} = \nabla \cdot \boldsymbol{\sigma} + \rho \vec{b}
+\]
+für einen punktförmigen körper ohne spannung:
+\[
+\frac{d\vec{v}}{dt} = \vec{b} = (0, 0, a t)
+\]
+ergebnis wie zuvor:
+\[
+z(t) = \frac{a}{6} t^3 + v_0 t + z_0
+\]
+
+\section*{6. ableitung der funktionaldeterminante}
+
+die funktionaldeterminante ist:
+\[
+j(t) = \det\left( \frac{\partial \vec{\chi}}{\partial \vec{x}} \right)
+\]
+die ableitung ergibt:
+\[
+\dot{j}(t) = j(t) \cdot \text{tr}\left( \mathbf{f}^{-1}(t) \frac{d \mathbf{f}(t)}{dt} \right)
+\]
+in der kontinuumsmechanik:
+\[
+\dot{j}(t) = j(t) \cdot \nabla \cdot \vec{v}
+\]
+
+\section*{7. herleitung dieser formel}
+
+für $j(t) = \det(\mathbf{f}(t))$, mit $\mathbf{f} = \frac{\partial \vec{\chi}}{\partial \vec{x}}$ gilt:
+\[
+\frac{d}{dt} \det(\mathbf{f}(t)) = \det(\mathbf{f}(t)) \cdot \text{tr}\left( \mathbf{f}^{-1}(t) \frac{d\mathbf{f}(t)}{dt} \right)
+\]
+dies basiert auf der matrixregel für die ableitung der determinante:
+\[
+\frac{d}{dt} \det(\mathbf{a}(t)) = \det(\mathbf{a}(t)) \cdot \text{tr}\left( \mathbf{a}^{-1}(t) \frac{d\mathbf{a}(t)}{dt} \right)
+\]
+
+\end{document}
