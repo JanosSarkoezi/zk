@@ -3,29 +3,29 @@
 ## Frage
 
 > Ich habe eine krasse Klasse gefunden:
-> ```java
-> // Abstrakter Builder
-> public class Builder<T, B extends Builder<T, B>> {
->     protected final T instance;
-> 
->     public Builder(Supplier<T> supplier) {
->         instance = supplier.get();
->     }
-> 
->     public <U> B with(BiConsumer<T, U> setter, U value) {
->         setter.accept(instance, value);
->         return self();
->     }
-> 
->     protected B self() {
->         return (B) this;
->     }
-> 
->     public T build() {
->         return instance;
->     }
-> }
-> ```
+```java
+// Abstrakter Builder
+public class Builder<T, B extends Builder<T, B>> {
+    protected final T instance;
+
+    public Builder(Supplier<T> supplier) {
+        instance = supplier.get();
+    }
+
+    public <U> B with(BiConsumer<T, U> setter, U value) {
+        setter.accept(instance, value);
+        return self();
+    }
+
+    protected B self() {
+        return (B) this;
+    }
+
+    public T build() {
+        return instance;
+    }
+}
+```
 > speziell ist Zeile `public class Builder<T, B extends Builder<T, B>>` schwer
 > zu verstehen. Koenntest du mit diese Zeile erklaeren? Danke dir.
 
