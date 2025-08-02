@@ -183,7 +183,7 @@ Wenn du möchtest, können wir jetzt:
 
 Was sind die Monad gesetze?
 
-Gute Frage! Die **Monadengesetze88 (auch **Monaden-Gesetze**) sind drei Regeln
+Gute Frage! Die **Monadengesetze** (auch **Monaden-Gesetze**) sind drei Regeln
 aus der Kategorientheorie, die sicherstellen, dass eine Monade **sich
 „vernünftig“ verhält**. Wenn du in Java mit einer eigenen `Box<T>`-Klasse
 arbeitest (wie oben gezeigt), helfen dir diese Gesetze dabei zu prüfen, ob du
@@ -286,7 +286,7 @@ Die Objekte in dieser Kategorie sind Typen, zum Beispiel:
 Manchmal betrachtet man auch nur die **reinen Typen** wie `String`, `Integer`,
 etc., und `Box` als **Endofunktor** (dazu gleich mehr).
 
-### ✅ Arrows (Morphismen): Funktionen T → Box<U>
+### ✅ Arrows (Morphismen): Funktionen `T → Box<U>`
 
 Die Morphismen sind Funktionen, die einen "normalen" Wert in eine neue Box transformieren:
 - `String` → `Box<Integer>`

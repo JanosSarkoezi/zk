@@ -128,7 +128,7 @@ Stream<Optional<T>> → flatMap(Optional::stream) → Stream<T>
 … dann bedeutet das:
 - **Alle leeren Optionals** werden **herausgefiltert**, weil
   `Optional.empty().stream()` nichts liefert.
-- **Alle vorhandenen Werte88 werden **"ausgepackt"**, also zu einem normalen
+- **Alle vorhandenen Werte** werden **"ausgepackt"**, also zu einem normalen
   Stream zusammengefügt.
 
 ### Warum nicht einfach map?
