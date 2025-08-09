@@ -133,3 +133,91 @@ public class Main {
   - **Einfachere Erweiterung:** Neue "Besucher"-Logik lässt sich durch das
     Hinzufügen einer Lambda-Funktion registrieren, ohne bestehende Klassen ändern
     zu müssen.
+
+## Frage
+
+Diese Methode wuerde auch bei einem Compositum funktionieren? Wenn also das
+Compositum eine Liste von Kindern hat?
+
+## Antwort
+
+Ja, der funktionale Ansatz funktioniert auch sehr gut mit dem Composite Design
+Pattern. Sie können die Methode `accept` des Composite-Objekts so
+implementieren, dass es die übergebene Funktion rekursiv auf alle seine
+Kind-Elemente anwendet.
+
+### Implementierung im Composite
+
+Um dies zu verdeutlichen, nehmen wir an, dass `Composite` eine Liste von `Element`-Objekten enthält. Die `accept`-Methode im `Composite` würde dann folgendermaßen aussehen:
+
+```java
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Function;
+
+// Das 'Composite' Element
+public class Composite implements Element {
+    private List<Element> children = new ArrayList<>();
+
+    public void add(Element element) {
+        children.add(element);
+    }
+
+    @Override
+    public <R> R accept(Function<Element, R> visitor) {
+        for (Element child : children) {
+            child.accept(visitor);
+        }
+        // Das Composite-Objekt selbst kann auch verarbeitet werden,
+        // oder Sie geben null, einen leeren Wert oder das Ergebnis einer Aggregation zurück.
+        return null;
+    }
+}
+```
+
+In diesem Beispiel durchläuft die `accept`-Methode des `Composite` jedes
+Kind-Element und ruft dessen eigene `accept`-Methode auf, der wiederum der
+gleiche funktionale "Visitor" übergeben wird. Die Verarbeitung der einzelnen
+Blätter (z.B. `ElementA`, `ElementB`) und der Composite-Knoten erfolgt dann wie
+zuvor über die registrierten Lambdas im `FunctionalVisitor`.
+
+### Anwendung im Composite-Kontext
+
+Wenn Sie das `Composite`-Objekt mit diesem funktionalen Visitor verwenden, sähe der Code wie folgt aus:
+
+```java
+// ... (bestehende FunctionalVisitor und Element Klassen)
+
+public class Main {
+    public static void main(String[] args) {
+        FunctionalVisitor visitor = new FunctionalVisitor();
+
+        visitor.register(ElementA.class, (ElementA a) -> {
+            System.out.println("Visiting Leaf ElementA");
+            return null;
+        });
+
+        visitor.register(ElementB.class, (ElementB b) -> {
+            System.out.println("Visiting Leaf ElementB");
+            return null;
+        });
+
+        // Erstellen der Baumstruktur
+        Composite composite1 = new Composite();
+        composite1.add(new ElementA());
+        composite1.add(new ElementB());
+
+        Composite composite2 = new Composite();
+        composite2.add(new ElementA());
+        composite2.add(composite1);
+
+        // Besucher auf den obersten Knoten anwenden
+        composite2.accept(visitor::visit);
+    }
+}
+```
+
+Die `visitor::visit` Methode ist eine Methodenreferenz, die als Lambda-Funktion
+an die `accept`-Methode übergeben wird. Wenn Sie das Programm ausführen, wird
+die Besucherlogik für jedes Blatt-Element im Baum ausgeführt, obwohl Sie nur
+den obersten `Composite`-Knoten besucht haben.
