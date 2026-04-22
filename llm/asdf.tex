@@ -1,0 +1,376 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+
+\usepackage{enumitem}
+\setlist[enumerate]{leftmargin=1cm, itemsep=2pt}
+
+\geometry{a4paper, margin=2.5cm}
+\newtheorem{satz}{Satz}[section]
+\newtheorem{axiom}[satz]{Axiom}
+\newtheorem{lemma}[satz]{Lemma}
+\newtheorem{theorem}[satz]{Theorem}
+\theoremstyle{definition}
+\newtheorem{definition}[satz]{Definition}
+\newtheorem{bemerkung}[satz]{Bemerkung}
+\begin{document}
+\title{Wiki Export}
+\author{LLM-Wiki Parser}
+\maketitle
+
+% --- reihe_definition ---
+\begin{definition}[Definition der unendlichen Reihe]
+Sei $(a_n)_{n \in \mathbb{N}_0}$ eine Folge reeller Zahlen. Die Folge $(s_n)_{n \in \mathbb{N}_0}$ der \textbf{Partialsummen} (Teilsummen) mit
+$s_n = \sum_{k=0}^n a_k = a_0 + a_1 + \dots + a_n$
+heißt \textbf{unendliche Reihe}. Man schreibt dafür symbolisch:
+$\sum_{k=0}^\infty a_k$.
+
+Die Reihe heißt \textbf{konvergent}, wenn die Folge $(s_n)$ ihrer Partialsummen gegen einen Grenzwert $s \in \mathbb{R}$ konvergiert. In diesem Fall nennt man $s$ die \textbf{Summe} der Reihe und schreibt:
+$\sum_{k=0}^\infty a_k = s$.
+Besitzt die Folge der Partialsummen keinen Grenzwert, so heißt die Reihe \textbf{divergent}.
+
+
+\end{definition}
+\begin{proof}
+(Definition erfordert keinen Beweis.)
+Eine unendliche Reihe ist formal nichts anderes als eine spezielle Folge, nämlich die Folge ihrer Teilsummen. Alle Aussagen über die Konvergenz von Reihen lassen sich daher auf die Konvergenz von Folgen zurückführen.
+\end{proof}
+% --- limes_superior_inferior_definition ---
+\begin{definition}[Definition des Limes superior und Limes inferior]
+Jede beschränkte Folge $(a_n)$ reeller Zahlen besitzt einen größten und einen kleinsten Häufungswert.
+
+\begin{enumerate}
+    \item Der größte Häufungswert von $(a_n)$ heißt \textbf{Limes superior} und wird mit $\limsup_{n \to \infty} a_n$ bezeichnet.
+    \item Der kleinste Häufungswert von $(a_n)$ heißt \textbf{Limes inferior} und wird mit $\liminf_{n \to \infty} a_n$ bezeichnet.
+\end{enumerate}
+
+Eine Zahl $a$ ist genau dann der Limes inferior einer beschränkten Folge $(a_n)$, wenn für jedes $\epsilon > 0$ gilt:
+\begin{itemize}
+    \item $a_n < a + \epsilon$ für unendlich viele $n$,
+    \item $a_n < a - \epsilon$ für höchstens endlich viele $n$.
+\end{itemize}
+
+Entsprechend ist $a'$ der Limes superior, wenn für jedes $\epsilon > 0$ gilt:
+\begin{itemize}
+    \item $a_n > a' - \epsilon$ für unendlich viele $n$,
+    \item $a_n > a' + \epsilon$ für höchstens endlich viele $n$.
+\end{itemize}
+
+
+\end{definition}
+\begin{proof}
+Nach dem Satz von Bolzano-Weierstraß besitzt jede beschränkte Folge mindestens einen Häufungswert. Die Menge $H$ aller Häufungswerte einer beschränkten Folge ist selbst beschränkt und abgeschlossen, besitzt also ein Maximum und ein Minimum. Diese Extremwerte definieren den Limes superior bzw. Limes inferior.
+\end{proof}
+% --- konvergenz_funktionen_definition ---
+\begin{definition}[Punktweise und Gleichmäßige Konvergenz]
+Eine Folge von Funktionen $(f_n)$ auf einer Menge $X$ heißt:
+1. \textbf{punktweise konvergent} gegen $f$, wenn für jedes $x \in X$ die Zahlenfolge $(f_n(x))$ gegen $f(x)$ konvergiert.
+2. \textbf{gleichmäßig konvergent} gegen $f$, wenn es zu jedem $\epsilon > 0$ ein $n_0(\epsilon)$ gibt (das nicht von $x$ abhängt), so dass für alle $n > n_0$ und alle $x \in X$ gilt:
+$$|f_n(x) - f(x)| < \epsilon$$
+
+
+\end{definition}
+\begin{proof}
+Die gleichmäßige Konvergenz ist eine stärkere Bedingung als die punktweise Konvergenz. Sie besagt anschaulich, dass die Funktionen $f_n$ ab einem gewissen $n$ komplett innerhalb eines "$\epsilon$-Schlauchs" um die Grenzfunktion $f$ liegen. Formal lässt sich dies über die Supremumsnorm ausdrücken: $f_n \to f$ gleichmäßig genau dann, wenn $\|f_n - f\|_\infty \to 0$.
+\end{proof}
+% --- abelscher_grenzwertsatz ---
+\begin{satz}[Abelscher Grenzwertsatz]
+Konvergiert die Potenzreihe $f(x) = \sum_{n=0}^\infty a_n (x-x_0)^n$ an einem der Randpunkte ihres Konvergenzintervalls, etwa für $x = x_0 + r$, so ist die Funktion $f$ in diesem Punkt (linksseitig) stetig, d.h. es gilt:
+$$\lim_{x \to (x_0+r)^-} f(x) = \sum_{n=0}^\infty a_n r^n$$
+
+
+\end{satz}
+\begin{proof}
+Der Beweis nutzt die Abelsche Partielle Summation, um die Konvergenz der Reihe am Randpunkt auf eine gleichmäßige Konvergenz im Intervall $[x_0, x_0+r]$ zurückzuführen.
+\end{proof}
+% --- absolute_konvergenz ---
+\begin{satz}[Absolute Konvergenz von Reihen]
+Eine unendliche Reihe $\sum a_n$ heißt \textbf{absolut konvergent}, wenn die Reihe der Absolutbeträge $\sum |a_n|$ konvergiert.
+Jede absolut konvergente Reihe ist auch (im gewöhnlichen Sinne) konvergent, und es gilt:
+$|\sum_{n=0}^\infty a_n| \le \sum_{n=0}^\infty |a_n|$.
+
+
+\end{satz}
+\begin{proof}
+Die Konvergenz folgt aus dem Cauchy-Kriterium für Reihen. Für $m > n$ gilt mit der allgemeinen Dreiecksungleichung:
+$|s_m - s_n| = |\sum_{k=n+1}^m a_k| \le \sum_{k=n+1}^m |a_k|$.
+Da $\sum |a_n|$ konvergiert, ist die rechte Seite für große $n, m$ beliebig klein. Somit erfüllt auch $\sum a_n$ das Cauchy-Kriterium und ist konvergent. 
+Die Ungleichung folgt durch Grenzübergang aus der endlichen Dreiecksungleichung.
+\end{proof}
+% --- cauchy_kriterium ---
+\begin{satz}[Cauchy-Konvergenzkriterium]
+Eine Folge $(a_n)$ reeller Zahlen konvergiert genau dann, wenn sie eine Cauchy-Folge ist. 
+Das heißt: Zu jedem $\epsilon > 0$ existiert ein $n_0 \in \mathbb{N}$, so dass für alle $m, n > n_0$ gilt: $|a_n - a_m| < \epsilon$.
+
+
+\end{satz}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+    \item \textbf{Notwendigkeit}: Falls $a_n \to a$, dann gilt $|a_n - a_m| \le |a_n - a| + |a - a_m| < \epsilon/2 + \epsilon/2 = \epsilon$ für große $n, m$.
+
+    \item \textbf{Hinlänglichkeit}: Sei $(a_n)$ eine Cauchy-Folge. 
+    Zunächst ist jede Cauchy-Folge beschränkt. 
+    Nach Bolzano-Weierstraß gibt es eine konvergente Teilfolge $a_{n_k} \to a$.
+    Wir zeigen nun $a_n \to a$:
+    Zu $\epsilon > 0$ wähle $N$, so dass $|a_n - a_m| < \epsilon/2$ für $n, m > N$.
+    Wähle $k$, so dass $n_k > N$ und $|a_{n_k} - a| < \epsilon/2$.
+    Für $n > N$ gilt dann:
+    $|a_n - a| \le |a_n - a_{n_k}| + |a_{n_k} - a| < \epsilon/2 + \epsilon/2 = \epsilon$.
+    Somit konvergiert die gesamte Folge gegen $a$.
+\end{enumerate}
+\end{proof}
+% --- potenzreihe_differenzierbarkeit ---
+\begin{satz}[Differenzierbarkeit von Potenzreihen]
+Eine Potenzreihe $f(x) = \sum_{n=0}^\infty a_n (x-x_0)^n$ ist im Innern ihres Konvergenzintervalls $K = (x_0-r, x_0+r)$ beliebig oft differenzierbar. Die Ableitungen können durch \textbf{gliedweise Differentiation} berechnet werden:
+$$f'(x) = \sum_{n=1}^\infty n a_n (x-x_0)^{n-1}$$
+Die abgeleitete Reihe hat denselben Konvergenzradius $r$ wie die ursprüngliche Reihe.
+
+
+\end{satz}
+\begin{proof}
+Der Beweis nutzt die Tatsache, dass eine Potenzreihe innerhalb ihres Konvergenzradius lokal gleichmäßig konvergiert. Da $\limsup \sqrt[n]{n|a_n|} = \limsup \sqrt[n]{|a_n|}$ (wegen $\sqrt[n]{n} \to 1$), bleibt der Konvergenzradius erhalten.
+\end{proof}
+% --- limes_superior_inferior_eigenschaften ---
+\begin{satz}[Eigenschaften des Limes superior und Limes inferior]
+Für beschränkte Folgen $(a_n)$ und $(b_n)$ gelten folgende Eigenschaften:
+
+1. \textbf{Einschließung}: $\inf \{a_n\} \le \liminf_{n \to \infty} a_n \le \limsup_{n \to \infty} a_n \le \sup \{a_n\}$.
+2. \textbf{Konvergenzkriterium}: Eine Folge $(a_n)$ konvergiert (oder divergiert bestimmt gegen $\pm\infty$) genau dann, wenn $\liminf_{n \to \infty} a_n = \limsup_{n \to \infty} a_n$. In diesem Fall gilt:
+   $$\lim_{n \to \infty} a_n = \liminf_{n \to \infty} a_n = \limsup_{n \to \infty} a_n$$
+3. \textbf{Subadditivität}: $\limsup_{n \to \infty} (a_n + b_n) \le \limsup_{n \to \infty} a_n + \limsup_{n \to \infty} b_n$.
+4. \textbf{Teilfolgen}: Für jede konvergente Teilfolge $(a_{n_k})$ von $(a_n)$ gilt:
+   $$\liminf_{n \to \infty} a_n \le \lim_{k \to \infty} a_{n_k} \le \limsup_{n \to \infty} a_n$$
+
+
+\end{satz}
+\begin{proof}
+Die Beweise ergeben sich aus der Definition der Häufungswerte und der Extremaleigenschaft von Limes superior/inferior innerhalb der Menge aller Häufungswerte. Die Gleichheit im Konvergenzfall folgt daraus, dass eine Folge genau dann konvergiert, wenn sie beschränkt ist und nur einen einzigen Häufungswert besitzt.
+\end{proof}
+% --- einschliessungssatz ---
+\begin{satz}[Einschließungssatz (Sandwich-Theorem)]
+Seien $(a_n), (b_n)$ und $(c_n)$ Folgen mit $a_n \le c_n \le b_n$ für fast alle $n$. Falls $\lim_{n \to \infty} a_n = \lim_{n \to \infty} b_n = a$, dann konvergiert auch $(c_n)$ gegen $a$.
+
+
+\end{satz}
+\begin{proof}
+Zu $\epsilon > 0$ wähle $n_1, n_2$, so dass $|a_n - a| < \epsilon$ für $n > n_1$ und $|b_n - a| < \epsilon$ für $n > n_2$. Für $n > \max(n_1, n_2)$ gilt:
+$a - \epsilon < a_n \le c_n \le b_n < a + \epsilon$,
+also $a - \epsilon < c_n < a + \epsilon$, was gleichbedeutend ist mit $|c_n - a| < \epsilon$.
+Dies beweist die Konvergenz von $(c_n)$ gegen $a$.
+\end{proof}
+% --- integralkriterium_konvergenz ---
+\begin{satz}[Integralkriterium für unendliche Reihen]
+Das Integralkriterium stellt einen Zusammenhang zwischen der Konvergenz einer unendlichen Reihe und einem uneigentlichen Integral her.
+
+Die Funktion $f$ sei auf $[m, \infty)$ (mit $m \in \mathbb{N}$) positiv und monoton fallend. Dann haben die Reihe $\sum_{k=m}^{\infty} f(k)$ und das uneigentliche Integral $\int_{m}^{\infty} f(x) \, dx$ dasselbe Konvergenzverhalten.
+
+Es gilt insbesondere:
+$$\sum_{k=m+1}^{\infty} f(k) \le \int_{m}^{\infty} f(x) \, dx \le \sum_{k=m}^{\infty} f(k)$$
+
+
+\end{satz}
+\begin{proof}
+Da $f$ fallend ist, gilt für $x \in [k, k+1]$ die Abschätzung:
+$$f(k+1) \le f(x) \le f(k)$$
+Integration über $[k, k+1]$ liefert:
+$$f(k+1) \le \int_{k}^{k+1} f(x) \, dx \le f(k)$$
+Summation über $k = m, \dots, n-1$ ergibt:
+$$\sum_{k=m+1}^{n} f(k) \le \int_{m}^{n} f(x) \, dx \le \sum_{k=m}^{n-1} f(k)$$
+Durch den Grenzübergang $n \to \infty$ folgt die Behauptung, da beide Seiten monoton wachsen und somit genau dann konvergieren, wenn sie beschränkt sind.
+\end{proof}
+% --- newton_verfahren_satz ---
+\begin{satz}[Konvergenz des Newton-Verfahrens]
+Die Funktion $f: [a,b] \to \mathbb{R}$ erfülle die Voraussetzungen:
+a) $f''$ ist vorhanden, stetig und $f''(x) \ge 0$ (oder $\le 0$) auf $[a,b]$.
+b) $f'$ hat keine Nullstellen in $[a,b]$.
+c) $f(a)f(b) < 0$.
+Dann besitzt $f(x)=0$ in $[a,b]$ genau eine Lösung $\xi$. Die durch die Iterationsvorschrift
+$$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
+definierte \textbf{Newton-Folge} konvergiert gegen $\xi$, wenn der Startpunkt $x_0$ so gewählt wird, dass $f(x_0)f''(x_0) \ge 0$ gilt. Unter der zusätzlichen Voraussetzung $f''' \in C[a,b]$ ist die Konvergenz \textbf{quadratisch}.
+
+
+\end{satz}
+\begin{proof}
+Der Beweis nutzt die Taylor-Formel zweiter Ordnung, um zu zeigen, dass der Fehler $|x_{n+1}-\xi|$ durch $K|x_n-\xi|^2$ abgeschätzt werden kann. Die Monotonie der Folge ergibt sich aus der Konvexität bzw. Konkavität von $f$.
+\end{proof}
+% --- potenzreihe_definition_konvergenz ---
+\begin{satz}[Konvergenz von Potenzreihen]
+Eine Reihe der Form $\sum_{n=0}^\infty a_n (x-x_0)^n$ heißt \textbf{Potenzreihe} mit dem Mittelpunkt $x_0$ und den Koeffizienten $a_n$.
+Der \textbf{Konvergenzradius} $r$ der Potenzreihe ist definiert durch die Formel von \textbf{Cauchy-Hadamard}:
+$$r = \frac{1}{\limsup_{n \to \infty} \sqrt[n]{|a_n|}}$$
+(mit $r=0$ falls der Limes superior $\infty$ ist und $r=\infty$ falls er $0$ ist).
+Die Reihe konvergiert für alle $x$ mit $|x-x_0| < r$ absolut und divergiert für $|x-x_0| > r$.
+
+
+\end{satz}
+\begin{proof}
+Die Aussage folgt direkt aus dem Wurzelkriterium für Reihen, angewandt auf die Glieder $b_n = a_n(x-x_0)^n$. Der Konvergenzbereich ist ein Intervall um $x_0$, wobei über das Verhalten an den Rändern $x_0 \pm r$ keine allgemeine Aussage getroffen werden kann.
+\end{proof}
+% --- uneigentliches_integral_konvergenzkriterien ---
+\begin{satz}[Konvergenzkriterien für uneigentliche Integrale]
+Für die Konvergenz uneigentlicher Integrale $\int_{a}^{\infty} f(x) \, dx$ gelten folgende Kriterien:
+
+1. \textbf{Cauchy-Kriterium}: Das Integral konvergiert genau dann, wenn zu jedem $\epsilon > 0$ ein $s_0$ existiert, so dass für alle $t > s > s_0$ gilt:
+   $$\left| \int_{s}^{t} f(x) \, dx \right| < \epsilon$$
+
+2. \textbf{Monotoniekriterium}: Ist $f \ge 0$ auf $[a, \infty)$, so konvergiert $\int_{a}^{\infty} f(x) \, dx$ genau dann, wenn die Teilintegrale $\int_{a}^{t} f(x) \, dx$ nach oben beschränkt sind.
+
+3. \textbf{Majorantenkriterium}: Gilt $|f| \le g$ auf $[a, \infty)$ und konvergiert $\int_{a}^{\infty} g(x) \, dx$, so konvergiert $\int_{a}^{\infty} f(x) \, dx$ (sogar absolut).
+
+4. \textbf{Minorantenkriterium}: Gilt $0 \le h \le f$ und divergiert $\int_{a}^{\infty} h(x) \, dx$, so divergiert auch $\int_{a}^{\infty} f(x) \, dx$.
+
+5. \textbf{Grenzwertkriterium}: Sind $f, g > 0$ und existiert der Grenzwert $\lim_{x \to \infty} \frac{f(x)}{g(x)} = L$ mit $L \in (0, \infty)$, so haben beide Integrale dasselbe Konvergenzverhalten.
+
+
+\end{satz}
+\begin{proof}
+Diese Kriterien sind direkte Übertragungen der Kriterien für Zahlenfolgen und unendliche Reihen auf die Funktion $F(t) = \int_{a}^{t} f(x) \, dx$. Die absolute Konvergenz (Punkt 3) folgt aus der Vollständigkeit von $\mathbb{R}$.
+\end{proof}
+% --- leibniz_kriterium ---
+\begin{satz}[Leibniz-Kriterium für alternierende Reihen]
+Sei $(a_n)$ eine monoton fallende Nullfolge reeller Zahlen mit $a_n \ge 0$. Dann konvergiert die alternierende Reihe
+$\sum_{n=0}^\infty (-1)^n a_n = a_0 - a_1 + a_2 - a_3 \pm \dots$.
+
+
+\end{satz}
+\begin{proof}
+Betrachte die Teilsummen $s_{2n+1}$ und $s_{2n}$.
+Es gilt $s_{2n+1} = s_{2n-1} + (a_{2n} - a_{2n+1}) \ge s_{2n-1}$, da $(a_n)$ monoton fallend ist. Die ungeraden Teilsummen wachsen also monoton.
+Analog ist $s_{2n+2} = s_{2n} - (a_{2n+1} - a_{2n+2}) \le s_{2n}$, die geraden Teilsummen fallen monoton.
+Wegen $s_{2n+1} = s_{2n} - a_{2n+1} \le s_{2n}$ und $s_1 \le s_{2n+1} \le s_{2n} \le s_0$ sind beide Folgen beschränkt und monoton, besitzen also nach dem Monotoniekriterium Grenzwerte. 
+Wegen $s_{2n} - s_{2n-1} = a_{2n} \to 0$ müssen diese Grenzwerte identisch sein.
+\end{proof}
+% --- monotoniekriterium ---
+\begin{satz}[Monotoniekriterium für Folgen]
+Eine monotone Folge reeller Zahlen konvergiert genau dann, wenn sie beschränkt ist.
+Ist $(a_n)$ monoton wachsend und nach oben beschränkt, dann gilt $\lim_{n \to \infty} a_n = \sup \{ a_n \mid n \in \mathbb{N} \}$.
+Ist $(a_n)$ monoton fallend und nach unten beschränkt, dann gilt $\lim_{n \to \infty} a_n = \inf \{ a_n \mid n \in \mathbb{N} \}$.
+
+
+\end{satz}
+\begin{proof}
+Sei $(a_n)$ monoton wachsend und nach oben beschränkt. Die Menge $A = \{ a_n \mid n \in \mathbb{N} \}$ ist nicht leer und nach oben beschränkt. Nach dem Vollständigkeitsaxiom von $\mathbb{R}$ existiert $a = \sup A$.
+Für jedes $\epsilon > 0$ gibt es ein $a_{n_0} \in A$, so dass $a - \epsilon < a_{n_0} \le a$.
+Da $(a_n)$ monoton wachsend ist, gilt für alle $n > n_0$:
+$a - \epsilon < a_{n_0} \le a_n \le a < a + \epsilon$.
+Daraus folgt $|a_n - a| < \epsilon$ für alle $n > n_0$. 
+Somit konvergiert $(a_n)$ gegen $a$.
+(Analog für den monoton fallenden Fall).
+Jede konvergente Folge ist zudem nach Satz 20.3 beschränkt.
+\end{proof}
+% --- nullfolgenkriterium_reihe ---
+\begin{satz}[Notwendige Konvergenzbedingung für Reihen]
+Ist die Reihe $\sum_{n=0}^\infty a_n$ konvergent, so bilden die Reihenglieder $(a_n)$ eine Nullfolge, d.h.
+$\lim_{n \to \infty} a_n = 0$.
+
+
+\end{satz}
+\begin{proof}
+Sei $s = \lim_{n \to \infty} s_n$ der Grenzwert der Partialsummen. Da $a_n = s_n - s_{n-1}$ für $n \ge 1$ gilt, folgt mit den Grenzwertsätzen für Folgen:
+$\lim_{n \to \infty} a_n = \lim_{n \to \infty} (s_n - s_{n-1}) = \lim_{n \to \infty} s_n - \lim_{n \to \infty} s_{n-1} = s - s = 0$.
+Dies beweist, dass $a_n$ gegen 0 strebt. Die Umkehrung gilt nicht (Gegenbeispiel: harmonische Reihe).
+\end{proof}
+% --- quotientenkriterium ---
+\begin{satz}[Quotientenkriterium für Reihen]
+Sei $\sum a_n$ eine Reihe mit $a_n \neq 0$ für fast alle $n$.
+\begin{enumerate}[label=\arabic*.]
+    \item Existiert ein $q < 1$, so dass $|\frac{a_{n+1}}{a_n}| \le q$ für fast alle $n$, so konvergiert die Reihe absolut.
+    \item Gilt $|\frac{a_{n+1}}{a_n}| \ge 1$ für fast alle $n$, so divergiert die Reihe.
+\end{enumerate}
+
+
+\end{satz}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+    \item Sei $|\frac{a_{n+1}}{a_n}| \le q$ für $n \ge N$. Dann gilt $|a_{N+k}| \le q^k |a_N|$. 
+    Die Reihe $\sum_{k=0}^\infty |a_{N+k}|$ hat somit die konvergente geometrische Reihe $\sum q^k |a_N|$ als Majorante (da $q < 1$) und konvergiert nach dem Majorantenkriterium.
+    \item Falls $|\frac{a_{n+1}}{a_n}| \ge 1$, so ist $|a_{n+1}| \ge |a_n|$. Die Glieder bilden also keine Nullfolge, was nach dem Nullfolgenkriterium die Divergenz impliziert.
+\end{enumerate}
+\end{proof}
+% --- arzela_ascoli_satz ---
+\begin{satz}[Satz von Arzelà-Ascoli]
+Eine Folge $(f_n)$ stetiger Funktionen auf einer kompakten Menge $X \subset \mathbb{R}$ besitzt genau dann eine gleichmäßig konvergente Teilfolge, wenn sie:
+1. \textbf{gleichmäßig beschränkt} ist (es gibt ein $M$ mit $|f_n(x)| \le M$ für alle $n, x$), und
+2. \textbf{gleichstetig} ist (zu jedem $\epsilon > 0$ gibt es ein $\delta > 0$, so dass für alle $n$ und alle $x, y$ mit $|x-y| < \delta$ gilt: $|f_n(x) - f_n(y)| < \epsilon$).
+
+
+\end{satz}
+\begin{proof}
+Die Notwendigkeit der Bedingungen ist leicht zu zeigen. Für die Hinlänglichkeit nutzt man ein Diagonalverfahren auf einer abzählbaren dichten Teilmenge von $X$ (z.B. die rationalen Zahlen), um eine punktweise konvergente Teilfolge zu erhalten. Die Gleichstetigkeit erlaubt es dann, diese punktweise Konvergenz auf ganz $X$ zur gleichmäßigen Konvergenz zu erweitern.
+\end{proof}
+% --- satz_von_dini ---
+\begin{satz}[Satz von Dini]
+Sei $X$ eine kompakte Menge und $(f_n)$ eine Folge stetiger Funktionen auf $X$, die \textbf{monoton} (d.h. $f_1 \le f_2 \le \dots$ oder $f_1 \ge f_2 \ge \dots$) gegen eine stetige Grenzfunktion $f$ konvergiert. Dann ist die Konvergenz auf $X$ bereits gleichmäßig.
+
+
+\end{satz}
+\begin{proof}
+Ohne Einschränkung sei $f_n \nearrow f$. Setze $g_n = f - f_n$. Dann sind $g_n$ stetig, $g_n \ge 0$ und $g_n \searrow 0$. Zu $\epsilon > 0$ definiere $K_n = \{x \in X : g_n(x) \ge \epsilon\}$. Da $g_n$ stetig ist, sind die $K_n$ kompakt. Wegen der Monotonie gilt $K_{n+1} \subset K_n$. Da $g_n(x) \to 0$ für jedes $x$, ist der Durchschnitt aller $K_n$ leer. Nach der Durchschnittseigenschaft kompakter Mengen muss dann bereits ein $K_{n_0}$ leer sein. Das bedeutet $g_n(x) < \epsilon$ für alle $n \ge n_0$ und alle $x \in X$.
+\end{proof}
+% --- gliedweise_differentiation ---
+\begin{satz}[Satz über die gliedweise Differentiation]
+Sei $(f_n)$ eine Folge auf $[a, b]$ differenzierbarer Funktionen. Wenn
+1. die abgeleitete Folge $(f'_n)$ auf $[a, b]$ gleichmäßig konvergiert, und
+2. die Folge $(f_n(x_0))$ für mindestens ein $x_0 \in [a, b]$ konvergiert,
+dann konvergiert $(f_n)$ auf $[a, b]$ gleichmäßig gegen eine differenzierbare Funktion $f$, und es gilt:
+$$f'(x) = \lim_{n \to \infty} f'_n(x)$$
+
+
+\end{satz}
+\begin{proof}
+Durch Anwendung des Mittelwertsatzes auf $f_n - f_m$ zeigt man, dass $(f_n)$ eine Cauchy-Folge bzgl. der Supremumsnorm ist, also gleichmäßig konvergiert. Die Differenzierbarkeit von $f$ und die Gleichheit der Ableitung folgen durch Betrachtung der Differenzenquotienten und Vertauschung der Grenzwerte (Netz-Konvergenz).
+\end{proof}
+% --- gliedweise_integration ---
+\begin{satz}[Satz über die gliedweise Integration]
+Konvergiert eine Folge R-integrierbarer Funktionen $(f_n)$ auf $[a, b]$ gleichmäßig gegen $f$, so ist auch $f$ R-integrierbar, und es gilt:
+$$\int_a^b f(x) \, dx = \lim_{n \to \infty} \int_a^b f_n(x) \, dx$$
+
+
+\end{satz}
+\begin{proof}
+Die Integrierbarkeit von $f$ folgt daraus, dass die Obersummen von $f$ durch die von $f_n$ approximiert werden können. Für das Integral gilt:
+$$|\int_a^b f - \int_a^b f_n| \le \int_a^b |f - f_n| \le (b-a) \|f - f_n\|_\infty$$
+Da $\|f - f_n\|_\infty \to 0$, strebt die Differenz der Integrale gegen 0.
+\end{proof}
+% --- stetigkeitssatz_funktionenfolgen ---
+\begin{satz}[Stetigkeitssatz für Funktionenfolgen]
+Konvergiert eine Folge stetiger Funktionen $(f_n)$ auf $X$ gleichmäßig gegen $f$, so ist auch die Grenzfunktion $f$ auf $X$ stetig.
+
+
+\end{satz}
+\begin{proof}
+Sei $\xi \in X$. Wir nutzen die "$\epsilon/3$-Abschätzung":
+$$|f(x) - f(\xi)| \le |f(x) - f_n(x)| + |f_n(x) - f_n(\xi)| + |f_n(\xi) - f(\xi)|$$
+Wegen gleichmäßiger Konvergenz können wir $n$ so groß wählen, dass der erste und dritte Term kleiner als $\epsilon/3$ sind (unabhängig von $x$). Wegen der Stetigkeit von $f_n$ gibt es eine Umgebung von $\xi$, in der der mittlere Term kleiner als $\epsilon/3$ ist. Insgesamt folgt $|f(x) - f(\xi)| < \epsilon$.
+\end{proof}
+% --- weierstrass_majorantenkriterium ---
+\begin{satz}[Weierstraßsches Majorantenkriterium]
+Eine Funktionenreihe $\sum_{k=1}^\infty f_k(x)$ konvergiert auf $X$ gleichmäßig, wenn es eine konvergente Reihe $\sum_{k=1}^\infty c_k$ mit reellen Gliedern $c_k \ge 0$ gibt, so dass für alle $x \in X$ und alle $k \in \mathbb{N}$ gilt:
+$$|f_k(x)| \le c_k$$
+
+
+\end{satz}
+\begin{proof}
+Wegen $|f_k(x)| \le c_k$ und der Konvergenz von $\sum c_k$ konvergiert die Reihe nach dem Majorantenkriterium für jedes $x$ absolut. Sei $s_n(x)$ die Teilsumme und $s(x)$ der Grenzwert. Dann gilt:
+$$|s(x) - s_n(x)| = |\sum_{k=n+1}^\infty f_k(x)| \le \sum_{k=n+1}^\infty |f_k(x)| \le \sum_{k=n+1}^\infty c_k$$
+Da das Restglied der konvergenten Reihe $\sum c_k$ gegen 0 strebt und unabhängig von $x$ ist, folgt die gleichmäßige Konvergenz.
+\end{proof}
+% --- wurzelkriterium ---
+\begin{satz}[Wurzelkriterium für Reihen]
+Sei $\sum a_n$ eine unendliche Reihe.
+\begin{enumerate}[label=\arabic*.]
+    \item Existiert ein $q < 1$, so dass $\sqrt[n]{|a_n|} \le q$ für fast alle $n$, so konvergiert die Reihe absolut.
+    \item Gilt $\sqrt[n]{|a_n|} \ge 1$ für unendlich viele $n$, so divergiert die Reihe.
+\end{enumerate}
+
+
+\end{satz}
+\begin{proof}
+\begin{enumerate}[label=\arabic*.]
+    \item Aus $\sqrt[n]{|a_n|} \le q$ folgt $|a_n| \le q^n$. Da $q < 1$, ist die geometrische Reihe $\sum q^n$ eine konvergente Majorante. Nach dem Majorantenkriterium konvergiert $\sum a_n$ absolut.
+    \item Aus $\sqrt[n]{|a_n|} \ge 1$ folgt $|a_n| \ge 1$. Die Glieder der Reihe bilden somit keine Nullfolge, woraus die Divergenz folgt.
+\end{enumerate}
+\end{proof}
+\end{document}

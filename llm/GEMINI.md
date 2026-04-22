@@ -10,9 +10,10 @@ Dieses Wiki generiert und verwaltet Markdown-Dateien in einem strikten Format. D
 
 ```
 raw/          -- Unverarbeitete Notizen und Quellen
+docs/         -- Dokumentation und technische Spezifikationen
+docs/specs.md -- Technische Definition der C-Strukturen und SQL-Schemas
 wiki/         -- Parser-konforme Markdown-Dateien
 wiki/index.md -- Register aller Keys und Verlinkungen
-wiki/specs.md -- Technische Definition der C-Strukturen und SQL-Schemas
 ```
 
 ## Dokumenten-Spezifikation (Strikt)
@@ -45,7 +46,7 @@ Wenn neue Informationen in den `raw/`-Ordner gelegt werden:
 
 ## C-Parser & SQLite Mapping
 
-Das Wiki pflegt in `wiki/specs.md` die technische Vorlage für das C-Programm:
+Das Wiki pflegt in `docs/specs.md` die technische Vorlage für das C-Programm:
 
 | MD-Feld | C-Struktur Typ | SQLite Spalte |
 | :--- | :--- | :--- |
@@ -61,7 +62,7 @@ Beim Audit des Wikis prüft Gemini:
 * **Parser-Kompatibilität**: Sind die Trenner `---` und `--proof--` korrekt gesetzt?
 * **SQL-Integrität**: Sind alle `key`-Werte im gesamten Wiki einzigartig?
 * **Broken Refs**: Zeigen alle Einträge unter `refs` auf existierende Dateien?
-* **Typ-Check**: Entsprechen die `type`-Felder den definierten Kategorien in der `specs.md`?
+* **Typ-Check**: Entsprechen die `type`-Felder den definierten Kategorien in der `docs/specs.md`?
 
 ## Regeln
 

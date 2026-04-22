@@ -103,6 +103,23 @@ Protokoll über Erstellungen und Änderungen.
   - `uneigentliches_integral_unbeschraenkt_definition`
   - `uneigentliches_integral_konvergenzkriterien`
   - `integralkriterium_konvergenz`
+- **2026-04-28**: Ingest der Inhalte aus H. Heuser - Kapitel 12 (Anwendungen):
+  - `wallis_produkt`
+  - `euler_summenformel`
+  - `stirling_formel`
+  - `dgl_getrennte_veraenderliche`
+  - `dgl_linear_erster_ordnung`
+  - `variation_der_konstanten_zweite_ordnung`
+  - `numerische_integrationsregeln`
+  - `energiesatz_mechanik`
+- **2026-04-28**: Ingest der Inhalte aus H. Heuser - Kapitel 13 (Vertauschung von Grenzübergängen):
+  - `konvergenz_funktionen_definition`
+  - `weierstrass_majorantenkriterium`
+  - `stetigkeitssatz_funktionenfolgen`
+  - `gliedweise_differentiation`
+  - `gliedweise_integration`
+  - `satz_von_dini`
+  - `arzela_ascoli_satz`
 - **2026-04-22**: Architektur-Refactoring und Bereinigung:
   - Verzeichnisse `src/common`, `src/importer` und `src/exporter` erstellt.
   - `database.c/h` und `document.h` nach `common/` verschoben.
