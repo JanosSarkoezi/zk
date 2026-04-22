@@ -103,3 +103,11 @@ Protokoll über Erstellungen und Änderungen.
   - `uneigentliches_integral_unbeschraenkt_definition`
   - `uneigentliches_integral_konvergenzkriterien`
   - `integralkriterium_konvergenz`
+- **2026-04-22**: Architektur-Refactoring und Bereinigung:
+  - Verzeichnisse `src/common`, `src/importer` und `src/exporter` erstellt.
+  - `database.c/h` und `document.h` nach `common/` verschoben.
+  - `StringBuilder` in neue Utility `src/common/sb_helper.c/h` ausgelagert.
+  - Importer nach `src/importer/` verschoben und modularisiert.
+  - Exporter in `src/exporter/main.c` und `src/exporter/latex.c/h` aufgeteilt.
+  - `meson.build` an neue Struktur angepasst.
+  - `wiki/specs.md` nach `docs/specs.md` verschoben (Trennung von Inhalt und Spezifikation).

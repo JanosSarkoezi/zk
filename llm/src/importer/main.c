@@ -3,7 +3,7 @@
 #include <string.h>
 #include <dirent.h>
 #include "import.h"
-#include "database.h"
+#include "../common/database.h"
 
 int main(int argc, char *argv[]) {
     if (argc < 3) {

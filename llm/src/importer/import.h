@@ -1,7 +1,7 @@
 #ifndef IMPORT_H
 #define IMPORT_H
 
-#include "document.h"
+#include "../common/document.h"
 
 void parse_file(const char *filename, Document *doc);
 void free_document(Document *doc);

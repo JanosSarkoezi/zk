@@ -1,48 +1,9 @@
 #include "import.h"
+#include "../common/sb_helper.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-
-// --- StringBuilder Helper ---
-typedef struct {
-    char *buffer;
-    size_t length;
-    size_t capacity;
-} StringBuilder;
-
-static void sb_init(StringBuilder *sb) {
-    sb->capacity = 1024;
-    sb->length = 0;
-    sb->buffer = malloc(sb->capacity);
-    if (sb->buffer) sb->buffer[0] = '\0';
-}
-
-static void sb_append(StringBuilder *sb, const char *str) {
-    if (!str) return;
-    size_t len = strlen(str);
-    if (sb->length + len + 1 > sb->capacity) {
-        // Exponential growth
-        while (sb->length + len + 1 > sb->capacity) {
-            sb->capacity *= 2;
-        }
-        char *temp = realloc(sb->buffer, sb->capacity);
-        if (temp) {
-            sb->buffer = temp;
-        } else {
-            return; // In a real app, handle out-of-memory
-        }
-    }
-    memcpy(sb->buffer + sb->length, str, len + 1);
-    sb->length += len;
-}
-
-static char* sb_finish(StringBuilder *sb) {
-    char *final = sb->buffer;
-    // Shrink to fit (optional, but good for long-term storage in Document)
-    char *shrunk = realloc(final, sb->length + 1);
-    return shrunk ? shrunk : final;
-}
 
 // --- Original Helper for Metadata (YAML) ---
 void append_string(char **destination, const char *source) {
@@ -96,8 +57,8 @@ void parse_file(const char *filename, Document *doc) {
     }
 
     StringBuilder content_sb, proof_sb;
-    sb_init(&content_sb);
-    sb_init(&proof_sb);
+    sb_init(&content_sb, 4096);
+    sb_init(&proof_sb, 4096);
 
     char line[4096];
     int state = 0; // 0: Searching for Header, 1: Inside Header, 2: Inside Content, 3: Inside Proof
