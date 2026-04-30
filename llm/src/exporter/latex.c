@@ -50,6 +50,31 @@ void parse_and_add_refs(KeyList *list, const char *refs_str) {
     free(copy);
 }
 
+void scan_content_for_refs(KeyList *list, const char *content) {
+    if (!content) return;
+    const char *p = content;
+    while (*p) {
+        if (*p == '[' && *(p+1) == '[') {
+            p += 2;
+            const char *start = p;
+            while (*p && *p != ']' && *p != '|') p++;
+            size_t len = p - start;
+            if (len > 0) {
+                char *key = malloc(len + 1);
+                memcpy(key, start, len);
+                key[len] = '\0';
+                add_unique_key(list, key);
+                free(key);
+            }
+            // Skip the rest of the [[...]] block
+            while (*p && (*p != ']' || *(p+1) != ']')) p++;
+            if (*p) p += 2;
+        } else {
+            p++;
+        }
+    }
+}
+
 char* smart_escape_regex(const char* pattern) {
     size_t len = strlen(pattern);
     char* result = malloc(len * 2 + 1);
@@ -96,18 +121,30 @@ void write_latex_header(FILE *out) {
     fprintf(out, "\\usepackage[ngerman]{babel}\n");
     fprintf(out, "\\usepackage{amsmath, amssymb, amsthm}\n");
     fprintf(out, "\\usepackage{geometry}\n");
+    fprintf(out, "\\usepackage[colorlinks=true, linkcolor=blue]{hyperref}\n");
+    fprintf(out, "\n");
+    fprintf(out, "%% Autoref Namen fuer Deutsch\n");
+    fprintf(out, "\\addto\\extrasngerman{\n");
+    fprintf(out, "  \\def\\satzautorefname{Satz}\n");
+    fprintf(out, "  \\def\\axiomautorefname{Axiom}\n");
+    fprintf(out, "  \\def\\lemmaautorefname{Lemma}\n");
+    fprintf(out, "  \\def\\theoremautorefname{Theorem}\n");
+    fprintf(out, "  \\def\\definitionautorefname{Definition}\n");
+    fprintf(out, "  \\def\\bemerkungautorefname{Bemerkung}\n");
+    fprintf(out, "}\n");
     fprintf(out, "\n");
     fprintf(out, "\\usepackage{enumitem}\n");
+
     fprintf(out, "\\setlist[enumerate]{leftmargin=1cm, itemsep=2pt}\n");
     fprintf(out, "\n");
     fprintf(out, "\\geometry{a4paper, margin=2.5cm}\n");
     fprintf(out, "\\newtheorem{satz}{Satz}[section]\n");
-    fprintf(out, "\\newtheorem{axiom}[satz]{Axiom}\n");
-    fprintf(out, "\\newtheorem{lemma}[satz]{Lemma}\n");
-    fprintf(out, "\\newtheorem{theorem}[satz]{Theorem}\n");
+    fprintf(out, "\\newtheorem{axiom}{Axiom}[section]\n");
+    fprintf(out, "\\newtheorem{lemma}{Lemma}[section]\n");
+    fprintf(out, "\\newtheorem{theorem}{Theorem}[section]\n");
     fprintf(out, "\\theoremstyle{definition}\n");
-    fprintf(out, "\\newtheorem{definition}[satz]{Definition}\n");
-    fprintf(out, "\\newtheorem{bemerkung}[satz]{Bemerkung}\n");
+    fprintf(out, "\\newtheorem{definition}{Definition}[section]\n");
+    fprintf(out, "\\newtheorem{bemerkung}{Bemerkung}[section]\n");
     fprintf(out, "\\begin{document}\n");
     fprintf(out, "\\title{Wiki Export}\n");
     fprintf(out, "\\author{LLM-Wiki Parser}\n");
@@ -125,6 +162,39 @@ char* latex_ify(const char* input) {
     int bold_open = 0;
     
     for (size_t i = 0; input[i] != '\0'; i++) {
+        // Handle [[key|text]] or [[key]] for references
+        if (input[i] == '[' && input[i+1] == '[') {
+            size_t j = i + 2;
+            int pipe_pos = -1;
+            while (input[j] != '\0' && (input[j] != ']' || input[j+1] != ']')) {
+                if (input[j] == '|') pipe_pos = (int)j;
+                j++;
+            }
+            if (input[j] == ']' && input[j+1] == ']') {
+                if (pipe_pos != -1) {
+                    // [[key|text]] -> \hyperref[key]{text}
+                    sb_append(&sb, "\\hyperref[");
+                    for (int k = (int)i + 2; k < pipe_pos; k++) {
+                        sb_append_char(&sb, input[k]);
+                    }
+                    sb_append(&sb, "]{");
+                    for (size_t k = (size_t)pipe_pos + 1; k < j; k++) {
+                        sb_append_char(&sb, input[k]);
+                    }
+                    sb_append_char(&sb, '}');
+                } else {
+                    // [[key]] -> \autoref{key}
+                    sb_append(&sb, "\\autoref{");
+                    for (size_t k = i + 2; k < j; k++) {
+                        sb_append_char(&sb, input[k]);
+                    }
+                    sb_append_char(&sb, '}');
+                }
+                i = j + 1;
+                continue;
+            }
+        }
+
         if (input[i] == '*' && input[i+1] == '*') {
             if (!bold_open) {
                 sb_append(&sb, "\\textbf{");

@@ -7,7 +7,7 @@ refs: [ordnungsaxiome]
 ---
 Die metrischen Axiome (M 1) bis (M 3) definieren eine metrische Struktur auf $\mathbb{R}$ mittels der Abstandsfunktion $d(a,b) = |a-b|$:
 
-\begin{enumerate}[label=(M \arabic*)]
+\begin{enumerate}
     \item Definitheit: $d(a,b) \ge 0$, wobei $d(a,b) = 0 \Leftrightarrow a = b$.
     \item Symmetrie: $d(a,b) = d(b,a)$.
     \item Dreiecksungleichung: $d(a,c) \le d(a,b) + d(b,c)$.

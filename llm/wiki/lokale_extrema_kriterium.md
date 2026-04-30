@@ -5,8 +5,8 @@ type: satz
 tags: [analysis, ableitung, extrema]
 refs: [ableitung_definition, mittelwertsatz_differentialrechnung]
 ---
-Sei $f$ in einer Umgebung von $\xi$ zweimal differenzierbar. 
-\begin{enumerate}[label=\arabic*.]
+Sei $f$ in einer Umgebung von $\xi$ zweimal [[ableitung_definition|differenzierbar]]. 
+\begin{enumerate}
     \item **Notwendige Bedingung**: Hat $f$ in einem inneren Punkt $\xi$ ein lokales Extremum, so gilt $f'(\xi) = 0$.
     \item **Hinreichende Bedingung**: Gilt $f'(\xi) = 0$ und $f''(\xi) < 0$, so hat $f$ in $\xi$ ein isoliertes lokales Maximum. Gilt $f'(\xi) = 0$ und $f''(\xi) > 0$, so liegt ein isoliertes lokales Minimum vor.
 \end{enumerate}

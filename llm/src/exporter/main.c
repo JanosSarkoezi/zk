@@ -74,17 +74,42 @@ int main(int argc, char *argv[]) {
     if (sqlite3_prepare_v2(db, search_sql, -1, &stmt, 0) == SQLITE_OK) {
         while (sqlite3_step(stmt) == SQLITE_ROW) {
             const char *key = (const char*)sqlite3_column_text(stmt, 0);
-            const char *refs = (const char*)sqlite3_column_text(stmt, 1);
             add_unique_key(&export_keys, key);
-            if (include_refs) parse_and_add_refs(&export_keys, refs);
         }
         sqlite3_finalize(stmt);
     }
-    // Note: search_sql points to internal buffer of sql_sb, but sb_finish returns it.
-    // However, our sb_finish doesn't null the buffer, so sb_free would free it.
-    // Let's be careful. In my sb_helper.c, sb_finish just returns the buffer.
-    // So sb_free must be called AFTER we are done with search_sql.
     sb_free(&sql_sb);
+
+    // Dependency Resolution
+    if (include_refs) {
+        int last_count = 0;
+        while (export_keys.count > last_count) {
+            int current_count = export_keys.count;
+            StringBuilder in_sb;
+            sb_init(&in_sb, export_keys.count * 32);
+            for (int i = last_count; i < current_count; i++) {
+                char *temp = sqlite3_mprintf("%s'%q'", (i > last_count ? "," : ""), export_keys.keys[i]);
+                sb_append(&in_sb, temp);
+                sqlite3_free(temp);
+            }
+            char *ref_sql = sqlite3_mprintf("SELECT refs, content, proof FROM entries WHERE key IN (%s)", sb_finish(&in_sb));
+            sb_free(&in_sb);
+
+            if (sqlite3_prepare_v2(db, ref_sql, -1, &stmt, 0) == SQLITE_OK) {
+                while (sqlite3_step(stmt) == SQLITE_ROW) {
+                    const char *refs = (const char*)sqlite3_column_text(stmt, 0);
+                    const char *content = (const char*)sqlite3_column_text(stmt, 1);
+                    const char *proof = (const char*)sqlite3_column_text(stmt, 2);
+                    if (refs) parse_and_add_refs(&export_keys, refs);
+                    if (content) scan_content_for_refs(&export_keys, content);
+                    if (proof) scan_content_for_refs(&export_keys, proof);
+                }
+                sqlite3_finalize(stmt);
+            }
+            sqlite3_free(ref_sql);
+            last_count = current_count;
+        }
+    }
 
     if (export_keys.count == 0) {
         printf("No entries found.\n");
@@ -121,12 +146,39 @@ int main(int argc, char *argv[]) {
 
     if (sqlite3_prepare_v2(db, final_sql, -1, &stmt, 0) == SQLITE_OK) {
         int count = 0;
+        int last_category = -1;
+        
         while (sqlite3_step(stmt) == SQLITE_ROW) {
             const char *key = (const char*)sqlite3_column_text(stmt, 0);
             const char *title = (const char*)sqlite3_column_text(stmt, 1);
             const char *type = (const char*)sqlite3_column_text(stmt, 2);
             const char *content = (const char*)sqlite3_column_text(stmt, 3);
             const char *proof = (const char*)sqlite3_column_text(stmt, 4);
+
+            int current_category = 4; // Other
+            const char *section_name = "Verschiedenes";
+
+            if (type) {
+                if (strcmp(type, "axiom") == 0) {
+                    current_category = 1;
+                    section_name = "Axiome";
+                } else if (strcmp(type, "def") == 0 || strcmp(type, "definition") == 0) {
+                    current_category = 2;
+                    section_name = "Definitionen";
+                } else if (strcmp(type, "satz") == 0 || strcmp(type, "theorem") == 0 || strcmp(type, "lemma") == 0) {
+                    current_category = 3;
+                    section_name = "Sätze und Theoreme";
+                } else if (strcmp(type, "bemerkung") == 0) {
+                    current_category = 4;
+                    section_name = "Bemerkungen";
+                }
+            }
+
+            // Add section header if category changes
+            if (current_category != last_category) {
+                fprintf(out, "\\section{%s}\n\n", section_name);
+                last_category = current_category;
+            }
 
             char env[32] = "theorem";
             if (type) {
@@ -137,14 +189,18 @@ int main(int argc, char *argv[]) {
                 else if (strcmp(type, "bemerkung") == 0) strcpy(env, "bemerkung");
             }
 
-            fprintf(out, "%% --- %s ---\n\\begin{%s}[%s]\n", key, env, title ? title : key);
+            fprintf(out, "%% --- %s ---\n\\begin{%s}[%s]\\label{%s}\n", key, env, title ? title : key, key);
             char *latex_content = latex_ify(content);
             fprintf(out, "%s\n\\end{%s}\n", latex_content ? latex_content : "", env);
             free(latex_content);
 
             if (proof && strlen(proof) > 0) {
                 char *latex_proof = latex_ify(proof);
-                fprintf(out, "\\begin{proof}\n%s\\end{proof}\n", latex_proof);
+                if (strcmp(env, "definition") == 0) {
+                    fprintf(out, "\\begin{itemize}[label=, leftmargin=0pt]\n\\item \\textbf{Beispiele/Bemerkungen:}\n%s\\end{itemize}\n", latex_proof);
+                } else {
+                    fprintf(out, "\\begin{proof}\n%s\\end{proof}\n", latex_proof);
+                }
                 free(latex_proof);
             }
             count++;

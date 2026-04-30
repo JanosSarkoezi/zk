@@ -7,7 +7,7 @@ refs: []
 ---
 Die Peanoschen Axiome bilden die Grundlage für die Konstruktion der natürlichen Zahlen $\mathbb{N}$. Sie wurden von Giuseppe Peano (1858-1932) eingeführt und lauten:
 
-\begin{enumerate}[label=\arabic*.]
+\begin{enumerate}
     \item 1 ist eine natürliche Zahl.
     \item Jeder natürlichen Zahl $n$ ist genau eine Nachfolgerzahl $n'$ zugeordnet.
     \item 1 ist kein Nachfolger einer natürlichen Zahl.

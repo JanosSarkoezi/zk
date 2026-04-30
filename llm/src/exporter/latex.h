@@ -16,6 +16,7 @@ void init_key_list(KeyList *list);
 void add_unique_key(KeyList *list, const char *key);
 void free_key_list(KeyList *list);
 void parse_and_add_refs(KeyList *list, const char *refs_str);
+void scan_content_for_refs(KeyList *list, const char *content);
 
 char* smart_escape_regex(const char* pattern);
 void sqlite_regexp(sqlite3_context *context, int argc, sqlite3_value **argv);

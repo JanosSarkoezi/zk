@@ -9,5 +9,5 @@ Ein Punkt $\xi$ heißt **Wendepunkt** der Funktion $f$, wenn $f$ an dieser Stell
 **Notwendige Bedingung**: Ist $f$ dreimal differenzierbar, so gilt an einem Wendepunkt $f''(\xi) = 0$.
 **Hinreichende Bedingung**: Gilt $f''(\xi) = 0$ und $f'''(\xi) \neq 0$, so liegt ein Wendepunkt vor.
 
---proof--
+--examples--
 Heuser (Nr. 52): Ein Wendepunkt ist eine Stelle, an der die Ableitung $f'$ ein lokales Extremum besitzt. Daher korrespondieren die Kriterien für Wendepunkte von $f$ zu den Extremwertkriterien von $f'$.

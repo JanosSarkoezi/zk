@@ -11,7 +11,7 @@ Dies führt zur asymptotischen Gleichheit für die zentralen Binomialkoeffizient
 $$\frac{\binom{2k}{k}}{2^{2k}} \approx \frac{1}{\sqrt{\pi k}} \quad (k \to \infty)$$
 
 --proof--
-Man betrachte die Integrale $I_n = \int_0^{\pi/2} \sin^n x \, dx$. Mittels partieller Integration ergibt sich die Rekursionsformel:
+Man betrachte die [[riemann_integral_definition|Integrale]] $I_n = \int_0^{\pi/2} \sin^n x \, dx$. Mittels partieller Integration ergibt sich die Rekursionsformel:
 $$I_n = \frac{n-1}{n} I_{n-2}$$
 mit $I_0 = \pi/2$ und $I_1 = 1$. Durch sukzessive Anwendung für $n=2k$ und $n=2k+1$ erhält man:
 $$I_{2k} = \frac{2k-1}{2k} \cdot \frac{2k-3}{2k-2} \cdots \frac{1}{2} \cdot \frac{\pi}{2}$$

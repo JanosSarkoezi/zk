@@ -1,130 +1,83 @@
 # Wiki Log
 
-Protokoll über Erstellungen und Änderungen.
+## 2026-05-03
+- Ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 04.
+- Added following entries:
+    - `mengenfunktion_definition` (def)
+    - `additivitaet_mengenfunktion_definition` (def)
+    - `inhalt_definition` (def)
+    - `additiv_impliziert_endlich_additiv_ring_satz` (satz)
+    - `inhalt_fortsetzung_satz` (satz)
+    - `monotonie_subadditivitaet_definition` (def)
+    - `inhalt_monoton_subadditiv_lemma` (lemma)
+    - `sigma_additivitaet_mass_definition` (def)
+    - `mass_fortsetzung_satz` (satz)
+    - `stetigkeit_mengenfunktionen_definition` (def)
+    - `sigma_additivitaet_stetigkeit_unten_satz` (satz)
+    - `stetigkeit_unten_impliziert_oben_lemma` (lemma)
+    - `sigma_additivitaet_stetigkeit_aequivalenz_satz` (satz)
+    - `mass_sigma_subadditiv_lemma` (lemma)
+    - `signiertes_mass_definition` (def)
+    - `jordan_zerlegung_satz` (satz)
+    - `hahn_zerlegung_satz` (satz)
 
-- **2026-04-15**: Erstellung der Basis-Struktur (`specs.md`, `index.md`).
-- **2026-04-15**: Ingest der Axiome aus H. Heuser - Kapitel 1:
-  - `peano_axiome`
-  - `koerperaxiome`
-  - `ordnungsaxiome`
-  - `schnittaxiom`
-  - `metrische_axiome`
-- **2026-04-15**: Ingest der Inhalte aus H. Heuser - Kapitel 2:
-  - `vektorraumaxiome`
-  - `funktion_definition`
-  - `identitaetssatz_polynome`
-  - `polynomdivision_rest`
-  - `lagrange_interpolation`
-  - `abzaehlbarkeit_q`
-  - `abzaehlbarkeit_vereinigung`
-  - `ueberabzaehlbarkeit_r`
-  - `satz_von_cantor`
-- **2026-04-15**: Ingest der Inhalte aus H. Heuser - Kapitel 3:
-  - `supremum_infimum`
-  - `grenzwert_definition`
-  - `eindeutigkeit_grenzwert`
-  - `beschraenktheit_konvergenter_folgen`
-  - `grenzwertsaetze_arithmetik`
-  - `vergleichssatz_grenzwerte`
-  - `einschliessungssatz`
-  - `monotoniekriterium`
-  - `bolzano_weierstrass`
-  - `cauchy_kriterium`
-  - `grenzwertsatz_cauchy_mittel`
-- **2026-04-15**: Ingest der Inhalte aus H. Heuser - Kapitel 4:
-  - `reihe_definition`
-  - `nullfolgenkriterium_reihe`
-  - `absolute_konvergenz`
-  - `leibniz_kriterium`
-  - `quotientenkriterium`
-  - `wurzelkriterium`
-- **2026-04-20**: Ingest der Inhalte aus H. Heuser - Kapitel 5:
-  - `stetigkeit_folgen_definition`
-  - `stetigkeit_arithmetik`
-  - `stetigkeit_epsilon_delta_definition`
-  - `nullstellensatz_bolzano`
-  - `zwischenwertsatz`
-  - `kompaktheit_folgen_definition`
-  - `extremalsatz_weierstrass`
-  - `stetigkeit_gleichmaessig_definition`
-  - `satz_von_heine`
-  - `heine_borel_satz`
-  - `grenzwert_funktion_definition`
-- **2026-04-20**: Ingest der Inhalte aus H. Heuser - Kapitel 6:
-  - `ableitung_definition`
-  - `differenzierbarkeit_stetigkeit`
-  - `ableitungsregeln_arithmetik`
-  - `kettenregel`
-  - `ableitung_umkehrfunktion`
-  - `mittelwertsatz_differentialrechnung`
-  - `lhospital_regel`
-- **2026-04-20**: Ingest der Inhalte aus H. Heuser - Kapitel 7:
-  - `lokale_extrema_kriterium`
-  - `wendepunkt_definition`
-  - `hyperbelfunktionen_definition`
-  - `stammfunktion_definition`
-  - `hoelder_ungleichung`
-  - `minkowski_ungleichung`
-  - `jensen_ungleichung`
-- **2026-04-21**: Ergänzung aus H. Heuser - Kapitel 6:
-  - `konvexitaet_definition`
-- **2026-04-21**: Ingest der Inhalte aus H. Heuser - Kapitel 8:
-  - `mittelwertsatz_hoehere_differenzen`
-  - `satz_von_taylor`
-  - `potenzreihe_definition_konvergenz`
-  - `potenzreihe_differenzierbarkeit`
-  - `potenzreihe_identitaetssatz`
-  - `abelscher_grenzwertsatz`
-- **2026-04-21**: Ingest der Inhalte aus H. Heuser - Kapitel 9:
-  - `newton_verfahren_satz`
-  - `bernoulli_zahlen_definition`
-  - `dgl_linear_homogen_n_ordnung`
-  - `dgl_linear_inhomogen_n_ordnung`
-- **2026-04-21**: Ingest der Inhalte aus H. Heuser - Kapitel 10 (Integration):
-  - `riemann_integral_definition`
-  - `darboux_integrale_definition`
-  - `riemann_integrabilitaet_kriterium`
-  - `lebesgue_integrabilitaetskriterium`
-  - `hauptsatz_differential_integralrechnung`
-  - `stetigkeit_impliziert_integrabilitaet`
-  - `integrationsregeln_arithmetik`
-  - `substitutionsregel`
-  - `partielle_integration`
-  - `mittelwertsatz_integralrechnung`
-  - `erweiterter_mittelwertsatz_integralrechnung`
-- **2026-04-22**: Refactoring der Parser-Source:
-  - Rename `src/parser.c` -> `src/import.c`
-  - Rename `src/parser.h` -> `src/import.h`
-  - Update `meson.build` und Includes.
-- **2026-04-22**: Ingest der Inhalte aus H. Heuser - Kapitel 3 (Häufungswerte):
-  - `limes_superior_inferior_definition`
-  - `limes_superior_inferior_eigenschaften`
-- **2026-04-22**: Ingest der Inhalte aus H. Heuser - Kapitel 11 (Uneigentliche Integrale):
-  - `uneigentliches_integral_unbeschraenkt_definition`
-  - `uneigentliches_integral_konvergenzkriterien`
-  - `integralkriterium_konvergenz`
-- **2026-04-28**: Ingest der Inhalte aus H. Heuser - Kapitel 12 (Anwendungen):
-  - `wallis_produkt`
-  - `euler_summenformel`
-  - `stirling_formel`
-  - `dgl_getrennte_veraenderliche`
-  - `dgl_linear_erster_ordnung`
-  - `variation_der_konstanten_zweite_ordnung`
-  - `numerische_integrationsregeln`
-  - `energiesatz_mechanik`
-- **2026-04-28**: Ingest der Inhalte aus H. Heuser - Kapitel 13 (Vertauschung von Grenzübergängen):
-  - `konvergenz_funktionen_definition`
-  - `weierstrass_majorantenkriterium`
-  - `stetigkeitssatz_funktionenfolgen`
-  - `gliedweise_differentiation`
-  - `gliedweise_integration`
-  - `satz_von_dini`
-  - `arzela_ascoli_satz`
-- **2026-04-22**: Architektur-Refactoring und Bereinigung:
-  - Verzeichnisse `src/common`, `src/importer` und `src/exporter` erstellt.
-  - `database.c/h` und `document.h` nach `common/` verschoben.
-  - `StringBuilder` in neue Utility `src/common/sb_helper.c/h` ausgelagert.
-  - Importer nach `src/importer/` verschoben und modularisiert.
-  - Exporter in `src/exporter/main.c` und `src/exporter/latex.c/h` aufgeteilt.
-  - `meson.build` an neue Struktur angepasst.
-  - `wiki/specs.md` nach `docs/specs.md` verschoben (Trennung von Inhalt und Spezifikation).
+## 2026-05-01
+- **Exporter-Infrastruktur**:
+    - Automatische Gliederung des LaTeX-Exports mittels `\section` (Axiome, Definitionen, Sätze).
+    - Implementierung von `\autoref` für kontextsensitive Nummerierung (z.B. "Definition 1.1").
+    - Integration von `hyperref` für klickbare Links im PDF (Farbe: blau).
+    - Rekursive Abhängigkeitsauflösung: Exporter zieht automatisch alle im Text referenzierten Keys in den Export ein.
+- **Automatisierung**:
+    - Refactoring des Python-Tools: Umzug von `update_refs.py` und `mapping.txt` nach `tools/`.
+    - Erstellung einer Dokumentation (`tools/README.md`) und Aktualisierung der technischen Spezifikation (`docs/specs.md`).
+- **Content-Vernetzung**:
+    - Systematische Überarbeitung aller Wiki-Dateien (Bulk-Update).
+    - Einführung der Syntax `[[key|text]]` für lesbare Querverweise im Fließtext.
+    - Vernetzung der Kernbereiche Maßtheorie und Analysis.
+
+## 2026-04-30
+- Initial ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 01.
+- Added following entries:
+    - `limes_inferior_superior_mengen` (def)
+    - `topologie_definition` (def)
+    - `topologie_durchschnitt_satz` (satz)
+    - `topologie_erzeugte_definition` (def)
+    - `sigma_algebra_definition` (def)
+    - `sigma_algebra_eigenschaften_lemma` (lemma)
+    - `sigma_algebra_durchschnitt_satz` (satz)
+    - `sigma_algebra_erzeugte_definition` (def)
+    - `borelsche_sigma_algebra_definition` (def)
+    - `dynkin_system_definition` (def)
+    - `dynkin_system_durchschnitt_satz` (satz)
+    - `dynkin_system_erzeugtes_definition` (def)
+    - `schnittstabiles_mengensystem_definition` (def)
+    - `sigma_algebra_dynkin_system_charakterisierung` (satz)
+    - `sigma_algebra_dynkin_system_erzeuger_satz` (satz)
+    - `halbring_definition` (def)
+    - `ring_definition` (def)
+    - `ring_erzeugter_halbring_satz` (satz)
+
+## 2026-04-30
+- Ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 02.
+- Added following entries:
+    - `urbild_eigenschaften_lemma` (lemma)
+    - `urbild_mengensystem_definition` (def)
+    - `topologischer_raum_definition` (def)
+    - `stetigkeit_erzeuger_satz` (satz)
+    - `messbarer_raum_definition` (def)
+    - `messbarkeit_erzeuger_satz` (satz)
+    - `stetigkeit_impliziert_messbarkeit_satz` (satz)
+    - `messbarkeit_monotone_funktionen_beispiel` (info)
+
+## 2026-04-30
+- Ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 03.
+- Added following entries:
+    - `produkt_mengen_projektion_definition` (def)
+    - `produkttopologie_definition` (def)
+    - `produkt_sigma_algebra_definition` (def)
+    - `stetigkeit_produkt_raum_satz` (satz)
+    - `produkttopologie_erzeuger_satz` (satz)
+    - `produkttopologie_endlich_satz` (satz)
+    - `messbarkeit_produkt_raum_satz` (satz)
+    - `produkt_sigma_algebra_erzeuger_satz` (satz)
+    - `produkt_sigma_algebra_abzaehlbar_satz` (satz)

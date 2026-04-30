@@ -5,7 +5,7 @@ type: satz
 tags: [analysis, differentialgleichung]
 refs: [dgl_linear_erster_ordnung, dgl_linear_inhomogen_n_ordnung]
 ---
-Zur Lösung einer inhomogenen linearen DGL zweiter Ordnung $y'' + a y' + b y = s(x)$ mit bekannten Lösungen $y_1, y_2$ der homogenen Gleichung nutzt man den Ansatz:
+Zur Lösung einer inhomogenen linearen DGL zweiter [[dgl_linear_erster_ordnung|Ordnung]] $y'' + a y' + b y = s(x)$ mit bekannten Lösungen $y_1, y_2$ der homogenen Gleichung nutzt man den Ansatz:
 $$y_p(x) = C_1(x) y_1(x) + C_2(x) y_2(x)$$
 Die Ableitungen $C'_1, C'_2$ ergeben sich aus dem Gleichungssystem:
 \begin{enumerate}

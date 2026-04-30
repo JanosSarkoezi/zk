@@ -7,7 +7,7 @@ refs: [ordnungsaxiome, schnittaxiom]
 ---
 Sei $M \subseteq \mathbb{R}$ eine nichtleere Teilmenge.
 
-\begin{enumerate}[label=\arabic*.]
+\begin{enumerate}
     \item Ein Element $s \in \mathbb{R}$ heißt **Supremum** (kleinste obere Schranke) von $M$, geschrieben $s = \sup M$, falls:
     \begin{itemize}
         \item $x \le s$ für alle $x \in M$ ($s$ ist obere Schranke).
@@ -21,5 +21,5 @@ Sei $M \subseteq \mathbb{R}$ eine nichtleere Teilmenge.
     \end{itemize}
 \end{enumerate}
 
---proof--
-Die Existenz des Supremums für jede nach oben beschränkte, nichtleere Teilmenge von $\mathbb{R}$ ist durch das **Schnittaxiom** (Vollständigkeitsaxiom) garantiert. Besitzt $M$ zudem ein Maximum, so gilt $\max M = \sup M$.
+--examples--
+Die Existenz des Supremums für jede nach oben beschränkte, nichtleere Teilmenge von $\mathbb{R}$ ist durch das **[[schnittaxiom|Schnittaxiom]]** (Vollständigkeitsaxiom) garantiert. Besitzt $M$ zudem ein Maximum, so gilt $\max M = \sup M$.

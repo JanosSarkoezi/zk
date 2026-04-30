@@ -10,4 +10,4 @@ $$f^{(n)}(\xi) = \frac{\Delta^n f(x_0)}{h^n}$$
 wobei $\Delta^n f(x_0)$ die $n$-te Differenz von $f$ an der Stelle $x_0$ bezeichnet.
 
 --proof--
-Der Beweis erfolgt per Induktion über $n$. Für $n=1$ entspricht die Aussage dem gewöhnlichen Mittelwertsatz der Differentialrechnung. Für den Induktionsschritt betrachtet man die Hilfsfunktion $g(x) = f(x+h) - f(x)$ und wendet die Induktionsvoraussetzung an.
+Der Beweis erfolgt per Induktion über $n$. Für $n=1$ entspricht die Aussage dem gewöhnlichen [[mittelwertsatz_differentialrechnung|Mittelwertsatz der Differentialrechnung]]. Für den Induktionsschritt betrachtet man die Hilfsfunktion $g(x) = f(x+h) - f(x)$ und wendet die Induktionsvoraussetzung an.

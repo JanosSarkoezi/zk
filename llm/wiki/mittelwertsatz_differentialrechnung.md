@@ -5,7 +5,7 @@ type: satz
 tags: [analysis, ableitung]
 refs: [ableitung_definition, extremalsatz_weierstrass]
 ---
-Sei $f: [a, b] \to \mathbb{R}$ stetig auf $[a, b]$ und differenzierbar in $(a, b)$. Dann gibt es mindestens ein $\xi \in (a, b)$ mit:
+Sei $f: [a, b] \to \mathbb{R}$ stetig auf $[a, b]$ und [[ableitung_definition|differenzierbar]] in $(a, b)$. Dann gibt es mindestens ein $\xi \in (a, b)$ mit:
 $$f'(\xi) = \frac{f(b) - f(a)}{b - a}$$
 
 --proof--

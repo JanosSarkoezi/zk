@@ -5,8 +5,8 @@ type: satz
 tags: [analysis, ableitung]
 refs: [ableitung_definition]
 ---
-Sind $f$ und $g$ an der Stelle $\xi$ differenzierbar, so gilt:
-\begin{enumerate}[label=\arabic*.]
+Sind $f$ und $g$ an der Stelle $\xi$ [[ableitung_definition|differenzierbar]], so gilt:
+\begin{enumerate}
     \item **Summenregel**: $(f \pm g)'(\xi) = f'(\xi) \pm g'(\xi)$
     \item **Faktorregel**: $(c \cdot f)'(\xi) = c \cdot f'(\xi)$ für $c \in \mathbb{R}$
     \item **Produktregel**: $(f \cdot g)'(\xi) = f'(\xi)g(\xi) + f(\xi)g'(\xi)$

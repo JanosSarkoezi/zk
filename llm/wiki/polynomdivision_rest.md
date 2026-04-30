@@ -5,7 +5,7 @@ type: satz
 tags: [analysis, algebra, polynome]
 refs: [identitaetssatz_polynome]
 ---
-Zu zwei Polynomen $p$ und $s$ ($s$ nicht das Nullpolynom) gibt es eindeutig bestimmte Polynome $q$ und $r$, so dass gilt:
+Zu zwei Polynomen $p$ und $s$ ($s$ nicht das Nullpolynom) gibt es eindeutig bestimmte [[identitaetssatz_polynome|Polynome]] $q$ und $r$, so dass gilt:
 $p = qs + r$
 wobei entweder $r = 0$ ist oder $\text{grad}(r) < \text{grad}(s)$.
 

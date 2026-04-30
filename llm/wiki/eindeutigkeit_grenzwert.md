@@ -5,7 +5,7 @@ type: satz
 tags: [analysis, folgen, grenzwert]
 refs: [grenzwert_definition]
 ---
-Jede konvergente Folge $(a_n)$ besitzt genau einen Grenzwert.
+Jede konvergente [[grenzwert_definition|Folge]] $(a_n)$ besitzt genau einen [[grenzwert_definition|Grenzwert]].
 
 --proof--
 Angenommen, $a_n \to a$ und $a_n \to b$ mit $a \neq b$. 

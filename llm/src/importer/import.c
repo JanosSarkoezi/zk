@@ -70,7 +70,7 @@ void parse_file(const char *filename, Document *doc) {
             continue;
         }
 
-        if (strncmp(line, "--proof--", 9) == 0) {
+        if (strncmp(line, "--proof--", 9) == 0 || strncmp(line, "--examples--", 12) == 0) {
             state = 3;
             continue;
         }

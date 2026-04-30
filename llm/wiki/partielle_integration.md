@@ -9,4 +9,4 @@ Sind $u$ und $v$ auf $[a, b]$ stetig differenzierbare Funktionen, so gilt:
 $$\int_a^b u(x) v'(x) \, dx = [u(x)v(x)]_a^b - \int_a^b u'(x) v(x) \, dx$$
 
 --proof--
-Die Regel folgt durch Integration der Produktregel $(uv)' = u'v + uv'$ und Anwendung des Hauptsatzes der Differential- und Integralrechnung.
+Die Regel folgt durch Integration der Produktregel $(uv)' = u'v + uv'$ und Anwendung des Hauptsatzes der Differential- [[hauptsatz_differential_integralrechnung|und Integralrechnung]].

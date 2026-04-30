@@ -7,7 +7,7 @@ refs: []
 ---
 Die Körperaxiome formulieren die Grundregeln der „Buchstabenalgebra“ für $\mathbb{R}$ unter den Verknüpfungen $+$ (Addition) und $\cdot$ (Multiplikation):
 
-\begin{enumerate}[label=(A \arabic*)]
+\begin{enumerate}
     \item Kommutativgesetze: $a+b = b+a$ und $ab = ba$.
     \item Assoziativgesetze: $a+(b+c) = (a+b)+c$ und $a(bc) = (ab)c$.
     \item Distributivgesetz: $a(b+c) = ab+ac$.

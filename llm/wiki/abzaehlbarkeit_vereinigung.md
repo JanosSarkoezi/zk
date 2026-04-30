@@ -5,10 +5,10 @@ type: satz
 tags: [analysis, mengen, abzaehlbarkeit]
 refs: [abzaehlbarkeit_q]
 ---
-Die Vereinigung von höchstens abzählbar vielen Mengen, von denen jede höchstens abzählbar ist, ist selbst wieder höchstens abzählbar.
+Die Vereinigung von höchstens [[abzaehlbarkeit_q|abzählbar]] vielen Mengen, von denen jede höchstens [[abzaehlbarkeit_q|abzählbar]] ist, ist selbst wieder höchstens [[abzaehlbarkeit_q|abzählbar]].
 
 --proof--
-Seien $M_1, M_2, \dots$ die abzählbar vielen Mengen. Wir können die Elemente in einem Schema anordnen:
+Seien $M_1, M_2, \dots$ die [[abzaehlbarkeit_q|abzählbar]] vielen Mengen. Wir können die Elemente in einem Schema anordnen:
 $m_{11}, m_{12}, m_{13}, \dots$
 $m_{21}, m_{22}, m_{23}, \dots$
 ...

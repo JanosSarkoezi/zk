@@ -13,6 +13,6 @@ Dabei heißt $X$ die **Definitionsmenge** und $Y$ die **Zielmenge**.
 Für eine Teilmenge $A \subseteq X$ heißt $f(A) = \{ f(x) \mid x \in A \}$ das **Bild** von $A$.
 Für eine Teilmenge $B \subseteq Y$ heißt $f^{-1}(B) = \{ x \in X \mid f(x) \in B \}$ das **Urbild** von $B$.
 
---proof--
+--examples--
 (Definition erfordert keinen Beweis.)
 Eine Funktion ist formal als Teilmenge des kartesischen Produkts $X \times Y$ definiert (der Graph von $f$), wobei für jedes $x \in X$ genau ein Paar $(x, y)$ in der Menge existiert.

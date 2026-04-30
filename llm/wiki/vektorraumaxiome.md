@@ -7,7 +7,7 @@ refs: [koerperaxiome]
 ---
 Ein linearer Raum (Vektorraum) über einem Körper (meist $\mathbb{R}$) ist eine Menge $E$, auf der eine Addition und eine Skalarmultiplikation definiert sind, die folgende Axiome erfüllen:
 
-\begin{enumerate}[label=(V \arabic*)]
+\begin{enumerate}
     \item $a+(b+c) = (a+b)+c$ (Assoziativgesetz der Addition)
     \item $a+b = b+a$ (Kommutativgesetz der Addition)
     \item Es gibt ein Nullelement $0 \in E$ mit $a+0 = a$.

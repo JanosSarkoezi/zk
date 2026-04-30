@@ -5,7 +5,7 @@ type: satz
 tags: [analysis, folgen, grenzwert]
 refs: [grenzwert_definition]
 ---
-Seien $(a_n)$ und $(b_n)$ konvergente Folgen mit $a_n \le b_n$ für fast alle $n$. Dann gilt für die Grenzwerte:
+Seien $(a_n)$ und $(b_n)$ konvergente Folgen mit $a_n \le b_n$ für fast alle $n$. Dann gilt für die [[grenzwert_definition|Grenzwerte]]:
 $\lim_{n \to \infty} a_n \le \lim_{n \to \infty} b_n$.
 
 --proof--

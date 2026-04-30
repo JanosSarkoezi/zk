@@ -38,8 +38,8 @@ Der Importer (`src/importer/`) nutzt einen Zustandsautomaten in `import.c`, um d
 
 1.  **START**: Suche nach dem ersten `---`.
 2.  **HEADER**: Extrahiere YAML `key: value` Paare.
-3.  **BODY**: Lese den Inhalt bis zum Separator `--proof--`.
-4.  **PROOF**: Lese den Rest der Datei als Beweis-Block.
+3.  **BODY**: Lese den Inhalt bis zum Separator `--proof--` oder `--examples--`.
+4.  **PROOF/EXAMPLES**: Lese den Rest der Datei als Sekundär-Block (Beweis oder Beispiele).
 
 Zur effizienten Speicherverwaltung wird die `StringBuilder`-Utility aus `src/common/sb_helper.c` verwendet.
 
@@ -64,6 +64,9 @@ Die Datenbank `wiki.db` enthält die Tabelle `entries`. Die Speicherung erfolgt 
 Der Exporter (`src/exporter/`) generiert aus Suchergebnissen ein kompilierbares LaTeX-Dokument.
 
 ### Funktionen & Logik
+- **Themen-Spezifische Sektionen**: Der Sekundär-Block wird je nach Typ unterschiedlich gelabelt:
+  - Bei `satz`, `theorem`, `lemma`: Erzeugung einer `\begin{proof}` Umgebung.
+  - Bei `def`, `definition`: Erzeugung einer Sektion "Beispiele/Bemerkungen".
 - **Dependency Resolution**: Mit `--refs` werden alle in `refs` genannten Keys automatisch in den Export aufgenommen.
 - **Regex-Suche**: Alle Suchbegriffe werden mittels einer in C implementierten `REGEXP`-Funktion (via `sqlite3_create_function`) gegen alle Textspalten geprüft.
 - **Theorem-Mapping**: Der `type` wird auf LaTeX-Umgebungen gemappt:
@@ -71,14 +74,36 @@ Der Exporter (`src/exporter/`) generiert aus Suchergebnissen ein kompilierbares 
   - `def`, `definition` -> `\begin{definition} ... \end{definition}`
   - `axiom` -> `\begin{axiom} ... \end{axiom}`
 
-### Sortierung & Deduplikation
+### Sortierung & Gliederung
 - Einträge werden nach einer logischen Hierarchie sortiert: 1. Axiome, 2. Definitionen, 3. Sätze, 4. Sonstiges.
 - Innerhalb der Gruppen erfolgt die Sortierung alphabetisch nach `title`.
+- Der Exporter erstellt automatisch `\section`-Header für jede Gruppe (z.B. "Definitionen", "Sätze und Theoreme"), um eine saubere Nummerierung (1.1, 2.1) zu gewährleisten.
 - Eine interne `KeyList` verhindert, dass doppelt referenzierte Einträge mehrfach im Dokument erscheinen.
+
+### Labeling & Referenzierung
+- Jeder exportierte Eintrag erhält automatisch ein LaTeX-Label im Format `\label{key}`.
+- Dies ermöglicht die spätere Implementierung von automatisierter Querverlinkung innerhalb des generierten PDF-Dokuments.
 
 ---
 
-## 6. Hilfsprogramme (Common)
+## 6. Automatisierung & Tools
+
+Um die Vernetzung der Inhalte zu erleichtern, stehen Python-basierte Tools im Ordner `tools/` zur Verfügung.
+
+### Reference Updater (`update_refs.py`)
+Das Skript automatisiert das Setzen von Querverweisen innerhalb der Markdown-Dateien.
+
+- **Eingabe**: `mapping.txt` (Key-Titel-Zuordnung) und die Dateien in `wiki/`.
+- **Logik**:
+  - Extraktion der `refs` aus dem YAML-Header.
+  - Suche nach Titel-Variationen im Text (Case-Insensitive).
+  - Ersetzung durch `[[key|Text]]` (für klickbare Links im PDF).
+  - Schutz von LaTeX-Umgebungen während der Ersetzung.
+- **Workflow**: Nach dem Hinzufügen neuer Artikel oder dem Ändern von Referenzen sollte das Skript ausgeführt werden, um die Konsistenz der Verlinkung zu gewährleisten.
+
+---
+
+## 7. Hilfsprogramme (Common)
 
 ### StringBuilder (`sb_helper.c`)
 Bietet dynamisch wachsenden Speicher für String-Operationen. Dies ist essenziell für die Verarbeitung beliebig langer Beweistexte.

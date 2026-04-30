@@ -11,5 +11,5 @@ oder äquivalent
 $$f'(\xi) = \lim_{h \to 0} \frac{f(\xi + h) - f(\xi)}{h}$$
 existiert und endlich ist. Der Wert $f'(\xi)$ heißt die **Ableitung** von $f$ an der Stelle $\xi$.
 
---proof--
+--examples--
 Heuser (Nr. 46) führt die Ableitung als Maß für die lokale Änderungsrate ein. Geometrisch entspricht $f'(\xi)$ der Steigung der Tangente an den Graphen von $f$ im Punkt $(\xi, f(\xi))$. Ist $f$ in jedem Punkt eines Intervalls $I$ differenzierbar, so erhält man die Ableitungsfunktion $f': I \to \mathbb{R}$.

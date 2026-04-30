@@ -7,11 +7,11 @@ refs: [koerperaxiome]
 ---
 Die Ordnungsaxiome definieren die „Kleiner-Beziehung“ $a < b$ in $\mathbb{R}$:
 
-\begin{enumerate}[label=(A \arabic*)]
-    \item Trichotomiegesetz: Für zwei reelle Zahlen $a, b$ gilt stets genau eine der Beziehungen $a < b$, $a = b$ oder $a > b$.
+\begin{enumerate}
+    \item Trichotomiegesetz: Für zwei reelle [[koerperaxiome|Zahlen]] $a, b$ gilt stets genau eine der Beziehungen $a < b$, $a = b$ oder $a > b$.
     \item Transitivitätsgesetz: $a < b$ und $b < c \Rightarrow a < c$.
     \item Monotoniegesetze:
-    \begin{enumerate}[leftmargin=0.5cm]
+    \begin{enumerate}
         \item $a < b \Rightarrow a+c < b+c$ für jedes $c$.
         \item $a < b \Rightarrow ac < bc$ für jedes $c > 0$.
     \end{enumerate}

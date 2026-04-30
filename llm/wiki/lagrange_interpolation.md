@@ -12,4 +12,4 @@ $L(x_k) = y_k$ für $k = 0, \dots, n$.
 Die Existenz wird durch die Konstruktion mit Lagrange-Basispolynomen gezeigt:
 $L_k(x) = \prod_{j=0, j \neq k}^n \frac{x - x_j}{x_k - x_j}$
 Dann ist $L(x) = \sum_{k=0}^n y_k L_k(x)$ das gesuchte Polynom, da $L_k(x_j) = \delta_{kj}$.
-Die Eindeutigkeit folgt aus dem Identitätssatz für Polynome: Gäbe es zwei solche Polynome $L$ und $M$, so hätte ihre Differenz $L-M$ an $n+1$ Stellen den Wert 0, obwohl ihr Grad höchstens $n$ ist. Folglich muss $L-M = 0$ sein.
+Die Eindeutigkeit folgt aus dem [[identitaetssatz_polynome|Identitätssatz für Polynome]]: Gäbe es zwei solche [[identitaetssatz_polynome|Polynome]] $L$ und $M$, so hätte ihre Differenz $L-M$ an $n+1$ Stellen den Wert 0, obwohl ihr Grad höchstens $n$ ist. Folglich muss $L-M = 0$ sein.

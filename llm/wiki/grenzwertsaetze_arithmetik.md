@@ -6,7 +6,7 @@ tags: [analysis, folgen, grenzwert]
 refs: [grenzwert_definition]
 ---
 Seien $(a_n)$ und $(b_n)$ konvergente Folgen mit $\lim_{n \to \infty} a_n = a$ und $\lim_{n \to \infty} b_n = b$. Dann gilt:
-\begin{enumerate}[label=\arabic*.]
+\begin{enumerate}
     \item $\lim_{n \to \infty} (a_n \pm b_n) = a \pm b$
     \item $\lim_{n \to \infty} (a_n \cdot b_n) = a \cdot b$
     \item $\lim_{n \to \infty} (\alpha a_n) = \alpha a$ für jedes $\alpha \in \mathbb{R}$
@@ -14,7 +14,7 @@ Seien $(a_n)$ und $(b_n)$ konvergente Folgen mit $\lim_{n \to \infty} a_n = a$ u
 \end{enumerate}
 
 --proof--
-\begin{enumerate}[label=\arabic*.]
+\begin{enumerate}
     \item **Summe**: Zu $\epsilon > 0$ wähle $n_1, n_2$, so dass $|a_n - a| < \epsilon/2$ für $n > n_1$ und $|b_n - b| < \epsilon/2$ für $n > n_2$. Für $n > \max(n_1, n_2)$ gilt:
     $|(a_n + b_n) - (a + b)| \le |a_n - a| + |b_n - b| < \epsilon/2 + \epsilon/2 = \epsilon$.
 

@@ -5,9 +5,9 @@ type: satz
 tags: [analysis, reihen, integralrechnung]
 refs: [reihe_definition, uneigentliches_integral_unbeschraenkt_definition]
 ---
-Das Integralkriterium stellt einen Zusammenhang zwischen der Konvergenz einer unendlichen Reihe und einem uneigentlichen Integral her.
+Das Integralkriterium stellt einen Zusammenhang zwischen der Konvergenz einer [[reihe_definition|unendlichen Reihe]] und einem uneigentlichen [[uneigentliches_integral_unbeschraenkt_definition|Integral]] her.
 
-Die Funktion $f$ sei auf $[m, \infty)$ (mit $m \in \mathbb{N}$) positiv und monoton fallend. Dann haben die Reihe $\sum_{k=m}^{\infty} f(k)$ und das uneigentliche Integral $\int_{m}^{\infty} f(x) \, dx$ dasselbe Konvergenzverhalten.
+Die Funktion $f$ sei auf $[m, \infty)$ (mit $m \in \mathbb{N}$) positiv und monoton fallend. Dann haben die [[reihe_definition|Reihe]] $\sum_{k=m}^{\infty} f(k)$ und das uneigentliche [[uneigentliches_integral_unbeschraenkt_definition|Integral]] $\int_{m}^{\infty} f(x) \, dx$ dasselbe Konvergenzverhalten.
 
 Es gilt insbesondere:
 $$\sum_{k=m+1}^{\infty} f(k) \le \int_{m}^{\infty} f(x) \, dx \le \sum_{k=m}^{\infty} f(k)$$
