@@ -12,9 +12,13 @@ Register aller Keys und Verlinkungen im Wiki.
 | `abzaehlbarkeit_q` | Die Menge der rationalen Zahlen ist abzählbar | satz |
 | `abzaehlbarkeit_vereinigung` | Vereinigung höchstens abzählbarer Mengen | satz |
 | `arzela_ascoli_satz` | Satz von Arzelà-Ascoli | satz |
+| `aeusseres_mass_definition` | Äußeres Maß | def |
 | `bernoulli_zahlen_definition` | Bernoulli-Zahlen | def |
+| `bildmass_definition` | Bildmaß (induziertes Maß) | def |
 | `beschraenktheit_konvergenter_folgen` | Beschränktheit konvergenter Folgen | satz |
 | `bolzano_weierstrass` | Satz von Bolzano-Weierstraß | satz |
+| `borelsche_sigma_algebra_definition` | Borelsche sigma-Algebra | def |
+| `caratheodory_fortsetzungssatz` | Fortsetzungssatz von Carathéodory | satz |
 | `cauchy_kriterium` | Cauchy-Konvergenzkriterium | satz |
 | `darboux_integrale_definition` | Darbouxsche Ober- und Unterintegrale | def |
 | `dgl_getrennte_veraenderliche` | DGL mit getrennten Veränderlichen | satz |
@@ -50,25 +54,30 @@ Register aller Keys und Verlinkungen im Wiki.
 | `konvexitaet_definition` | Definition der Konvexität | def |
 | `lagrange_interpolation` | Lagrange-Interpolationspolynom | satz |
 | `lebesgue_integrabilitaetskriterium` | Lebesguesches Integrabilitätskriterium | satz |
+| `lebesgue_mass_charakterisierung_satz` | Charakterisierung des Lebesgue-Maßes durch Translationsinvarianz | satz |
+| `lebesgue_mass_definition` | Lebesgue-Maß auf den Borelmengen | def |
+| `lebesgue_mass_transformation_linear_satz` | Transformation des Lebesgue-Maßes unter linearen Abbildungen | satz |
 | `leibniz_kriterium` | Leibniz-Kriterium für alternierende Reihen | satz |
 | `lhospital_regel` | Regel von de l'Hospital | satz |
 | `limes_superior_inferior_definition` | Definition des Limes superior und Limes inferior | def |
 | `limes_superior_inferior_eigenschaften` | Eigenschaften des Limes superior und Limes inferior | satz |
 | `lokale_extrema_kriterium` | Kriterien für lokale Extrema | satz |
+| `mass_approximationssatz` | Approximationssatz für Maße | satz |
+| `mass_eindeutigkeitssatz` | Eindeutigkeitssatz für Maße | satz |
+| `mass_fortsetzung_satz` | Fortsetzungssatz für Maße | satz |
+| `mass_sigma_subadditiv_lemma` | Monotonie und sigma-Subadditivität von Maßen | lemma |
 | `mengenfunktion_definition` | Definition einer Mengenfunktion | def |
 | `additivitaet_mengenfunktion_definition` | Additivität von Mengenfunktionen | def |
 | `inhalt_definition` | Definition eines Inhalts | def |
-| `additiv_impliziert_endlich_additiv_ring_satz` | Additivität und endliche Additivität auf Ringen | satz |
+| `additiv_impliziert_endlich_additiv_ring_satz` | Additivität and endliche Additivität auf Ringen | satz |
 | `inhalt_fortsetzung_satz` | Fortsetzungssatz für Inhalte | satz |
 | `monotonie_subadditivitaet_definition` | Monotonie und Subadditivität | def |
 | `inhalt_monoton_subadditiv_lemma` | Monotonie und Subadditivität von Inhalten | lemma |
 | `sigma_additivitaet_mass_definition` | Definition eines Maßes | def |
-| `mass_fortsetzung_satz` | Fortsetzungssatz für Maße | satz |
 | `stetigkeit_mengenfunktionen_definition` | Stetigkeitseigenschaften von Mengenfunktionen | def |
 | `sigma_additivitaet_stetigkeit_unten_satz` | Äquivalenz von sigma-Additivität und Stetigkeit von unten | satz |
 | `stetigkeit_unten_impliziert_oben_lemma` | Zusammenhang zwischen Stetigkeit von unten und oben | lemma |
 | `sigma_additivitaet_stetigkeit_aequivalenz_satz` | Äquivalente Charakterisierungen der sigma-Additivität | satz |
-| `mass_sigma_subadditiv_lemma` | Monotonie und sigma-Subadditivität von Maßen | lemma |
 | `signiertes_mass_definition` | Definition eines signierten Maßes | def |
 | `jordan_zerlegung_satz` | Satz von der Jordan-Zerlegung | satz |
 | `hahn_zerlegung_satz` | Satz von der Hahn-Zerlegung | satz |
@@ -108,6 +117,7 @@ Register aller Keys und Verlinkungen im Wiki.
 | `stirling_formel` | Die Stirlingsche Formel | satz |
 | `substitutionsregel` | Substitutionsregel | satz |
 | `supremum_infimum` | Supremum und Infimum | def |
+| `translationsinvarianz_mass_definition` | Translationsinvarianz von Maßen | def |
 | `ueberabzaehlbarkeit_r` | Die Menge der reellen Zahlen ist überabzählbar | satz |
 | `uneigentliches_integral_konvergenzkriterien` | Konvergenzkriterien für uneigentliche Integrale | satz |
 | `uneigentliches_integral_unbeschraenkt_definition` | Uneigentliche Integrale über unbeschränkte Intervalle | def |
@@ -133,7 +143,7 @@ Register aller Keys und Verlinkungen im Wiki.
 | `dynkin_system_erzeugtes_definition` | Erzeugtes Dynkin-System | def |
 | `schnittstabiles_mengensystem_definition` | Definition eines schnittstabilen Mengensystems | def |
 | `sigma_algebra_dynkin_system_charakterisierung` | Charakterisierung von sigma-Algebren durch Dynkin-Systeme | satz |
-| `sigma_algebra_dynkin_system_erzeuger_satz` | Gleichheit von erzeugter sigma-Algebra und erzeugtem Dynkin-System | satz |
+| `sigma_algebra_dynkin_system_erzeuger_satz` | Gleichheit von erzeugter sigma-Algebra and erzeugtem Dynkin-System | satz |
 | `halbring_definition` | Definition eines Halbrings | def |
 | `ring_definition` | Definition eines Rings | def |
 | `ring_erzeugter_halbring_satz` | Der von einem Halbring erzeugte Ring | satz |
@@ -141,7 +151,8 @@ Register aller Keys und Verlinkungen im Wiki.
 | `urbild_mengensystem_definition` | Urbild eines Mengensystems | def |
 | `topologischer_raum_definition` | Topologischer Raum und stetige Abbildung | def |
 | `stetigkeit_erzeuger_satz` | Stetigkeit und Erzeuger der Topologie | satz |
-| `messbarer_raum_definition` | Messbarer Raum und messbare Abbildung | def |
+| `messbarer_raum_definition` | Messbarer Raum and messbare Abbildung | def |
+| `messbarkeit_aeusseres_mass_definition` | Messbarkeit bezüglich eines äußeren Maßes (Carathéodory-Kriterium) | def |
 | `messbarkeit_erzeuger_satz` | Messbarkeit und Erzeuger der sigma-Algebra | satz |
 | `stetigkeit_impliziert_messbarkeit_satz` | Zusammenhang zwischen Stetigkeit und Messbarkeit | satz |
 | `messbarkeit_monotone_funktionen_beispiel` | Messbarkeit monotoner Funktionen | info |

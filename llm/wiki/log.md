@@ -1,5 +1,22 @@
 # Wiki Log
 
+## 2026-05-25
+- Ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 06 (Transformation von Maßen).
+- Added following entries:
+    - `bildmass_definition` (def)
+    - `translationsinvarianz_mass_definition` (def)
+    - `lebesgue_mass_charakterisierung_satz` (satz)
+    - `lebesgue_mass_transformation_linear_satz` (satz)
+
+## 2026-05-25
+- Ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 05 (Fortsetzung von Maßen).
+- Added following entries:
+    - `mass_eindeutigkeitssatz` (satz)
+    - `aeusseres_mass_definition` (def)
+    - `messbarkeit_aeusseres_mass_definition` (def)
+    - `caratheodory_fortsetzungssatz` (satz)
+    - `lebesgue_mass_definition` (def)
+
 ## 2026-05-03
 - Ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 04.
 - Added following entries:

@@ -11,9 +11,18 @@ Sei $\mathcal{C}$ ein Halbring. Dann besitzt jeder Inhalt $\mu: \mathcal{C} \to 
 Nach dem Satz über den erzeugten [[ring_erzeugter_halbring_satz|Ring]] [[halbring_definition|eines Halbrings]] gilt:
 $$\rho(\mathcal{C}) = \left\{ A \in 2^\Omega \mid A = \sum_{i \in I} H_i \text{ mit } I \text{ endlich und } \{H_i\}_{i \in I} \subseteq \mathcal{C} \text{ disjunkt} \right\}$$
 
-Für eine Fortsetzung $\bar{\mu}$ muss gelten: $\bar{\mu}[A] = \sum_{i \in I} \mu[H_i]$. 
+Für eine Fortsetzung $\bar{\mu}$ muss gelten: $\bar{\mu}[A] = \sum_{i \in I} \mu[H_i]$.
 
-1. **Wohldefiniertheit**: Man zeigt, dass die Summe $\sum \mu[H_i]$ unabhängig von der gewählten Zerlegung von $A$ in disjunkte Halbring-Elemente ist. Dies folgt aus der Additivität von $\mu$ auf dem Halbring (durch Betrachtung der gemeinsamen Verfeinerung zweier Zerlegungen).
-2. **Inhaltseigenschaft**: Es ist leicht zu prüfen, dass $\bar{\mu}[\emptyset] = 0$ und $\bar{\mu}$ additiv auf $\rho(\mathcal{C})$ ist. Da $\rho(\mathcal{C})$ ein [[ring_erzeugter_halbring_satz|Ring]] ist, folgt aus der Additivität bereits die endliche Additivität.
-3. **Eindeutigkeit**: Da jedes Element von $\rho(\mathcal{C})$ eine endliche disjunkte Vereinigung von Elementen aus $\mathcal{C}$ ist, ist der Wert von $\bar{\mu}$ durch die Werte auf $\mathcal{C}$ zwingend festgelegt.
+\begin{enumerate}[label=(\arabic*)]
+    \item **Wohldefiniertheit**: Man zeigt, dass die Summe $\sum \mu[H_i]$ unabhängig von der
+          gewählten Zerlegung von $A$ in disjunkte Halbring-Elemente ist. Dies folgt aus der
+          Additivität von $\mu$ auf dem Halbring (durch Betrachtung der gemeinsamen Verfeinerung
+          zweier Zerlegungen).
+    \item **Inhaltseigenschaft**: Es ist leicht zu prüfen, dass $\bar{\mu}[\emptyset] = 0$ und
+          $\bar{\mu}$ additiv auf $\rho(\mathcal{C})$ ist. Da $\rho(\mathcal{C})$ ein
+          [[ring_erzeugter_halbring_satz|Ring]] ist, folgt aus der Additivität bereits die endliche Additivität.
+    \item **Eindeutigkeit**: Da jedes Element von $\rho(\mathcal{C})$ eine endliche disjunkte
+          Vereinigung von Elementen aus $\mathcal{C}$ ist, ist der Wert von $\bar{\mu}$ durch
+          die Werte auf $\mathcal{C}$ zwingend festgelegt.
+\end{enumerate}
 --proof--
