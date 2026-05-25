@@ -1,6 +1,17 @@
 # Wiki Log
 
 ## 2026-05-25
+- Ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 07 (Messbare Funktionen).
+- Added following entries:
+    - `numerische_funktion_definition` (def)
+    - `messbarkeit_numerische_funktion_charakterisierung_satz` (satz)
+    - `messbarkeit_funktionenfolgen_satz` (satz)
+    - `messbarkeit_approximationssatz_positiv_satz` (satz)
+    - `l0_raum_definition` (def)
+    - `l_unendlich_raum_definition` (def)
+    - `konvergenz_arten_definition` (def)
+
+## 2026-05-25
 - Ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 06 (Transformation von Maßen).
 - Added following entries:
     - `bildmass_definition` (def)
