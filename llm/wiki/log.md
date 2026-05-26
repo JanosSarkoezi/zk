@@ -1,6 +1,14 @@
 # Wiki Log
 
 ## 2026-05-26
+- Ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 10 (Wahrscheinlichkeitsräume).
+- Added following entries:
+    - `wahrscheinlichkeitsraum_definition` (def)
+    - `diskreter_wahrscheinlichkeitsraum_definition` (def)
+    - `symmetrischer_wahrscheinlichkeitsraum_definition` (def)
+    - `projektive_familie_wahrscheinlichkeitsmasse_definition` (def)
+    - `andersen_jessen_satz` (satz)
+
 - Ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 09 (Berechnung des Lebesgue-Integrals).
 - Added following entries:
     - `integral_induziertes_mass_satz` (satz)
