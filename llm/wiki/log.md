@@ -1,6 +1,20 @@
 # Wiki Log
 
 ## 2026-05-26
+- Ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 09 (Berechnung des Lebesgue-Integrals).
+- Added following entries:
+    - `integral_induziertes_mass_satz` (satz)
+    - `mass_mit_dichte_definition` (def)
+    - `dichte_kettenregel_satz` (satz)
+    - `mass_mit_dichte_eindeutigkeit_satz` (satz)
+    - `absolutstetigkeit_mass_definition` (def)
+    - `radon_nikodym_satz` (satz)
+    - `singulaeres_mass_definition` (def)
+    - `lebesgue_zerlegung_satz` (satz)
+    - `substitutionsregel_mass_satz` (satz)
+    - `produkt_mass_definition` (def)
+    - `fubini_satz` (satz)
+
 - Ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 08 (Lebesgue-Integral).
 - Added following entries:
     - `einfache_funktion_definition` (def)
