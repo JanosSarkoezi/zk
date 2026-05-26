@@ -1,5 +1,20 @@
 # Wiki Log
 
+## 2026-05-26
+- Ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 08 (Lebesgue-Integral).
+- Added following entries:
+    - `einfache_funktion_definition` (def)
+    - `lebesgue_integral_einfach_definition` (def)
+    - `lebesgue_integral_einfach_linearitaet_satz` (satz)
+    - `lebesgue_integral_positiv_definition` (def)
+    - `monotone_konvergenz_satz` (satz)
+    - `markov_ungleichung_satz` (satz)
+    - `integral_nullmenge_lemma` (lemma)
+    - `fatou_lemma` (satz)
+    - `integrierbarkeit_definition` (def)
+    - `integral_linearitaet_monotonie_satz` (satz)
+    - `majorisierte_konvergenz_satz` (satz)
+
 ## 2026-05-25
 - Ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 07 (Messbare Funktionen).
 - Added following entries:
