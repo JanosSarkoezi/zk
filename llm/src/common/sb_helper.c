@@ -1,6 +1,7 @@
 #include "sb_helper.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 void sb_init(StringBuilder *sb, size_t initial_cap) {
     sb->capacity = initial_cap > 0 ? initial_cap : 1024;
@@ -17,7 +18,11 @@ void sb_append(StringBuilder *sb, const char *str) {
             sb->capacity *= 2;
         }
         char *temp = realloc(sb->buffer, sb->capacity);
-        if (temp) sb->buffer = temp;
+        if (!temp) {
+            fprintf(stderr, "Out of memory in sb_append!\n");
+            exit(EXIT_FAILURE); // Oder ein anderes Fehlermanagement
+        }
+        sb->buffer = temp;
     }
     memcpy(sb->buffer + sb->length, str, len + 1);
     sb->length += len;

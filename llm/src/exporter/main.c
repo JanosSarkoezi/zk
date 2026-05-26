@@ -55,7 +55,7 @@ int main(int argc, char *argv[]) {
 
     for (int i = start_idx; i < argc; i++) {
         char *escaped = smart_escape_regex(argv[i]);
-        char *part = sqlite3_mprintf("%s(key REGEXP '%q' OR title REGEXP '%q' OR tags REGEXP '%q' OR content REGEXP '%q' OR proof REGEXP '%q')", 
+        char *part = sqlite3_mprintf("%s(key REGEXP '%q' OR title REGEXP '%q' OR tags REGEXP '%q' OR content REGEXP '%q' OR proof REGEXP '%q')",
                                      (!first_search_part ? " AND " : ""), escaped, escaped, escaped, escaped, escaped);
         sb_append(&sql_sb, part);
         sqlite3_free(part);
@@ -78,7 +78,6 @@ int main(int argc, char *argv[]) {
         }
         sqlite3_finalize(stmt);
     }
-    sb_free(&sql_sb);
 
     // Dependency Resolution
     if (include_refs) {
@@ -110,6 +109,9 @@ int main(int argc, char *argv[]) {
             last_count = current_count;
         }
     }
+
+    // sql_sb wird erst hier freigegeben, da search_sql bis hierhin gültig sein muss
+    sb_free(&sql_sb);
 
     if (export_keys.count == 0) {
         printf("No entries found.\n");
@@ -147,7 +149,7 @@ int main(int argc, char *argv[]) {
     if (sqlite3_prepare_v2(db, final_sql, -1, &stmt, 0) == SQLITE_OK) {
         int count = 0;
         int last_category = -1;
-        
+
         while (sqlite3_step(stmt) == SQLITE_ROW) {
             const char *key = (const char*)sqlite3_column_text(stmt, 0);
             const char *title = (const char*)sqlite3_column_text(stmt, 1);
@@ -155,38 +157,43 @@ int main(int argc, char *argv[]) {
             const char *content = (const char*)sqlite3_column_text(stmt, 3);
             const char *proof = (const char*)sqlite3_column_text(stmt, 4);
 
-            int current_category = 4; // Other
+            // Hier ist der optimierte, sichere Block mit String-Pointern
+            const char *env = "theorem";
+            int current_category = 4; // Andere / Verschiedenes
             const char *section_name = "Verschiedenes";
 
             if (type) {
                 if (strcmp(type, "axiom") == 0) {
                     current_category = 1;
                     section_name = "Axiome";
+                    env = "axiom";
                 } else if (strcmp(type, "def") == 0 || strcmp(type, "definition") == 0) {
                     current_category = 2;
                     section_name = "Definitionen";
-                } else if (strcmp(type, "satz") == 0 || strcmp(type, "theorem") == 0 || strcmp(type, "lemma") == 0) {
+                    env = "definition";
+                } else if (strcmp(type, "satz") == 0) {
                     current_category = 3;
                     section_name = "Sätze und Theoreme";
+                    env = "satz";
+                } else if (strcmp(type, "theorem") == 0) {
+                    current_category = 3;
+                    section_name = "Sätze und Theoreme";
+                    env = "theorem";
+                } else if (strcmp(type, "lemma") == 0) {
+                    current_category = 3;
+                    section_name = "Sätze und Theoreme";
+                    env = "lemma";
                 } else if (strcmp(type, "bemerkung") == 0) {
                     current_category = 4;
                     section_name = "Bemerkungen";
+                    env = "bemerkung";
                 }
             }
 
-            // Add section header if category changes
+            // Überschrift hinzufügen, wenn sich die Kategorie ändert
             if (current_category != last_category) {
                 fprintf(out, "\\section{%s}\n\n", section_name);
                 last_category = current_category;
-            }
-
-            char env[32] = "theorem";
-            if (type) {
-                if (strcmp(type, "satz") == 0) strcpy(env, "satz");
-                else if (strcmp(type, "axiom") == 0) strcpy(env, "axiom");
-                else if (strcmp(type, "def") == 0 || strcmp(type, "definition") == 0) strcpy(env, "definition");
-                else if (strcmp(type, "lemma") == 0) strcpy(env, "lemma");
-                else if (strcmp(type, "bemerkung") == 0) strcpy(env, "bemerkung");
             }
 
             fprintf(out, "%% --- %s ---\n\\begin{%s}[%s]\\label{%s}\n", key, env, title ? title : key, key);

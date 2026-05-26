@@ -5,6 +5,6 @@
 
 void parse_file(const char *filename, Document *doc);
 void free_document(Document *doc);
-void append_string(char **destination, const char *source);
+void assign_string(char **destination, const char *source);
 
 #endif // IMPORT_H
