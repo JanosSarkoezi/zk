@@ -9,4 +9,4 @@ Eine auf einer kompakten Menge $K$ [[stetigkeit_folgen_definition|stetige]] Funk
 $$f(x_1) \le f(x) \le f(x_2) \quad \forall x \in K$$
 
 --proof--
-Heuser (Satz 36.3): Angenommen $f$ wäre nicht nach oben beschränkt. Dann gäbe es eine Folge $(x_n)$ in $K$ mit $f(x_n) > n$. Wegen der Kompaktheit von $K$ gäbe es eine Teilfolge $x_{n_k} \to \xi \in K$. Da $f$ [[stetigkeit_folgen_definition|stetig]] ist, müsste $f(x_{n_k}) \to f(\xi)$ gelten. Dies widerspricht jedoch $f(x_{n_k}) \to \infty$. Damit ist $f$ beschränkt. Die Existenz des Maximums zeigt man analog unter Nutzung des Supremums der Bildmenge.
+Heuser ([[extremalsatz_weierstrass|Satz 36.3]]): Angenommen $f$ wäre nicht nach oben beschränkt. Dann gäbe es eine Folge $(x_n)$ in $K$ mit $f(x_n) > n$. Wegen der Kompaktheit von $K$ gäbe es eine Teilfolge $x_{n_k} \to \xi \in K$. Da $f$ [[stetigkeit_folgen_definition|stetig]] ist, müsste $f(x_{n_k}) \to f(\xi)$ gelten. Dies widerspricht jedoch $f(x_{n_k}) \to \infty$. Damit ist $f$ beschränkt. Die Existenz des Maximums zeigt man analog unter Nutzung des Supremums der Bildmenge.

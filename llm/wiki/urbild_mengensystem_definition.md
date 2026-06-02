@@ -10,7 +10,7 @@ $$f^{-1}(\mathcal{E}') := \{ A \in 2^\Omega \mid A = f^{-1}(A') \text{ mit } A' 
 das Urbild von $\mathcal{E}'$ unter $f$.
 
 --examples--
-Das Urbild einer Abbildung $f^{-1}: 2^{\Omega'} \to 2^\Omega$ kommutiert mit den grundlegenden Operationen der Mengenlehre. Insbesondere gilt nach Lemma 2.1.1:
+Das Urbild einer Abbildung $f^{-1}: 2^{\Omega'} \to 2^\Omega$ kommutiert mit den grundlegenden Operationen der Mengenlehre. Insbesondere gilt nach [[urbild_eigenschaften_lemma|Lemma 2.1.1]]:
 \begin{enumerate}[label=(\arabic*)]
   \item $f^{-1}(\Omega') = \Omega$ und $f^{-1}(\emptyset) = \emptyset$.
   \item $f^{-1}((A')^c) = (f^{-1}(A'))^c$.

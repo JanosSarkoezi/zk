@@ -10,6 +10,6 @@ $$f^{-1}(\mathcal{E}') \subseteq \mathcal{F}$$
 gilt.
 
 --proof--
-Der Beweis verläuft vollkommen analog zum Beweis für stetige Abbildungen (Satz 2.2.3):
+Der Beweis verläuft vollkommen analog zum Beweis für stetige Abbildungen ([[stetigkeit_erzeuger_satz|Satz 2.2.3]]):
 Die Notwendigkeit ($f$ messbar $\implies f^{-1}(\mathcal{E}') \subseteq \mathcal{F}$) ist trivial, da $\mathcal{E}' \subseteq \mathcal{F}'$.
 Für die Hinlänglichkeit zeigt man, dass das System $\mathcal{F}'_0 := \{ A' \in \mathcal{F}' \mid f^{-1}(A') \in \mathcal{F} \}$ eine $\sigma$-Algebra auf $\Omega'$ ist. Da $f^{-1}(\mathcal{E}') \subseteq \mathcal{F}$ vorausgesetzt ist, gilt $\mathcal{E}' \subseteq \mathcal{F}'_0$, und da $\mathcal{F}'_0$ eine $\sigma$-Algebra ist, folgt $\mathcal{F}' = \sigma(\mathcal{E}') \subseteq \mathcal{F}'_0$. Damit ist $f^{-1}(\mathcal{F}') \subseteq \mathcal{F}$, also ist $f$ messbar.

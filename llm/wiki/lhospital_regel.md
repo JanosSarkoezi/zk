@@ -10,4 +10,4 @@ $$\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}$$
 sofern der Grenzwert auf der rechten Seite existiert.
 
 --proof--
-Heuser (Satz 50.1): Der Beweis basiert auf dem verallgemeinerten [[mittelwertsatz_differentialrechnung|Mittelwertsatz der Differentialrechnung]], der für zwei Funktionen $f, g$ besagt, dass ein $\xi$ existiert mit $(f(b)-f(a))g'(\xi) = (g(b)-g(a))f'(\xi)$. Man wendet dies auf kleine Intervalle nahe $a$ an.
+Heuser ([[lhospital_regel|Satz 50.1]]): Der Beweis basiert auf dem verallgemeinerten [[mittelwertsatz_differentialrechnung|Mittelwertsatz der Differentialrechnung]], der für zwei Funktionen $f, g$ besagt, dass ein $\xi$ existiert mit $(f(b)-f(a))g'(\xi) = (g(b)-g(a))f'(\xi)$. Man wendet dies auf kleine Intervalle nahe $a$ an.

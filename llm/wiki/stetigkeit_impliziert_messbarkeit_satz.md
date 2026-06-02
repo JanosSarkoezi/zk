@@ -10,4 +10,4 @@ Seien $(\Omega, \mathcal{T})$ und $(\Omega', \mathcal{T}')$ topologische Räume.
 --proof--
 Nach Definition der Borelschen $\sigma$-Algebra ist $\mathcal{T}'$ ein Erzeuger von $\mathcal{B}(\Omega', \mathcal{T}')$. Da $f$ stetig ist, gilt $f^{-1}(\mathcal{T}') \subseteq \mathcal{T}$. Wegen $\mathcal{T} \subseteq \sigma(\mathcal{T}) = \mathcal{B}(\Omega, \mathcal{T})$ folgt:
 $$f^{-1}(\mathcal{T}') \subseteq \mathcal{B}(\Omega, \mathcal{T})$$
-Nach dem Satz über Messbarkeit und Erzeuger (Satz 2.3.3 / 2.3.2) folgt daraus die Messbarkeit von $f$ bezüglich der Borelschen $\sigma$-Algebren.
+Nach dem Satz über Messbarkeit und Erzeuger ([[messbarkeit_erzeuger_satz|Satz 2.3.3 / 2.3.2]]) folgt daraus die Messbarkeit von $f$ bezüglich der Borelschen $\sigma$-Algebren.

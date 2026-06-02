@@ -16,4 +16,4 @@ Sind die Funktionen $f$ und $g$ an der Stelle $\xi$ [[stetigkeit_folgen_definiti
 an der Stelle $\xi$ [[stetigkeit_folgen_definition|stetig]].
 
 --proof--
-Der Beweis folgt unmittelbar aus den Grenzwertsätzen für Folgen (Heuser, Satz 22.6). Da für jede Folge $x_n \to \xi$ gilt, dass $f(x_n) \to f(\xi)$ und $g(x_n) \to g(\xi)$, konvergiert auch die Summenfolge $f(x_n) + g(x_n) \to f(\xi) + g(\xi)$, was genau der Definition der [[stetigkeit_folgen_definition|Stetigkeit]] für $f+g$ entspricht. Analog verfährt man für die anderen Operationen.
+Der Beweis folgt unmittelbar aus den Grenzwertsätzen für Folgen (Heuser, [[grenzwertsaetze_arithmetik|Satz 22.6]]). Da für jede Folge $x_n \to \xi$ gilt, dass $f(x_n) \to f(\xi)$ und $g(x_n) \to g(\xi)$, konvergiert auch die Summenfolge $f(x_n) + g(x_n) \to f(\xi) + g(\xi)$, was genau der Definition der [[stetigkeit_folgen_definition|Stetigkeit]] für $f+g$ entspricht. Analog verfährt man für die anderen Operationen.
