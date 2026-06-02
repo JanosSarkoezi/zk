@@ -15,4 +15,4 @@ Sei $(\Omega, \mathcal{F}, \mu)$ ein Maßraum. Eine messbare Funktion $f: \Omega
 Dabei sind $f^+ := \max(f, 0)$ und $f^- := \max(-f, 0)$ der Positiv- bzw. Negativteil von $f$.
 
 --proof--
-Da $|f| = f^+ + f^-$, folgt aus der Linearität des Integrals für positive Funktionen, dass $\int |f| \, d\mu = \int f^+ \, d\mu + \int f^- \, d\mu$. Die Endlichkeit von $\int |f| \, d\mu$ ist also gleichbedeutend mit der Endlichkeit beider Teilintegrale. Integrierbare Funktionen sind nach Lemma 8.3.1 fast überall endlich.
+Da $|f| = f^+ + f^-$, folgt aus der Linearität des Integrals für positive Funktionen, dass $\int |f| \, d\mu = \int f^+ \, d\mu + \int f^- \, d\mu$. Die Endlichkeit von $\int |f| \, d\mu$ ist also gleichbedeutend mit der Endlichkeit beider Teilintegrale. Integrierbare Funktionen sind nach [[integrierbarkeit_definition|Lemma 8.3.1]] fast überall endlich.

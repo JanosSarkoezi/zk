@@ -12,4 +12,4 @@ Sei $f$ in einer Umgebung von $\xi$ zweimal [[ableitung_definition|differenzierb
 \end{enumerate}
 
 --proof--
-Heuser (Satz 49.6): Die notwendige Bedingung folgt aus dem Differenzenquotienten. Für die hinreichende Bedingung nutzt man die Taylor-Approximation oder betrachtet das Vorzeichen von $f'$ in einer Umgebung von $\xi$. Ist $f''(\xi) > 0$, so ist $f'$ in einer Umgebung streng wachsend. Da $f'(\xi) = 0$, muss $f'(x) < 0$ für $x < \xi$ und $f'(x) > 0$ für $x > \xi$ gelten, was einem Minimum entspricht.
+Heuser ([[lokale_extrema_kriterium|Satz 49.6]]): Die notwendige Bedingung folgt aus dem Differenzenquotienten. Für die hinreichende Bedingung nutzt man die Taylor-Approximation oder betrachtet das Vorzeichen von $f'$ in einer Umgebung von $\xi$. Ist $f''(\xi) > 0$, so ist $f'$ in einer Umgebung streng wachsend. Da $f'(\xi) = 0$, muss $f'(x) < 0$ für $x < \xi$ und $f'(x) > 0$ für $x > \xi$ gelten, was einem Minimum entspricht.

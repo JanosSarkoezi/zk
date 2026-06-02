@@ -14,6 +14,6 @@ Sind $f$ und $g$ an der Stelle $\xi$ [[ableitung_definition|differenzierbar]], s
 \end{enumerate}
 
 --proof--
-Heuser (Satz 47.1): Der Beweis nutzt die Grenzwertsätze für Funktionen. Bei der Produktregel verwendet man den Trick einer "nahrhaften Null":
+Heuser ([[ableitungsregeln_arithmetik|Satz 47.1]]): Der Beweis nutzt die Grenzwertsätze für Funktionen. Bei der Produktregel verwendet man den Trick einer "nahrhaften Null":
 $$\frac{f(x)g(x) - f(\xi)g(\xi)}{x - \xi} = \frac{f(x)-f(\xi)}{x-\xi}g(x) + f(\xi)\frac{g(x)-g(\xi)}{x-\xi}$$
 Im Grenzübergang $x \to \xi$ liefert dies $f'(\xi)g(\xi) + f(\xi)g'(\xi)$. Die Quotientenregel folgt analog oder durch Anwendung der Produktregel auf $f \cdot (1/g)$.

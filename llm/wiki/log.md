@@ -1,5 +1,15 @@
 # Wiki Log
 
+## 2026-05-27
+- Ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 11 (Unabhängigkeit).
+- Added 25 entries covering:
+    - Conditional probability and Bayes' theorem.
+    - Independence of events, families of events, and systems.
+    - Borel-Cantelli lemmas and Borel's Null-One Law.
+    - Independence of random variables and their characterization.
+    - Kolmogorov's Null-One Law and terminal sigma-algebras.
+    - Independence in product spaces.
+
 ## 2026-05-26
 - Ingestion of Schmidt, "Maß und Wahrscheinlichkeit", Kapitel 10 (Wahrscheinlichkeitsräume).
 - Added following entries:

@@ -11,4 +11,4 @@ $$\bigotimes_{i \in I} \mathcal{T}_i = \tau\left( \bigcup_{i \in I} \pi_i^{-1}(\
 --examples--
 Die Forderung der Stetigkeit aller $\pi_j$ bedeutet nach Definition $f^{-1}(\mathcal{T}_j) \subseteq \mathcal{T}$ für alle $j \in I$. Die Produkttopologie ist somit die von der Vereinigung aller Urbilder der offenen Mengen [[topologie_erzeugte_definition|erzeugte Topologie]].
 Beispiel: Die natürliche [[topologie_erzeugte_definition|Topologie]] auf $\mathbb{R}^n$ ist die Produkttopologie der natürlichen Topologien der Faktoren $\mathbb{R}$.
-Ein wichtiges Resultat (Satz 3.2.2) ist: Eine Abbildung $f: \Omega \to \prod_{i \in I} \Omega_i$ ist genau dann stetig, wenn jede Koordinatenabbildung $f_i := \pi_i \circ f$ stetig ist.
+Ein wichtiges Resultat ([[stetigkeit_produkt_raum_satz|Satz 3.2.2]]) ist: Eine Abbildung $f: \Omega \to \prod_{i \in I} \Omega_i$ ist genau dann stetig, wenn jede Koordinatenabbildung $f_i := \pi_i \circ f$ stetig ist.

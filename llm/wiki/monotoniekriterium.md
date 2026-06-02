@@ -17,4 +17,4 @@ $a - \epsilon < a_{n_0} \le a_n \le a < a + \epsilon$.
 Daraus folgt $|a_n - a| < \epsilon$ für alle $n > n_0$. 
 Somit konvergiert $(a_n)$ gegen $a$.
 (Analog für den monoton fallenden Fall).
-Jede konvergente Folge ist zudem nach Satz 20.3 beschränkt.
+Jede konvergente Folge ist zudem nach [[beschraenktheit_konvergenter_folgen|Satz 20.3]] beschränkt.

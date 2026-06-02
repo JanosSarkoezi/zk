@@ -5,7 +5,7 @@ type: def
 tags: [masstheorie]
 refs: [messbarer_raum_definition, sigma_additivitaet_mass_definition]
 ---
-Seien $(\Omega, \mathcal{F}, \mu)$ ein Maßraum und $(\Omega', \mathcal{F}')$ ein messbarer Raum. Sei $f: \Omega \to \Omega'$ eine messbare Abbildung.
+Seien $(\Omega, \mathcal{F}, \mu)$ ein Maßraum und $(\Omega', \mathcal{F}')$ ein messbarer Raum. Sei $f: \Omega \to \Omega'$ eine [[messbarer_raum_definition|messbare Abbildung]].
 
 Das **Bildmaß** von $\mu$ unter $f$, bezeichnet mit $\mu f$ oder $f_*\mu$, ist die Mengenfunktion $\mu f: \mathcal{F}' \to [0, \infty]$, definiert durch:
 $$(\mu f)(A') := \mu(f^{-1}(A')) \quad \text{für alle } A' \in \mathcal{F}'$$

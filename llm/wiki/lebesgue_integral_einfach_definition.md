@@ -12,4 +12,4 @@ $$
 Dabei gilt die Konvention $0 \cdot \infty = 0$.
 
 --proof--
-Die Definition ist wohldefiniert, da $f(\Omega)$ für eine einfache Funktion endlich ist und für jede messbare Menge $A \in \mathcal{F}$ der Wert $\mu(A) \in [0, \infty]$ definiert ist. Die Verträglichkeit mit anderen Darstellungen von $f$ wird durch Lemma 8.1.1 sichergestellt.
+Die Definition ist wohldefiniert, da $f(\Omega)$ für eine einfache Funktion endlich ist und für jede messbare Menge $A \in \mathcal{F}$ der Wert $\mu(A) \in [0, \infty]$ definiert ist. Die Verträglichkeit mit anderen Darstellungen von $f$ wird durch [[lebesgue_integral_einfach_definition|Lemma 8.1.1]] sichergestellt.

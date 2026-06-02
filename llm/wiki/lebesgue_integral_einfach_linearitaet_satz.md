@@ -13,4 +13,4 @@ Seien $f, g: \Omega \to [0, \infty)$ positive einfache Funktionen und $a \in [0,
 \end{enumerate}
 
 --proof--
-Der Beweis folgt aus Lemma 8.1.1 (allgemeine Darstellung des Integrals). Man wählt eine gemeinsame disjunkte Zerlegung $\{B_i\}$ von $\Omega$, so dass $f = \sum c_i \chi_{B_i}$ und $g = \sum d_i \chi_{B_i}$. Dann ist $f+g = \sum (c_i+d_i) \chi_{B_i}$ und $af = \sum a c_i \chi_{B_i}$. Die Behauptungen folgen dann direkt aus der Definition und der Additivität des Maßes.
+Der Beweis folgt aus [[lebesgue_integral_einfach_definition|Lemma 8.1.1]] (allgemeine Darstellung des Integrals). Man wählt eine gemeinsame disjunkte Zerlegung $\{B_i\}$ von $\Omega$, so dass $f = \sum c_i \chi_{B_i}$ und $g = \sum d_i \chi_{B_i}$. Dann ist $f+g = \sum (c_i+d_i) \chi_{B_i}$ und $af = \sum a c_i \chi_{B_i}$. Die Behauptungen folgen dann direkt aus der Definition und der Additivität des Maßes.

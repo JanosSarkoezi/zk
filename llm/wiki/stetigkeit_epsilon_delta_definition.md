@@ -9,7 +9,7 @@ Eine Funktion $f: X \to \mathbb{R}$ ist genau dann [[stetigkeit_folgen_definitio
 $$|x - \xi| < \delta \implies |f(x) - f(\xi)| < \epsilon$$
 
 --examples--
-Heuser (Satz 34.6) beweist die Äquivalenz zur Folgendefinition.
+Heuser ([[stetigkeit_epsilon_delta_definition|Satz 34.6]]) beweist die Äquivalenz zur Folgendefinition.
 \begin{enumerate}
     \item ($\delta \implies$ Folge): Sei die $\epsilon$-$\delta$-Bedingung erfüllt und $x_n \to \xi$. Zu $\epsilon > 0$ wähle $\delta > 0$. Da $x_n \to \xi$, gibt es ein $n_0$ mit $|x_n - \xi| < \delta$ für $n > n_0$. Dann ist $|f(x_n) - f(\xi)| < \epsilon$, also $f(x_n) \to f(\xi)$.
     \item (Folge $\implies \delta$): Per Widerspruchsbeweis. Wäre die Bedingung falsch, gäbe es ein $\epsilon > 0$, so dass für jedes $\delta = 1/n$ ein $x_n$ existiert mit $|x_n - \xi| < 1/n$ aber $|f(x_n) - f(\xi)| \ge \epsilon$. Dann $x_n \to \xi$, aber $f(x_n) \not\to f(\xi)$, im Widerspruch zur Folgenstetigkeit.

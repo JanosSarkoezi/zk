@@ -14,4 +14,4 @@ Seien $f, g$ integrierbare Funktionen und $a, b \in \mathbb{R}$. Dann gilt:
 \end{enumerate}
 
 --proof--
-Die Linearität folgt aus der Zerlegung in Positiv- und Negativteil und der Linearität des Integrals für positive messbare Funktionen (Lemma 8.3.7). Die Monotonie ergibt sich analog. Die Dreiecksungleichung folgt aus $f \le |f|$ und $-f \le |f|$ mittels Monotonie.
+Die Linearität folgt aus der Zerlegung in Positiv- und Negativteil und der Linearität des Integrals für positive messbare Funktionen ([[lebesgue_integral_positiv_definition|Lemma 8.3.7]]). Die Monotonie ergibt sich analog. Die Dreiecksungleichung folgt aus $f \le |f|$ und $-f \le |f|$ mittels Monotonie.
